@@ -1,6 +1,6 @@
 {
-  "name": "json-tools",
-  "displayName": "JSON Tools",
+  "name": "json-assistant",
+  "displayName": "JSON Assistant",
   "description": "Jump to any nested JSON path instantly, browse a live JSON outline in the sidebar, and find every code reference to a path across your workspace.",
   "version": "0.0.1",
   "publisher": "oldjazjef",
