@@ -1,12 +1,16 @@
 import * as vscode from 'vscode';
+import { registerPathSearchCommand } from './features/pathSearch/pathSearchCommand';
 import { Logger } from './util/logger';
 
 let logger: Logger | undefined;
 
 export function activate(context: vscode.ExtensionContext): void {
   logger = new Logger('JSON Tools');
-  logger.info('JSON Tools extension activated.');
   context.subscriptions.push(logger);
+
+  registerPathSearchCommand(context, logger);
+
+  logger.info('JSON Tools extension activated.');
 }
 
 export function deactivate(): void {

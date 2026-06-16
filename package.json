@@ -201,9 +201,10 @@
     "lint": "eslint src test",
     "typecheck": "tsc --noEmit",
     "test:unit": "mocha --require ts-node/register --extension ts \"test/unit/**/*.test.ts\"",
+    "compile-tests": "tsc -p .",
     "test:integration": "vscode-test",
     "test": "npm run test:unit && npm run test:integration",
-    "pretest:integration": "npm run compile",
+    "pretest:integration": "npm run compile && npm run compile-tests",
     "vsce:package": "vsce package"
   },
   "devDependencies": {
