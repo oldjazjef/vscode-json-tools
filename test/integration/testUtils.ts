@@ -16,7 +16,7 @@ export async function openFixture(...segments: string[]): Promise<vscode.TextEdi
   return vscode.window.showTextDocument(document);
 }
 
-const EXTENSION_ID = 'oldjazjef.json-tools';
+const EXTENSION_ID = 'oldjazjef.json-assistant';
 
 /**
  * Ensures the extension is activated (commands registered) before a test
