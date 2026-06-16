@@ -1,0 +1,226 @@
+{
+  "name": "json-tools",
+  "displayName": "JSON Tools",
+  "description": "Search nested JSON paths, browse a live JSON outline in the sidebar, and find code references to a JSON path across your workspace.",
+  "version": "0.0.1",
+  "publisher": "oldjazjef",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0",
+    "node": ">=22.0.0"
+  },
+  "volta": {
+    "node": "22.22.3"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "json",
+    "jsonc",
+    "outline",
+    "search",
+    "navigation"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jsonTools.searchPath",
+        "title": "JSON Tools: Search Path...",
+        "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.findReferences",
+        "title": "JSON Tools: Find References to Path",
+        "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.refreshOutline",
+        "title": "JSON Tools: Refresh Outline",
+        "category": "JSON Tools",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "jsonTools.outline.search",
+        "title": "JSON Tools: Filter Outline...",
+        "category": "JSON Tools",
+        "icon": "$(search)"
+      },
+      {
+        "command": "jsonTools.outline.clearSearch",
+        "title": "JSON Tools: Clear Outline Filter",
+        "category": "JSON Tools",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "jsonTools.outline.revealNode",
+        "title": "JSON Tools: Reveal Node",
+        "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.findReferencesFromNode",
+        "title": "JSON Tools: Find References",
+        "category": "JSON Tools"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jsonTools.searchPath",
+        "key": "ctrl+alt+j",
+        "mac": "cmd+alt+j",
+        "when": "editorLangId == json || editorLangId == jsonc"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "jsonTools.searchPath",
+          "when": "editorLangId == json || editorLangId == jsonc"
+        },
+        {
+          "command": "jsonTools.findReferences",
+          "when": "editorLangId == json || editorLangId == jsonc"
+        },
+        {
+          "command": "jsonTools.outline.revealNode",
+          "when": "false"
+        },
+        {
+          "command": "jsonTools.findReferencesFromNode",
+          "when": "false"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "jsonTools.findReferences",
+          "when": "editorLangId == json || editorLangId == jsonc",
+          "group": "jsonTools"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "jsonTools.outline.search",
+          "when": "view == jsonTools.outlineView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "jsonTools.outline.clearSearch",
+          "when": "view == jsonTools.outlineView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "jsonTools.refreshOutline",
+          "when": "view == jsonTools.outlineView",
+          "group": "navigation@3"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "jsonTools.findReferencesFromNode",
+          "when": "view == jsonTools.outlineView",
+          "group": "jsonTools"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "jsonTools",
+          "title": "JSON Tools",
+          "icon": "resources/icon-activitybar.svg"
+        }
+      ]
+    },
+    "views": {
+      "jsonTools": [
+        {
+          "id": "jsonTools.outlineView",
+          "name": "Outline",
+          "when": "true"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "JSON Tools",
+      "properties": {
+        "jsonTools.languageIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "json",
+            "jsonc"
+          ],
+          "description": "Language IDs treated as JSON for this extension's features."
+        },
+        "jsonTools.referenceFinder.include": {
+          "type": "string",
+          "default": "**/*.{js,jsx,ts,tsx,py,go,rb,java,cs,php}",
+          "description": "Glob of files to scan when finding references to a JSON path."
+        },
+        "jsonTools.referenceFinder.exclude": {
+          "type": "string",
+          "default": "",
+          "description": "Additional glob to exclude from reference scanning, on top of files.exclude/search.exclude."
+        },
+        "jsonTools.referenceFinder.maxResults": {
+          "type": "number",
+          "default": 500,
+          "description": "Maximum number of reference matches to return."
+        },
+        "jsonTools.referenceFinder.accessorFunctionNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "get",
+            "t",
+            "i18n.t",
+            "_.get"
+          ],
+          "description": "Function names treated as path-accessor calls, e.g. get('a.b.c')."
+        },
+        "jsonTools.outline.debounceMs": {
+          "type": "number",
+          "default": 150,
+          "description": "Debounce delay in milliseconds for the outline search filter."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production",
+    "vscode:prepublish": "npm run package",
+    "lint": "eslint src test",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "mocha --require ts-node/register --extension ts \"test/unit/**/*.test.ts\"",
+    "test:integration": "vscode-test",
+    "test": "npm run test:unit && npm run test:integration",
+    "pretest:integration": "npm run compile",
+    "vsce:package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.5",
+    "@types/vscode": "^1.96.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.1",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.17.0",
+    "mocha": "^11.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
+}

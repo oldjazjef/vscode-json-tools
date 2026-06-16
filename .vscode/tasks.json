@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "watch",
+      "label": "npm: watch",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never",
+        "group": "watchers"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^> (.*):(\\d+):(\\d+): error: (.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^\\[watch\\] build started$",
+          "endsPattern": "^\\[watch\\] build finished$"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "npm",
+      "script": "compile",
+      "label": "npm: compile",
+      "group": "build"
+    }
+  ]
+}
