@@ -6,6 +6,15 @@
   "publisher": "oldjazjef",
   "private": true,
   "license": "MIT",
+  "icon": "resources/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oldjazjef/vscode-json-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oldjazjef/vscode-json-tools/issues"
+  },
+  "homepage": "https://github.com/oldjazjef/vscode-json-tools#readme",
   "engines": {
     "vscode": "^1.96.0",
     "node": ">=22.0.0"
