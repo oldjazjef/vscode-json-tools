@@ -15,3 +15,21 @@ export async function openFixture(...segments: string[]): Promise<vscode.TextEdi
   const document = await vscode.workspace.openTextDocument(fixtureUri(...segments));
   return vscode.window.showTextDocument(document);
 }
+
+const EXTENSION_ID = 'oldjazjef.json-tools';
+
+/**
+ * Ensures the extension is activated (commands registered) before a test
+ * calls `vscode.commands.executeCommand`. `onStartupFinished` normally
+ * handles this, but explicitly awaiting activation here removes any
+ * dependency on that event's timing relative to test start.
+ */
+export async function activateExtension(): Promise<void> {
+  const extension = vscode.extensions.getExtension(EXTENSION_ID);
+  if (!extension) {
+    throw new Error(`Extension "${EXTENSION_ID}" was not found among loaded extensions.`);
+  }
+  if (!extension.isActive) {
+    await extension.activate();
+  }
+}

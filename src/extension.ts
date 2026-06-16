@@ -1,5 +1,7 @@
 import * as vscode from 'vscode';
 import { registerPathSearchCommand } from './features/pathSearch/pathSearchCommand';
+import { registerJsonOutlineView } from './features/treeView/jsonOutlineProvider';
+import { registerOutlineSearchCommands } from './features/treeView/treeViewSearchController';
 import { Logger } from './util/logger';
 
 let logger: Logger | undefined;
@@ -9,6 +11,9 @@ export function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(logger);
 
   registerPathSearchCommand(context, logger);
+
+  const outlineProvider = registerJsonOutlineView(context);
+  registerOutlineSearchCommands(context, outlineProvider);
 
   logger.info('JSON Tools extension activated.');
 }

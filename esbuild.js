@@ -32,6 +32,11 @@ async function main() {
     target: 'node22',
     outfile: 'dist/extension.js',
     external: ['vscode'],
+    // jsonc-parser's default (CJS/"main") build is a UMD wrapper with a
+    // runtime `require('./impl/format')` that esbuild can't statically
+    // resolve once everything is flattened into one file. Its "module"
+    // (ESM) build uses static imports instead, which bundles cleanly.
+    mainFields: ['module', 'main'],
     minify: production,
     sourcemap: !production,
     sourcesContent: false,
