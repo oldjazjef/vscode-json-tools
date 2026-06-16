@@ -152,6 +152,12 @@
         }
       ]
     },
+    "viewsWelcome": [
+      {
+        "view": "jsonTools.outlineView",
+        "contents": "Open a JSON or JSONC file to see its structure here, like the built-in Outline view but JSON-aware.\n\nClick any entry to jump to it in the editor.\n\nUse the $(search) filter icon above to narrow the tree down to matching keys, indices, or values — matches and their ancestors stay visible, everything else is hidden.\n\nRight-click an entry and choose **Find References** to search your workspace for code that accesses that path.\n\n[Search Path in Active File](command:jsonTools.searchPath)"
+      }
+    ],
     "configuration": {
       "title": "JSON Tools",
       "properties": {
