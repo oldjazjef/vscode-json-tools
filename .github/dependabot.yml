@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    groups:
+      npm-dependencies:
+        patterns:
+          - '*'
+    # Security-update PRs are opened immediately regardless of this
+    # schedule/grouping — this only controls routine version-bump PRs.
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    # Actions in this repo's workflows are pinned to a commit SHA with a
+    # trailing "# vX.Y.Z" comment; Dependabot understands that convention
+    # and opens a PR updating both the SHA and the comment together.

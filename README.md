@@ -1,6 +1,7 @@
 # JSON Tools
 
 [![CI](https://github.com/oldjazjef/vscode-json-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/oldjazjef/vscode-json-tools/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/oldjazjef/vscode-json-tools/badge)](https://scorecard.dev/viewer/?uri=github.com/oldjazjef/vscode-json-tools)
 [![License: MIT](https://img.shields.io/github/license/oldjazjef/vscode-json-tools)](LICENSE)
 
 Three small tools for working with JSON/JSONC files in VS Code:
@@ -74,7 +75,25 @@ Press `F5` in VS Code to launch an Extension Development Host with the extension
 
 1. Bump `version` in `package.json` and add a dated entry to [CHANGELOG.md](CHANGELOG.md).
 2. Commit, then tag and push: `git tag v0.1.0 && git push origin v0.1.0`.
-3. The [Release workflow](.github/workflows/release.yml) runs the full test suite, packages a `.vsix`, and attaches it to a new GitHub Release. If the `VSCE_PAT`/`OVSX_PAT` repository secrets are configured, it also publishes to the Visual Studio Marketplace / Open VSX.
+3. The [Release workflow](.github/workflows/release.yml) runs the full test suite, packages a `.vsix`, and attaches it (plus a CycloneDX SBOM) to a new GitHub Release. If the `VSCE_PAT`/`OVSX_PAT` repository secrets are configured, it also publishes to the Visual Studio Marketplace / Open VSX.
+
+Setting up auto-publish (one-time, done outside this repo):
+
+1. **Marketplace publisher** — create one at [marketplace.visualstudio.com/manage](https://marketplace.visualstudio.com/manage) with the id used in `package.json`'s `publisher` field (`oldjazjef`).
+2. **Personal Access Token** — in [Azure DevOps](https://dev.azure.com), create a PAT scoped to **Marketplace > Manage**.
+3. Add it as a repository secret named `VSCE_PAT` (*Settings → Secrets and variables → Actions*). Optionally do the same for [open-vsx.org](https://open-vsx.org) (`OVSX_PAT`) if you also want to publish there.
+4. From then on, pushing a `v*.*.*` tag publishes automatically.
+
+## Trust & Security
+
+- [SECURITY.md](SECURITY.md) — vulnerability reporting policy and a summary of the supply-chain practices below.
+- Every CI run audits production dependencies (`npm audit --omit=dev --audit-level=high`) and verifies npm registry package signatures (`npm audit signatures`).
+- [Dependency Review](.github/workflows/dependency-review.yml) blocks any pull request that introduces a dependency with a known vulnerability.
+- [Dependabot](.github/dependabot.yml) keeps npm packages and GitHub Actions up to date; CI workflows pin actions to a commit SHA rather than a mutable tag.
+- [OpenSSF Scorecard](.github/workflows/scorecard.yml) runs weekly (badge above) — an automated, third-party-verifiable score of this repo's security posture.
+- Each GitHub Release includes a CycloneDX SBOM alongside the `.vsix`.
+
+**Becoming a "Verified" publisher** on the Marketplace (the blue checkmark) is a separate, manual step done on Microsoft's side: it requires verifying ownership of a domain through the [publisher management portal](https://marketplace.visualstudio.com/manage), not anything in this repository. See [Microsoft's docs on publisher verification](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#verify-a-publisher) for the current process.
 
 ## License
 
