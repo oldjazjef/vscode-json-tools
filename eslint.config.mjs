@@ -3,7 +3,10 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['dist/**', 'out/**', '.vscode-test/**', 'node_modules/**'],
+    // test/integration/fixtures/** are inert sample data for the reference
+    // scanner and outline tests, not real source — they're deliberately
+    // loose (e.g. `any` casts) and aren't meant to satisfy lint rules.
+    ignores: ['dist/**', 'out/**', '.vscode-test/**', 'node_modules/**', 'test/integration/fixtures/**'],
   },
   ...tseslint.configs.recommended,
   {
