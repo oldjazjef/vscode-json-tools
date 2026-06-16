@@ -1,0 +1,54 @@
+name: Release
+
+# Triggered by pushing a tag like v0.1.0 (see the "Releasing" section in
+# README.md). Runs the full test suite, packages a .vsix, attaches it to a
+# new GitHub Release, and optionally publishes to the Visual Studio
+# Marketplace / Open VSX if the corresponding secrets are configured.
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      OVSX_PAT: ${{ secrets.OVSX_PAT }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.3'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      - run: npm run typecheck
+
+      - run: npm run test:unit
+
+      - name: Run integration tests (headless via xvfb)
+        run: xvfb-run -a npm run test:integration
+
+      - name: Package extension
+        run: npx vsce package --no-git-tag-version --no-update-package-json
+
+      - name: Create GitHub Release with the .vsix attached
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "${{ github.ref_name }}" ./*.vsix --title "${{ github.ref_name }}" --generate-notes
+
+      - name: Publish to Visual Studio Marketplace
+        if: env.VSCE_PAT != ''
+        run: npx vsce publish --no-git-tag-version --no-update-package-json --packagePath ./*.vsix
+
+      - name: Publish to Open VSX
+        if: env.OVSX_PAT != ''
+        run: npx ovsx publish ./*.vsix -p "$OVSX_PAT"

@@ -1,7 +1,7 @@
 {
   "name": "json-tools",
   "displayName": "JSON Tools",
-  "description": "Search nested JSON paths, browse a live JSON outline in the sidebar, and find code references to a JSON path across your workspace.",
+  "description": "Jump to any nested JSON path instantly, browse a live JSON outline in the sidebar, and find every code reference to a path across your workspace.",
   "version": "0.0.1",
   "publisher": "oldjazjef",
   "private": true,

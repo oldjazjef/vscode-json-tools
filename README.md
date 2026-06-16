@@ -1,6 +1,9 @@
 # JSON Tools
 
-Three small tools for working with JSON/JSONC files in VSCode:
+[![CI](https://github.com/oldjazjef/vscode-json-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/oldjazjef/vscode-json-tools/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/github/license/oldjazjef/vscode-json-tools)](LICENSE)
+
+Three small tools for working with JSON/JSONC files in VS Code:
 
 1. **Search Path** — type a dotted path like `path1.path2.path3` and jump straight to that nested property in the active file.
 2. **JSON Outline** — a sidebar tree view that mirrors the active JSON file's structure, with a live filter.
@@ -23,7 +26,13 @@ Supported path syntax:
 
 ### JSON Outline
 
-Open the **JSON Tools** view in the Activity Bar. It shows the structure of whichever JSON/JSONC file is currently active — like the built-in Outline view, but JSON-aware. Use the search icon in the view's title bar to filter by key, index, or value; matching nodes and their ancestors stay visible, everything else is hidden. Click any row to jump to it in the editor.
+Open the **JSON Tools** view in the Activity Bar. It shows the structure of whichever JSON file is currently active — like the built-in Outline view, but JSON-aware. Click any row to jump to it in the editor.
+
+Use the search icon in the view's title bar to filter live as you type:
+- A plain term (`vscode`) matches any key, array index, or value preview containing it.
+- A dotted path (`engines.vscode`) matches that specific nested property, even though no single node's own label contains the full string.
+
+Matching nodes and their ancestors stay visible; everything else is hidden. Clear the filter with the broom icon next to the search icon.
 
 ### Find References
 
@@ -52,14 +61,20 @@ This is a text/regex scan, not a per-language AST analysis — it's fast and wor
 
 ```bash
 npm install
-npm run compile        # bundle the extension with esbuild
-npm run test:unit       # fast, pure-logic tests (no VSCode needed)
-npm run test:integration  # spins up a real VSCode instance (@vscode/test-cli)
+npm run compile           # bundle the extension with esbuild
+npm run test:unit         # fast, pure-logic tests (no VS Code needed)
+npm run test:integration  # spins up a real VS Code instance (@vscode/test-cli)
 npm run lint
 npm run typecheck
 ```
 
-Press `F5` in VSCode to launch an Extension Development Host with the extension loaded.
+Press `F5` in VS Code to launch an Extension Development Host with the extension loaded.
+
+## Releasing
+
+1. Bump `version` in `package.json` and add a dated entry to [CHANGELOG.md](CHANGELOG.md).
+2. Commit, then tag and push: `git tag v0.1.0 && git push origin v0.1.0`.
+3. The [Release workflow](.github/workflows/release.yml) runs the full test suite, packages a `.vsix`, and attaches it to a new GitHub Release. If the `VSCE_PAT`/`OVSX_PAT` repository secrets are configured, it also publishes to the Visual Studio Marketplace / Open VSX.
 
 ## License
 
