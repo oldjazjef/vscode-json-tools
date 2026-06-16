@@ -49,6 +49,35 @@ suite('JSON outline tree view', () => {
     assert.deepStrictEqual(cleared.map((c) => describeOutlineNode(c).label), ['path1', 'items']);
   });
 
+  test('branches leading to a match auto-expand while filtering, and collapse again once cleared', async () => {
+    const editor = await openFixture('simple.json');
+    const provider = new JsonOutlineProvider();
+    provider.setDocument(editor.document);
+
+    provider.setFilterText('path3');
+    const [path1] = provider.getChildren();
+    assert.strictEqual(provider.getTreeItem(path1).collapsibleState, vscode.TreeItemCollapsibleState.Expanded);
+    const [path2] = provider.getChildren(path1);
+    assert.strictEqual(provider.getTreeItem(path2).collapsibleState, vscode.TreeItemCollapsibleState.Expanded);
+
+    provider.setFilterText('');
+    const [path1Unfiltered] = provider.getChildren();
+    assert.strictEqual(
+      provider.getTreeItem(path1Unfiltered).collapsibleState,
+      vscode.TreeItemCollapsibleState.Collapsed
+    );
+  });
+
+  test('a leaf node always has collapsibleState None, filtered or not', async () => {
+    const editor = await openFixture('simple.json');
+    const provider = new JsonOutlineProvider();
+    provider.setDocument(editor.document);
+
+    provider.setFilterText('path3');
+    const path3 = provider.getChildren(provider.getChildren(provider.getChildren()[0])[0])[0];
+    assert.strictEqual(provider.getTreeItem(path3).collapsibleState, vscode.TreeItemCollapsibleState.None);
+  });
+
   test('setFilterText accepts a dotted path, filtering down to that nested property', async () => {
     const editor = await openFixture('simple.json');
     const provider = new JsonOutlineProvider();

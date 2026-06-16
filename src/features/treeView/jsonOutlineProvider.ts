@@ -61,10 +61,7 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
 
   getTreeItem(element: JsonOutlineNode): vscode.TreeItem {
     const { label, description } = describeOutlineNode(element);
-    const item = new vscode.TreeItem(
-      label,
-      hasChildren(element) ? vscode.TreeItemCollapsibleState.Collapsed : vscode.TreeItemCollapsibleState.None
-    );
+    const item = new vscode.TreeItem(label, this.collapsibleStateFor(element));
     item.description = description;
     item.id = `${outlineNodePathString(element) || '$root'}#${element.valueNode.offset}`;
     item.contextValue = 'jsonTools.outlineNode';
@@ -87,6 +84,21 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
       return children;
     }
     return children.filter((child) => subtreeMatchesFilter(child, this.filterText));
+  }
+
+  /**
+   * Leaves use `None`. Branches normally start `Collapsed` so browsing an
+   * unfiltered document doesn't dump everything open at once — but while a
+   * filter is active, every branch reaching this point is, by construction,
+   * an ancestor of a match (see `getChildren`'s `subtreeMatchesFilter`
+   * filtering), so it's expanded automatically to walk the user straight
+   * down to the match instead of requiring a manual click at every level.
+   */
+  private collapsibleStateFor(element: JsonOutlineNode): vscode.TreeItemCollapsibleState {
+    if (!hasChildren(element)) {
+      return vscode.TreeItemCollapsibleState.None;
+    }
+    return this.filterText ? vscode.TreeItemCollapsibleState.Expanded : vscode.TreeItemCollapsibleState.Collapsed;
   }
 }
 
