@@ -14,7 +14,7 @@ export function registerOutlineSearchCommands(context: vscode.ExtensionContext, 
   const searchCommand = vscode.commands.registerCommand('jsonTools.outline.search', () => {
     const inputBox = vscode.window.createInputBox();
     inputBox.title = 'JSON Tools: Filter Outline';
-    inputBox.placeholder = 'Filter by key, index, or value...';
+    inputBox.placeholder = 'Filter by key, index, value, or a dotted path like engines.vscode...';
     inputBox.value = provider.getFilterText();
 
     const applyFilterDebounced = debounce((text: string) => provider.setFilterText(text), getOutlineDebounceMs());

@@ -49,6 +49,19 @@ suite('JSON outline tree view', () => {
     assert.deepStrictEqual(cleared.map((c) => describeOutlineNode(c).label), ['path1', 'items']);
   });
 
+  test('setFilterText accepts a dotted path, filtering down to that nested property', async () => {
+    const editor = await openFixture('simple.json');
+    const provider = new JsonOutlineProvider();
+    provider.setDocument(editor.document);
+
+    provider.setFilterText('path1.path2');
+    const topLevel = provider.getChildren();
+    assert.deepStrictEqual(topLevel.map((c) => describeOutlineNode(c).label), ['path1']);
+
+    const path1Children = provider.getChildren(topLevel[0]);
+    assert.deepStrictEqual(path1Children.map((c) => describeOutlineNode(c).label), ['path2']);
+  });
+
   test('setDocument with a non-JSON document empties the tree', async () => {
     const provider = new JsonOutlineProvider();
     const plainTextDoc = await vscode.workspace.openTextDocument({ content: 'not json', language: 'plaintext' });

@@ -97,6 +97,33 @@ describe('jsonOutlineNode', () => {
       assert.strictEqual(nodeMatchesFilter(node, 'world'), true);
     });
 
+    it('matches a node by its full dotted path, even when no single label contains it', () => {
+      const root = rootNodeFor('{"engines": {"vscode": "^1.96.0", "node": ">=22"}}');
+      const engines = getChildOutlineNodes(root)[0];
+      const [vscode, node] = getChildOutlineNodes(engines);
+
+      assert.strictEqual(nodeMatchesFilter(vscode, 'engines.vscode'), true);
+      assert.strictEqual(nodeMatchesFilter(node, 'engines.vscode'), false);
+      // A bare leaf-name filter still matches via the existing label check.
+      assert.strictEqual(nodeMatchesFilter(vscode, 'vscode'), true);
+    });
+
+    it('matches a node by a partial substring of its full dotted path', () => {
+      const root = rootNodeFor('{"engines": {"vscode": "^1.96.0"}}');
+      const engines = getChildOutlineNodes(root)[0];
+      const [vscodeNode] = getChildOutlineNodes(engines);
+
+      assert.strictEqual(nodeMatchesFilter(vscodeNode, 'ngines.vsc'), true);
+    });
+
+    it('keeps an ancestor visible via subtreeMatchesFilter when a dotted-path filter targets a descendant', () => {
+      const root = rootNodeFor('{"engines": {"vscode": "^1.96.0"}, "other": 1}');
+      const [engines, other] = getChildOutlineNodes(root);
+
+      assert.strictEqual(subtreeMatchesFilter(engines, 'engines.vscode'), true);
+      assert.strictEqual(subtreeMatchesFilter(other, 'engines.vscode'), false);
+    });
+
     it('keeps a non-matching ancestor when a descendant matches', () => {
       const root = rootNodeFor('{"outer": {"inner": "needle"}}');
       const outer = getChildOutlineNodes(root)[0];

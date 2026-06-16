@@ -100,12 +100,23 @@ export function outlineNodePathString(node: JsonOutlineNode): string {
   return node.pathSegments.length > 0 ? stringifyPathQuery(node.pathSegments as PathSegment[]) : '';
 }
 
+/**
+ * Matches `filterTextLower` against the node's own label/value preview
+ * (e.g. typing "vscode" finds a node labeled "vscode") *and* against its
+ * full dotted path from the root (e.g. typing "engines.vscode" finds the
+ * "vscode" node nested under "engines", even though neither name alone
+ * contains that string) — both are plain case-insensitive substring
+ * checks, so a partial path like "ngines.vsc" still matches too.
+ */
 export function nodeMatchesFilter(node: JsonOutlineNode, filterTextLower: string): boolean {
   if (!filterTextLower) {
     return true;
   }
   const { label, description } = describeOutlineNode(node);
-  return label.toLowerCase().includes(filterTextLower) || description.toLowerCase().includes(filterTextLower);
+  if (label.toLowerCase().includes(filterTextLower) || description.toLowerCase().includes(filterTextLower)) {
+    return true;
+  }
+  return outlineNodePathString(node).toLowerCase().includes(filterTextLower);
 }
 
 /**
