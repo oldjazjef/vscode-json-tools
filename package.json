@@ -2,7 +2,7 @@
   "name": "json-assistant",
   "displayName": "JSON Assistant",
   "description": "Jump to any nested JSON path instantly, browse a live JSON outline in the sidebar, and find every code reference to a path across your workspace.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "oldjazjef",
   "private": true,
   "license": "MIT",
@@ -73,6 +73,27 @@
         "command": "jsonTools.findReferencesFromNode",
         "title": "JSON Tools: Find References",
         "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.duplicateKeys.ignore",
+        "title": "JSON Tools: Ignore this duplicate",
+        "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.duplicateKeys.revealOccurrence",
+        "title": "JSON Tools: Reveal Occurrence",
+        "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.duplicateKeys.manageIgnoreList",
+        "title": "JSON Tools: Manage Ignored Duplicates",
+        "category": "JSON Tools",
+        "icon": "$(list-unordered)"
+      },
+      {
+        "command": "jsonTools.duplicateKeys.createMergeInstruction",
+        "title": "JSON Tools: Create Merge Instruction for AI",
+        "category": "JSON Tools"
       }
     ],
     "keybindings": [
@@ -100,6 +121,18 @@
         {
           "command": "jsonTools.findReferencesFromNode",
           "when": "false"
+        },
+        {
+          "command": "jsonTools.duplicateKeys.revealOccurrence",
+          "when": "false"
+        },
+        {
+          "command": "jsonTools.duplicateKeys.ignore",
+          "when": "false"
+        },
+        {
+          "command": "jsonTools.duplicateKeys.createMergeInstruction",
+          "when": "false"
         }
       ],
       "editor/context": [
@@ -124,12 +157,27 @@
           "command": "jsonTools.refreshOutline",
           "when": "view == jsonTools.outlineView",
           "group": "navigation@3"
+        },
+        {
+          "command": "jsonTools.duplicateKeys.manageIgnoreList",
+          "when": "view == jsonTools.duplicateKeysView",
+          "group": "navigation@1"
         }
       ],
       "view/item/context": [
         {
           "command": "jsonTools.findReferencesFromNode",
           "when": "view == jsonTools.outlineView",
+          "group": "jsonTools"
+        },
+        {
+          "command": "jsonTools.duplicateKeys.ignore",
+          "when": "view == jsonTools.duplicateKeysView && viewItem == jsonTools.duplicateGroup",
+          "group": "jsonTools"
+        },
+        {
+          "command": "jsonTools.duplicateKeys.createMergeInstruction",
+          "when": "view == jsonTools.duplicateKeysView && viewItem == jsonTools.duplicateGroup",
           "group": "jsonTools"
         }
       ]
@@ -149,6 +197,11 @@
           "id": "jsonTools.outlineView",
           "name": "Outline",
           "when": "true"
+        },
+        {
+          "id": "jsonTools.duplicateKeysView",
+          "name": "Duplicate Keys",
+          "when": "true"
         }
       ]
     },
@@ -156,6 +209,10 @@
       {
         "view": "jsonTools.outlineView",
         "contents": "Open a JSON or JSONC file to see its structure here, like the built-in Outline view but JSON-aware.\n\nClick any entry to jump to it in the editor.\n\nUse the $(search) filter icon above to narrow the tree down to matching keys, indices, or values — matches and their ancestors stay visible, everything else is hidden.\n\nRight-click an entry and choose **Find References** to search your workspace for code that accesses that path.\n\n[Search Path in Active File](command:jsonTools.searchPath)"
+      },
+      {
+        "view": "jsonTools.duplicateKeysView",
+        "contents": "Open a JSON or JSONC file to check for duplicate keys.\n\nWhen duplicate keys are found, they are listed here with all their occurrences and values. Click an occurrence to jump to it in the editor.\n\nRight-click a duplicate and choose **Ignore this duplicate** to hide it from this list. Use the $(list-unordered) icon above to view and remove entries from the ignore list."
       }
     ],
     "configuration": {
@@ -204,6 +261,26 @@
           "type": "number",
           "default": 150,
           "description": "Debounce delay in milliseconds for the outline search filter."
+        },
+        "jsonTools.duplicateKeys.mergeInstructionTemplates.pathGroup": {
+          "type": "string",
+          "default": "File: {filePath}\n\nMerge duplicate key \"{keyName}\" found at multiple locations:\n{locations}\n\nConsider refactoring to eliminate duplication by:\n- Creating a shared reference\n- Extracting to a common parent object\n- Using a data structure that deduplicates this key",
+          "description": "Template for merge instructions for duplicate keys at the same path. Placeholders: {filePath}, {keyName}, {locations}"
+        },
+        "jsonTools.duplicateKeys.mergeInstructionTemplates.attributeGroup": {
+          "type": "string",
+          "default": "File: {filePath}\n\nMerge duplicated attribute \"{attribute}\" found in {pathCount} different locations:\n{locations}\n\nConsider refactoring to:\n- Extract the attribute to a shared parent\n- Create a template or base object\n- Use composition to avoid repetition",
+          "description": "Template for merge instructions for duplicate attributes. Placeholders: {filePath}, {attribute}, {pathCount}, {locations}"
+        },
+        "jsonTools.duplicateKeys.mergeInstructionTemplates.pairGroup": {
+          "type": "string",
+          "default": "File: {filePath}\n\nMerge duplicated pair \"{key}: {value}\" found at {occurrenceCount} locations:\n{locations}\n\nConsider refactoring to:\n- Extract to a shared constant or reference\n- Use a single definition referenced multiple times\n- Consolidate into a lookup table",
+          "description": "Template for merge instructions for duplicate key-value pairs (leaf values only). Placeholders: {filePath}, {key}, {value}, {occurrenceCount}, {locations}"
+        },
+        "jsonTools.duplicateKeys.mergeInstructionTemplates.valueGroup": {
+          "type": "string",
+          "default": "File: {filePath}\n\nMerge duplicated value \"{value}\" found at {occurrenceCount} locations:\n{locations}\n\nConsider refactoring to:\n- Replace with a reference to a shared value\n- Create a constants object\n- Use variable substitution",
+          "description": "Template for merge instructions for duplicate values. Placeholders: {filePath}, {value}, {occurrenceCount}, {locations}"
         }
       }
     }
@@ -240,5 +317,8 @@
   },
   "dependencies": {
     "jsonc-parser": "^3.3.1"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.5"
   }
 }

@@ -3,6 +3,7 @@ import { registerPathSearchCommand } from './features/pathSearch/pathSearchComma
 import { registerFindReferencesCommands } from './features/referenceFinder/referenceResultsProvider';
 import { registerJsonOutlineView } from './features/treeView/jsonOutlineProvider';
 import { registerOutlineSearchCommands } from './features/treeView/treeViewSearchController';
+import { registerDuplicateKeyView } from './features/duplicateKeys/duplicateKeyProvider';
 import { Logger } from './util/logger';
 
 let logger: Logger | undefined;
@@ -17,6 +18,7 @@ export function activate(context: vscode.ExtensionContext): void {
   registerOutlineSearchCommands(context, outlineProvider);
 
   registerFindReferencesCommands(context, logger);
+  registerDuplicateKeyView(context, logger);
 
   logger.info('JSON Tools extension activated.');
 }

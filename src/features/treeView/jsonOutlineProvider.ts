@@ -9,6 +9,7 @@ import {
   getChildOutlineNodes,
   hasChildren,
   JsonOutlineNode,
+  nodeMatchesFilter,
   outlineNodeKeyRange,
   outlineNodePathString,
   outlineNodeValueRange,
@@ -30,6 +31,7 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
   private rootOutlineNode: JsonOutlineNode | undefined;
   private documentUri: vscode.Uri | undefined;
   private filterText = '';
+  private treeView: vscode.TreeView<JsonOutlineNode> | undefined;
 
   /** Re-parses `document` and rebuilds the tree from scratch. Pass `undefined` to clear the view (e.g. non-JSON active editor). */
   setDocument(document: vscode.TextDocument | undefined): void {
@@ -55,15 +57,61 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
     return this.filterText;
   }
 
+  setTreeView(view: vscode.TreeView<JsonOutlineNode>): void {
+    this.treeView = view;
+  }
+
   getActiveDocumentUri(): vscode.Uri | undefined {
     return this.documentUri;
+  }
+
+  /**
+   * Finds the first node in the tree that directly matches the current filter text.
+   * Used for auto-revealing matched nodes when filtering.
+   */
+  findFirstMatchingNode(): JsonOutlineNode | undefined {
+    if (!this.rootOutlineNode || !this.filterText) {
+      return undefined;
+    }
+    return this.findFirstMatchingNodeRecursive(this.rootOutlineNode);
+  }
+
+  /**
+   * Reveals and expands the first matching node in the tree view.
+   */
+  revealFirstMatch(): void {
+    if (!this.treeView) {
+      return;
+    }
+    const firstMatch = this.findFirstMatchingNode();
+    if (firstMatch) {
+      this.treeView.reveal(firstMatch, { focus: false, select: false, expand: true });
+    }
+  }
+
+  private findFirstMatchingNodeRecursive(node: JsonOutlineNode): JsonOutlineNode | undefined {
+    if (nodeMatchesFilter(node, this.filterText)) {
+      return node;
+    }
+    for (const child of getChildOutlineNodes(node)) {
+      if (subtreeMatchesFilter(child, this.filterText)) {
+        const result = this.findFirstMatchingNodeRecursive(child);
+        if (result) {
+          return result;
+        }
+      }
+    }
+    return undefined;
   }
 
   getTreeItem(element: JsonOutlineNode): vscode.TreeItem {
     const { label, description } = describeOutlineNode(element);
     const item = new vscode.TreeItem(label, this.collapsibleStateFor(element));
     item.description = description;
-    item.id = `${outlineNodePathString(element) || '$root'}#${element.valueNode.offset}`;
+    // Append ':f' when filtering so VS Code treats filtered items as fresh tree
+    // nodes and respects the Expanded collapsibleState, rather than reusing the
+    // cached Collapsed state from the unfiltered render.
+    item.id = `${outlineNodePathString(element) || '$root'}#${element.valueNode.offset}${this.filterText ? ':f' : ''}`;
     item.contextValue = 'jsonTools.outlineNode';
     item.tooltip = outlineNodePathString(element) || undefined;
     item.command = {
@@ -114,6 +162,7 @@ export function registerJsonOutlineView(context: vscode.ExtensionContext): JsonO
     treeDataProvider: provider,
     showCollapseAll: true,
   });
+  provider.setTreeView(treeView);
 
   const refreshFromActiveEditor = () => provider.setDocument(vscode.window.activeTextEditor?.document);
   refreshFromActiveEditor();

@@ -1,0 +1,18 @@
+{
+  "user": {
+    "name": "John",
+    "status": "active"
+  },
+  "person": {
+    "name": "Jane",
+    "status": "active"
+  },
+  "config": {
+    "debug": true,
+    "theme": "dark"
+  },
+  "settings": {
+    "debug": true,
+    "timeout": 30
+  }
+}

@@ -17,15 +17,20 @@ export function registerOutlineSearchCommands(context: vscode.ExtensionContext, 
     inputBox.placeholder = 'Filter by key, index, value, or a dotted path like engines.vscode...';
     inputBox.value = provider.getFilterText();
 
-    const applyFilterDebounced = debounce((text: string) => provider.setFilterText(text), getOutlineDebounceMs());
+    const applyFilterDebounced = debounce((text: string) => {
+      provider.setFilterText(text);
+      provider.revealFirstMatch();
+    }, getOutlineDebounceMs());
 
     inputBox.onDidChangeValue((value) => applyFilterDebounced(value));
     inputBox.onDidAccept(() => {
       provider.setFilterText(inputBox.value);
+      provider.revealFirstMatch();
       inputBox.hide();
     });
     inputBox.onDidHide(() => {
       provider.setFilterText(inputBox.value);
+      provider.revealFirstMatch();
       inputBox.dispose();
     });
     inputBox.show();
