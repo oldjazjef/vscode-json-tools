@@ -43,8 +43,14 @@ jobs:
       - name: Run integration tests (headless via xvfb)
         run: xvfb-run -a npm run test:integration
 
+      - name: Update version in package.json from tag
+        run: |
+          TAG="${{ github.ref_name }}"
+          VERSION=${TAG#v}  # Remove 'v' prefix
+          node -e "const pkg = require('./package.json'); pkg.version = '$VERSION'; require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2) + '\n');"
+
       - name: Package extension
-        run: npx vsce package --no-git-tag-version --no-update-package-json
+        run: npx vsce package --no-git-tag-version
 
       - name: Generate a CycloneDX SBOM for the release
         run: npx cyclonedx-npm --output-file sbom.cdx.json
