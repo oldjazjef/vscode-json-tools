@@ -73,9 +73,15 @@ Press `F5` in VS Code to launch an Extension Development Host with the extension
 
 ## Releasing
 
-1. Bump `version` in `package.json` and add a dated entry to [CHANGELOG.md](CHANGELOG.md).
+1. Add a dated entry to [CHANGELOG.md](CHANGELOG.md) for the new version.
 2. Commit, then tag and push: `git tag v0.1.0 && git push origin v0.1.0`.
-3. The [Release workflow](.github/workflows/release.yml) runs the full test suite, packages a `.vsix`, and attaches it (plus a CycloneDX SBOM) to a new GitHub Release. If the `VSCE_PAT`/`OVSX_PAT` repository secrets are configured, it also publishes to the Visual Studio Marketplace / Open VSX.
+3. The [Release workflow](.github/workflows/release.yml) automatically:
+   - Extracts the version from the tag (e.g., `v0.1.0` → `0.1.0`)
+   - Updates `package.json` with the tag version
+   - Runs the full test suite
+   - Packages a `.vsix` file with the correct version
+   - Creates a GitHub Release with the `.vsix` and CycloneDX SBOM attached
+   - Optionally publishes to the Visual Studio Marketplace / Open VSX if `VSCE_PAT`/`OVSX_PAT` secrets are configured
 
 Setting up auto-publish (one-time, done outside this repo):
 
