@@ -58,7 +58,9 @@ jobs:
       - name: Create GitHub Release with the .vsix and SBOM attached
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create "${{ github.ref_name }}" ./*.vsix sbom.cdx.json --title "${{ github.ref_name }}" --generate-notes --clobber
+        run: |
+          gh release delete "${{ github.ref_name }}" --yes 2>/dev/null || true
+          gh release create "${{ github.ref_name }}" ./*.vsix sbom.cdx.json --title "${{ github.ref_name }}" --generate-notes
 
       - name: Publish to Visual Studio Marketplace
         if: env.VSCE_PAT != ''
