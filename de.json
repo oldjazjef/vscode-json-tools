@@ -1,0 +1,5891 @@
+{
+  "login": {
+    "panel": {
+      "headline": "Alles Wichtige zu Policen und Meldungen an einem Ort."
+    },
+    "title": "Melden Sie sich jetzt mit Ihrem Konto an.",
+    "subtitle": "Zugang für autorisierte Broker und Kunden",
+    "actions": {
+      "login": "Anmelden",
+      "requestLogin": "Login anfordern"
+    },
+    "noLogin": "Noch kein Login?"
+  },
+  "scopeSelector": {
+    "title": "Konto wählen",
+    "subtitle": "Sie haben Zugang zu mehreren Konten. Bitte wählen Sie, mit welchem Sie fortfahren möchten.",
+    "loading": "Laden",
+    "logout": "Abmelden",
+    "types": {
+      "organization": "Broker",
+      "customer": "Kunde"
+    }
+  },
+  "incidentComment": {
+    "send": "Senden",
+    "placeholder": "Kommentar erfassen",
+    "uploadButton": "Anhänge hinzufügen"
+  },
+  "etxSelect": {
+    "noData": "Keine Daten",
+    "itemsSelected": "{{count}} Elemente ausgewählt"
+  },
+  "tableHeaders": {
+    "number": "Nummer",
+    "name": "Name"
+  },
+  "etxToggleSlider": {
+    "on": "Ja",
+    "off": "Nein"
+  },
+
+  "paginator": {
+    "per_page": "Einträge pro Seite"
+  },
+  "forms": {
+    "generic": {
+      "filesToUpload": {
+        "label": "Dateien / Dokumente"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Nachricht eingeben"
+      },
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Vorname eingeben"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Nachname eingeben"
+      },
+      "street": {
+        "label": "Strasse",
+        "placeholder": "Strasse eingeben"
+      },
+      "zipCode": {
+        "label": "PLZ",
+        "placeholder": "PLZ eingeben"
+      },
+      "city": {
+        "label": "Ort",
+        "placeholder": "Ort eingeben"
+      },
+      "country": {
+        "label": "Land",
+        "placeholder": "Land eingeben"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "E-Mail eingeben"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Telefon eingeben"
+      },
+      "mobile": {
+        "label": "Mobil",
+        "placeholder": "Mobil eingeben"
+      },
+      "birthdate": {
+        "label": "Geburtsdatum",
+        "placeholder": "Geburtsdatum wählen"
+      },
+      "nationality": {
+        "label": "Nationalität",
+        "placeholder": "Nationalität eingeben"
+      },
+      "civilStatus": {
+        "label": "Zivilstand",
+        "placeholder": "Zivilstand wählen"
+      },
+      "sex": {
+        "label": "Geschlecht",
+        "placeholder": "Geschlecht wählen"
+      },
+      "language": {
+        "label": "Sprache",
+        "placeholder": "Sprache wählen"
+      },
+      "remarks": {
+        "label": "Bemerkungen",
+        "placeholder": "Bemerkungen eingeben"
+      },
+      "annualSalary": {
+        "label": "Jahreslohn",
+        "placeholder": "Jahreslohn eingeben"
+      },
+      "workload": {
+        "label": "Arbeitspensum",
+        "placeholder": "Arbeitspensum eingeben"
+      },
+      "pensionPlan": {
+        "label": "Vorsorgeplan",
+        "placeholder": "Vorsorgeplan wählen"
+      },
+      "entryDate": {
+        "label": "Eintrittsdatum",
+        "placeholder": "Datum wählen"
+      },
+      "damageDate": {
+        "label": "Schadensdatum",
+        "placeholder": "Datum wählen"
+      },
+      "damageDescription": {
+        "label": "Schadenshergang",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "damageAmount": {
+        "label": "Schätzung Schadenhöhe",
+        "placeholder": "Betrag eingeben"
+      },
+      "damageObject": {
+        "label": "Was wurde beschädigt",
+        "placeholder": "Schadensobjekt angeben"
+      }
+    },
+    "bvgExit": {
+      "employeeId": {
+        "label": "Mitarbeiter"
+      },
+      "exitDate": {
+        "label": "Austrittsdatum"
+      },
+      "fullyCapable": {
+        "label": "Ist die Person voll arbeitsfähig?*"
+      },
+      "dueToPensioning": {
+        "label": "Austritt auf Grund vob Pensionierung?*"
+      },
+      "dueToRestructuring": {
+        "label": "Austritt auf Grund von umstrukturierung?*"
+      },
+      "usageForInsurancePayment": {
+        "label": "Verwendung der Austrittsleistung",
+        "placeholder": "Verwendung wählen"
+      },
+      "incapabilityReason": {
+        "label": "Grund der Arbeitsunfähigkeit",
+        "placeholder": "Grund eingeben"
+      },
+      "newEmployer": {
+        "label": "Neuer Arbeitgeber",
+        "placeholder": "Neuen Arbeitgeber eingeben"
+      },
+      "newInsurer": {
+        "label": "Neue Pensionskasse",
+        "placeholder": "Neue Pensionskasse eingeben"
+      }
+    },
+    "externalPropertyDamage": {
+      "toggle": "Wurde fremdes Eigentum beschädigt?",
+      "baseInformation": {
+        "title": "Fremder Sachschaden",
+        "description": {
+          "label": "Beschreibung",
+          "placeholder": "Bitte Angaben zum hergang"
+        },
+        "amount": {
+          "label": "Gschätzter Betrag",
+          "placeholder": "Betrag des Schadens"
+        }
+      },
+      "additionalInfo": "Weitere Angaben",
+      "victim": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Name des Geschädigten"
+        },
+        "address": {
+          "label": "Addresse",
+          "placeholder": "Addresse des Gschädigten"
+        },
+        "licensePlate": {
+          "label": "Kennzeichen",
+          "placeholder": "Kennzeichen des Geschädigten"
+        }
+      },
+      "notes": {
+        "label": "Notizen",
+        "placeholder": "Weitere Informationen..."
+      }
+    },
+    "financialLoss": {
+      "date": {
+        "label": "Schadensdatum",
+        "placeholder": "Datum wählen"
+      },
+      "incidentDescription": {
+        "label": "Schadenshergang",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "financialLossDescription": {
+        "label": "Welche Vermögens-Schäden haben Sie erlitten?",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "damageValue": {
+        "label": "Schätzung Schadenhöhe",
+        "placeholder": "Betrag eingeben"
+      }
+    },
+    "building-damage": {
+      "administrationContact": {
+        "label": "Kontaktdaten Verwaltung",
+        "placeholder": "Kontaktdaten eingeben"
+      },
+      "thirdPartyFault": {
+        "label": "Verschulden von Dritten"
+      },
+      "thirdPartyFaultDetails": {
+        "label": "Kontaktdaten Schuldiger",
+        "placeholder": "Kontaktdaten eingeben"
+      },
+      "thirdPartyVictim": {
+        "label": "Schaden gegenüber Dritten"
+      },
+      "thirdPartyVictimDetails": {
+        "label": "Kontaktdaten Geschädigter",
+        "placeholder": "Kontaktdaten eingeben"
+      },
+      "victim": {
+        "label": "Geschädigter",
+        "placeholder": "Kontaktdaten eingeben"
+      }
+    },
+    "locationData": {
+      "title": "Ort und Zeit des Unfallhergangs",
+      "date": {
+        "label": "Datum",
+        "placeholder": "Datum des Vorfalls"
+      },
+      "time": {
+        "label": "Zeit",
+        "placeholder": "Zeit des Vorfalls"
+      }
+    },
+    "personDamageData": {
+      "personalInjuryHappened": {
+        "label": "Sind Personen zu Schaden gekommen?"
+      },
+      "victimName": {
+        "label": "Name",
+        "placeholder": "Namen eingeben"
+      },
+      "victimAddress": {
+        "label": "Adresse",
+        "placeholder": "Adresse eingeben"
+      },
+      "injuryDescription": {
+        "label": "Art der Verletzung",
+        "placeholder": "Art eingeben"
+      },
+      "medicalPersonal": {
+        "label": "Arzt / Spital",
+        "placeholder": "Spital eingeben"
+      }
+    },
+    "damageData": {
+      "taskDescription": {
+        "label": "Wie lautet der genaue Auftrag",
+        "placeholder": "Auftrag eingeben"
+      },
+      "party1": {
+        "label": "1. Geschädigte Partei",
+        "placeholder": "Name eingeben"
+      },
+      "party2": {
+        "label": "2. Geschädigte Partei",
+        "placeholder": "Name eingeben"
+      },
+      "party3": {
+        "label": "3. Geschädigte Partei",
+        "placeholder": "Name eingeben"
+      },
+      "damageDate": {
+        "label": "Schadendatum",
+        "placeholder": "Datum wählen"
+      },
+      "damageDescription": {
+        "label": "Schadenhergang",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "damagedItems": {
+        "label": "Was wurde beschädigt",
+        "placeholder": "Gegenstände angeben"
+      },
+      "consequentialDamages": {
+        "label": "Folgeschäden",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "inspectionRequested": {
+        "label": "Besichtigung gewünscht"
+      }
+    },
+    "policeData": {
+      "policeReportCreated": {
+        "label": "Wurde ein Polizeireport erstellt?"
+      },
+      "responsiblePolice": {
+        "label": "Polizeiposten und zuständige Person",
+        "placeholder": "Station und Person eingeben"
+      }
+    },
+    "bvgPersonData": {
+      "birthdate": "Geburtsdatum",
+      "driversLicenseDate": "Führerscheindatum",
+      "sex": "Geschlecht",
+      "language": "Sprache",
+      "nationality": "Nationalität",
+      "civilStatus": "Zivilstand",
+      "marriageDate": "Heiratsdatum",
+      "childSupport": "Unterhaltspflichtige Kinder"
+    },
+    "bvgPersonAndDateData": {
+      "employeeId": "Mitarbeiter ID",
+      "exitDate": "Austrittsdatum"
+    },
+    "vehicleForeignPropertyDamage": {
+      "description": "Beschreibung",
+      "amount": "Betrag",
+      "victimName": "Geschädigter Name",
+      "victimAdress": "Geschädigter Adresse",
+      "victimVehicleNr": "Kennzeichen des Geschädigten",
+      "additionalNotes": "Zusätzliche Notizen"
+    },
+    "vehiclePersonDamage": {
+      "description": "Beschreibung",
+      "amount": "Betrag",
+      "victimName": "Geschädigter Name",
+      "victimAdress": "Geschädigter Adresse",
+      "additionalNotes": "Zusätzliche Notizen"
+    },
+    "vehicleDamageRepair": {
+      "repairContractor": "Reparaturwerkstatt",
+      "street": "Strasse",
+      "zipCode": "PLZ",
+      "city": "Ort"
+    },
+    "incidentDocumentsData": {
+      "filesToUpload": "Dateien"
+    },
+    "incidentBrokerData": {
+      "policeNumber": "Policennummer",
+      "damageAmount": "Schadenshöhe",
+      "deductible": "Selbstbehalt"
+    },
+    "bvgEntryPersonData": {
+      "birthdate": "Geburtsdatum",
+      "driversLicenseDate": "Datum Führerausweis",
+      "sex": "Geschlecht",
+      "language": "Sprache",
+      "nationality": "Nationalität",
+      "civilStatus": "Zivilstand",
+      "marriageDate": "Datum Hochzeit",
+      "childSupport": "Kinderzulagen"
+    },
+    "bvgHealthData": {
+      "receivesSocialSupport": "Sozialleistungen"
+    },
+    "bvgMutationBaseData": {
+      "mutationFromDate": "Datum Mutation",
+      "employeeId": "Mitarbeiter ID",
+      "employeeTitle": "Anrede",
+      "employeeStreet": "Strasse",
+      "employeeZipCode": "Postleitzahl",
+      "employeeCity": "Ort",
+      "employeeCountry": "Land",
+      "employeeSex": "Geschlecht",
+      "employeeCivilStatus": "Zivilstand",
+      "employeeMobile": "Handynummer",
+      "employeeEmail": "E-Mail",
+      "annualSalary": "Jahreslohn",
+      "workload": "Beschäftigungsgrad",
+      "pensionPlan": "Vorsorgeplan",
+      "newTitle": "Neue Anrede",
+      "newCountry": "Neues Land",
+      "newSex": "Neues Geschlecht"
+    },
+    "deklarationBaseData": {
+      "remarks": "Bemerkungen"
+    },
+    "healthConfirmationData": {
+      "allFullyCapable": "Alle Personen voll arbeitsfähig",
+      "notFullyCapableWho": "Falls nein, wer?",
+      "receivesSocialBenefits": "Bezieht Sozialleistungen",
+      "socialBenefitsWho": "Falls ja, wer?",
+      "remarks": "Bemerkungen"
+    },
+    "bvgEmploymentChangesData": {
+      "newAnnualSalary": "Neuer Jahreslohn",
+      "newWorkload": "Neuer Beschäftigungsgrad",
+      "newPensionPlan": "Neuer Vorsorgeplan"
+    },
+    "bvgMutationChangesData": {
+      "newCivilStatus": "Neuer Zivilstand",
+      "newCivilStatusDate": "Datum Zivilstandsänderung",
+      "newFirstName": "Neuer Vorname",
+      "newLastName": "Neuer Nachname",
+      "newStreet": "Neue Strasse",
+      "newStreetNumber": "Neue Hausnummer",
+      "newZipCode": "Neue PLZ",
+      "newCity": "Neue Stadt",
+      "newMobile": "Neue Handynummer",
+      "newEmail": "Neue E-Mail"
+    },
+    "pickUpData": {
+      "pickupWhenType": "Abholungszeitpunkt",
+      "pickupDate": "Abholungsdatum",
+      "remarksPickup": "Bemerkung Abholung"
+    },
+    "coverageData": {
+      "liability": "Haftpflicht",
+      "coverageTeilkasko": "TeilKasko",
+      "coverageVollkasko": "Vollkasko",
+      "coverageParkschaden": "Parkschaden",
+      "coverageAssistance": "Assistenz",
+      "coverageUnclear": "Noch unklar",
+      "remarksCoverage": "Bemerkung Haftpflicht"
+    },
+    "vehicle-deregistration": {
+      "licensePlateId": {
+        "label": "Kontrolschild",
+        "placeholder": "Schild wählen"
+      },
+      "validFrom": {
+        "label": "Abmeldung per",
+        "placeholder": "Datum wählen"
+      },
+      "deregisteredAtOffice": {
+        "label": "Fahrzeug wurde bereits auf dem Strassenverkehrsamt deponiert"
+      },
+      "placedAtOffice": {
+        "label": "Schild wurde auf dem Strassenverkehrsamt deponiert"
+      },
+      "policyShouldBeCancelled": {
+        "label": "Police soll aufgehoben werden"
+      }
+    },
+    "personDamage": {
+      "toggle": "Wurden Personen verletzt?",
+      "title": "Personenschaden",
+      "description": {
+        "label": "Beschreibung",
+        "placeholder": "Angaben zum Hergang..."
+      },
+      "amount": {
+        "label": "Betrag",
+        "placeholder": "Betrag des Schadens..."
+      },
+      "victimName": "Geschädigter",
+      "additionalNotes": "Bemerkungen",
+      "baseInformation": {
+        "title": "Personenschaden",
+        "description": {
+          "label": "Beschreibung",
+          "placeholder": "Art der Verletzung..."
+        },
+        "amount": {
+          "label": "Schadenssumme",
+          "placeholder": "Voraussichtliche Kosten..."
+        }
+      },
+      "additionalInfo": "Weitere Angaben",
+      "victim": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Name des Geschädigten"
+        },
+        "address": {
+          "label": "Addresse",
+          "placeholder": "Addresse des Gschädigten"
+        }
+      },
+      "notes": {
+        "label": "Notizen",
+        "placeholder": "Weitere Informationen..."
+      }
+    },
+    "deregistrationData": {
+      "licensePlateId": "Kontrollschild",
+      "validFrom": "Abmeldung per",
+      "deregisteredAtOffice": "Bei Strassenverkehrsamt abgemeldet",
+      "placedAtOffice": "Schuld bei Amt deponiert",
+      "policyShouldBeCancelled": "Policy aufheben"
+    },
+    "newDriverData": {
+      "title": "Fahrer erfassen",
+      "licenseDate": {
+        "label": "Datum Führerausweis",
+        "placeholder": ""
+      },
+      "liability": {
+        "label": "Schuld",
+        "placeholder": ""
+      }
+    },
+    "timeAndPlace": {
+      "date": "Datum",
+      "place": "Ort",
+      "time": "Zeit"
+    },
+    "policeInfo": {
+      "policePersonal": "Polizeibeamter",
+      "policeStation": "Polizeistelle",
+      "remarks": "Notizen"
+    },
+    "ownPropertyDamage": {
+      "baseInformation": {
+        "title": "Schaden am eigenen Fahrzeug"
+      },
+      "toggle": "Müssen Sie einen Schaden melden?",
+      "description": {
+        "label": "Beschreibung",
+        "placeholder": "Angaben zum Hergang..."
+      },
+      "amount": {
+        "label": "Betrag",
+        "placeholder": "Betrag des Schadens..."
+      },
+      "additionalInfo": "Weitere Angaben",
+      "licensePlate": {
+        "label": "Kennzeichen",
+        "placeholder": "Kennzeichen des Geschädigten"
+      },
+      "vehicle": "Fahrzeug"
+    },
+    "damageDriver": {
+      "driver": "Fahrer",
+      "liability": "Schuld"
+    },
+    "damageRepair": {
+      "repairContractor": "Reparierer"
+    },
+    "employmentChangesData": {
+      "newAnnualSalary": {
+        "label": "neues Jahreseinkommen",
+        "placeholder": "Betrag eingeben"
+      },
+      "newWorkload": {
+        "label": "neues Arbeitspensum",
+        "placeholder": "Pensum eingeben"
+      },
+      "newPensionPlan": "neuer Vorsorgeplan"
+    },
+    "bvgMutation": {
+      "mutationFromDate": {
+        "placeholder": "Datum wählen"
+      },
+      "newTitle": {
+        "label": "Neue Anrede",
+        "placeholder": "Anrede angeben"
+      },
+      "ahvNumber": {
+        "label": "AHV-Nummer",
+        "placeholder": "AHV-Nummer eingeben"
+      },
+      "childSupport": {
+        "label": "Unterhaltspflichtig",
+        "placeholder": "Unterhaltspflicht eingeben"
+      },
+      "staffNumber": {
+        "label": "Personal-Nummer",
+        "placeholder": "Personal-Nummer eingeben"
+      },
+      "fullTimeAble": {
+        "label": "Sind Sie voll arbeitsfähig",
+        "placeholder": "Arbeitsfähigkeit eingeben"
+      },
+      "notFullTimeReason": {
+        "label": "Wenn nein, warum?",
+        "placeholder": "Grund eingeben"
+      },
+      "handicap": {
+        "label": "Invaliditätsgrad in %",
+        "placeholder": "Invaliditätsgrad eingeben"
+      },
+      "amountCHF": {
+        "label": "Betrag in CHF",
+        "placeholder": "Betrag eingeben"
+      },
+      "marriageDate": {
+        "label": "Heiratsdatum",
+        "placeholder": "Heiratsdatum eingeben"
+      },
+      "driversLicenseDate": {
+        "label": "Datum Führerschein",
+        "placeholder": "Datum Führerschein eingeben"
+      },
+      "socialSupport": {
+        "label": "Beziehen Sie Leistungen gemäss Eidg. IV, MVG, UVG, BVG, einer ausländischen Sozialversicherung oder einer anderen Versicherung, oder haben Sie Leistungen beantragt?"
+      },
+      "socialSupportSource": {
+        "label": "Wenn ja, von wem?",
+        "placeholder": "Quelle angeben"
+      },
+      "newFirstName": {
+        "label": "Neuer Vorname",
+        "placeholder": "Vornamen eingeben"
+      },
+      "newLastName": {
+        "label": "Neuer Nachname",
+        "placeholder": "Nachnamen eingeben"
+      },
+      "newStreet": {
+        "label": "Neue Strasse",
+        "placeholder": "Strasse eingeben"
+      },
+      "newZipCode": {
+        "label": "Neue Postleitzahl",
+        "placeholder": "Postleitzahl eingeben"
+      },
+      "newCity": {
+        "label": "Neuer Ort",
+        "placeholder": "Ort eingeben"
+      },
+      "newCountry": {
+        "label": "Neues Land",
+        "placeholder": "Land eingeben"
+      },
+      "newSex": {
+        "label": "Neues Geschlecht",
+        "placeholder": "Geschlecht eingeben"
+      },
+      "newCivilStatus": {
+        "label": "Neuen Zivilstand",
+        "placeholder": "Zivilstand eingeben"
+      },
+      "newMobile": {
+        "label": "Neue Mobilnummer",
+        "placeholder": "Mobilnummer eingeben"
+      },
+      "newEmail": {
+        "label": "Neue Email",
+        "placeholder": "Email eingeben"
+      }
+    },
+    "mutationBaseData": {
+      "mutationFromDate": "Gülig ab",
+      "asset": "Asset",
+      "employee": "Mitarbeiter",
+      "employeeId": "Mitarbeiter ID",
+      "employeeTitle": "Titel",
+      "employeeFirstName": "Vorname",
+      "employeeLastName": "Nachname",
+      "employeeStreet": "Strasse",
+      "employeeZipCode": "Postleitzahl",
+      "employeeCity": "Ort",
+      "employeeCountry": "Land",
+      "employeeSex": "Geschlecht",
+      "employeeCivilStatus": "Zivilstand",
+      "employeeMobile": "Mobil",
+      "employeeEmail": "Email",
+      "annualSalary": "Jahreseinkommen",
+      "workload": "Arbeitspensum",
+      "pensionPlan": "Vorsorge-Plan"
+    },
+    "mutationChangesData": {
+      "wasChanged": "wasChanged",
+      "newTitle": "neuer Titel",
+      "newFirstName": "neuer Vorname",
+      "newLastName": "neuer Nachname",
+      "newStreet": "neue Strasse",
+      "newZipCode": "neue Postleitzahl",
+      "newCity": "neue Stadt",
+      "newCountry": "neues Land",
+      "newSex": "neues Geschlecht",
+      "newCivilStatus": "neuer Zivilstand",
+      "newMobile": "neue Mobilnummer",
+      "newEmail": "neue Email"
+    },
+    "personAndDateData": {
+      "employeeId": "Mitarbeiter ID",
+      "employeeFirstName": "Mitarbeiter Vorname",
+      "employeeLastName": "Mitarbeiter Nachname",
+      "exitDate": "Mitarbeiter Autrittsdatum"
+    },
+    "exitDetailsData": {
+      "dueToWorkIncapable": "Austritt auf Grund von Arbeitsunfähigkeit",
+      "incapabilityReason": "Grund der Arbeitsunfähigkeit",
+      "dueToPensioning": "Austritt auf Grund vob Pensionierung",
+      "dueToRestructuring": "Austritt auf Grund von umstrukturierung"
+    },
+    "vehicle-registration": {
+      "vehicleType": {
+        "label": "Welches Fahrzeug möchten Sie einlösen?",
+        "placeholder": "Fahrzeugart",
+        "options": {
+          "passengerCar": "Personenwagen",
+          "van": "Lieferwagen",
+          "truck": "Lastwagen",
+          "motorcycle": "Motorrad",
+          "motorhome": "Wohnmobil",
+          "caravan": "Wohnwagen",
+          "trailer": "Anhänger",
+          "boat": "Boot",
+          "aircraft": "Flugzeug"
+        }
+      },
+      "plateBindingType": {
+        "label": "Auf welches Schild soll das neue Fahrzeug eingelöst werden:",
+        "placeholder": "Kontrollschild",
+        "options": {
+          "replacedVehicle": "Ersetzt Fahrzeug",
+          "newVehiclePlate": "Neues Wechselschild mit Fahrzeug",
+          "newPlateOnly": "Neues Kontrollschild",
+          "unknown": "Noch unklar"
+        }
+      },
+      "replacedVehicle": {
+        "label": "Ersetzt Fahrzeug"
+      },
+      "registrationDate": {
+        "label": "Wann soll die Einlösung des Fahrzeuges erfolgen?",
+        "placeholder": "Einlösedatum wählen"
+      },
+      "coverageType": {
+        "label": "Welche Deckungen soll offeriert werden?",
+        "placeholder": "Deckung wählen",
+        "options": {
+          "liability": "Haftpflicht",
+          "partialCoverage": "Teilkasko",
+          "fullCoverage": "Vollkasko",
+          "parkingDamage": "Parkschaden",
+          "assistance": "Assistance",
+          "unknown": "noch unklar"
+        }
+      },
+      "mostFrequentDriverId": {
+        "label": "Häufigster Lenker",
+        "placeholder": "Lenker wählen"
+      },
+      "remarks": {
+        "label": "Bemerkungen",
+        "placeholder": "Bemerkungen eingeben"
+      }
+    },
+    "registrationData": {
+      "vehicleType": "Fahrzeugtyp",
+      "plateBindingType": "Anmeldung",
+      "registrationDate": "Anmeldedatum",
+      "coverageType": "Deckung",
+      "mostFrequentDriverId": "Häufigster Lenker",
+      "remarks": "Bemerkungen"
+    },
+    "personData": {
+      "ahvNumber": "AHV-Nummer",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "birthdate": "Geburtstag",
+      "civilStatus": "Zivilstand",
+      "marriageDate": "Heirats Datum",
+      "nationality": "Nationalität",
+      "driversLicenseDate": "Datum Führerschein"
+    },
+    "contactData": {
+      "street": "Strasse",
+      "zipCode": "Postleitzahl",
+      "city": "Stadt",
+      "country": "Land",
+      "newEmployer": "Neuer Arbeitgeber",
+      "newInsurer": "Neuer Versicherer"
+    },
+    "contactDetailData": {
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "email": "Email"
+    },
+    "employmentData": {
+      "annualSalary": "Jahreseinkommen",
+      "workload": "Arbeitspensum",
+      "entryDate": "Einstiegs-Datum",
+      "pensionPlan": "Vorsorge-Plan",
+      "socialSupport": "Leistungen IV",
+      "socialSupportSource": "Quelle der Leistungen"
+    },
+    "sunet": {
+      "employee": {
+        "label": "Mitarbeiter:in"
+      },
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Vorname eingeben"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Nachname eingeben"
+      },
+      "ahvNumber": {
+        "label": "AHV-Nummer",
+        "placeholder": "756.XXXX.XXXX.XX"
+      },
+      "birthdate": {
+        "label": "Geburtsdatum",
+        "placeholder": "Geburtsdatum wählen"
+      },
+      "sex": {
+        "label": "Geschlecht",
+        "placeholder": "Geschlecht wählen"
+      },
+      "maritalStatus": {
+        "label": "Zivilstand",
+        "placeholder": "Zivilstand wählen"
+      },
+      "language": {
+        "label": "Sprache",
+        "placeholder": "Sprache wählen"
+      },
+      "nationality": {
+        "label": "Nationalität",
+        "placeholder": "Nationalität eingeben"
+      },
+      "address": {
+        "label": "Adresse",
+        "placeholder": "Strasse und Hausnummer"
+      },
+      "plz": {
+        "label": "PLZ",
+        "placeholder": "Postleitzahl"
+      },
+      "city": {
+        "label": "Ort",
+        "placeholder": "Ort eingeben"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "Telefonnummer eingeben"
+      },
+      "mobilePhone": {
+        "label": "Mobiltelefon",
+        "placeholder": "Mobilnummer eingeben"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "E-Mail-Adresse eingeben"
+      },
+      "numberOfChildren": {
+        "label": "Anzahl Kinder",
+        "placeholder": "Anzahl eingeben"
+      },
+      "withholdingTax": {
+        "label": "Quellensteuer"
+      },
+      "dateOfEmployment": {
+        "label": "Eintrittsdatum",
+        "placeholder": "Datum wählen"
+      },
+      "profession": {
+        "label": "Beruf",
+        "placeholder": "Beruf eingeben"
+      },
+      "professionalPosition": {
+        "label": "Berufliche Stellung",
+        "placeholder": "Berufliche Stellung wählen"
+      },
+      "workingHoursPerWeek": {
+        "label": "Arbeitsstunden pro Woche",
+        "placeholder": "Stunden eingeben"
+      },
+      "workingDaysPerWeek": {
+        "label": "Arbeitstage pro Woche",
+        "placeholder": "Tage eingeben"
+      },
+      "levelOfEmployment": {
+        "label": "Beschäftigungsgrad",
+        "placeholder": "Beschäftigungsgrad eingeben"
+      },
+      "workingFrequency": {
+        "label": "Arbeitshäufigkeit",
+        "placeholder": "Arbeitshäufigkeit wählen"
+      },
+      "usualWorkingPlace": {
+        "label": "Üblicher Arbeitsort",
+        "placeholder": "Arbeitsort eingeben"
+      },
+      "employmentContractStatus": {
+        "label": "Arbeitsvertragsstatus",
+        "placeholder": "Status wählen"
+      },
+      "employmentContractTerminatedDate": {
+        "label": "Kündigungsdatum",
+        "placeholder": "Datum wählen"
+      },
+      "stoppedWorkingDate": {
+        "label": "Arbeitsunterbruch ab",
+        "placeholder": "Datum wählen"
+      },
+      "stoppedWorkingTime": {
+        "label": "Arbeitsunterbruch Zeit",
+        "placeholder": "Zeit wählen"
+      },
+      "resumedWorkDate": {
+        "label": "Wiederaufnahme der Arbeit",
+        "placeholder": "Datum wählen"
+      },
+      "resumedWorkPercentage": {
+        "label": "Wiederaufnahme Arbeitspensum",
+        "placeholder": "Prozent eingeben"
+      },
+      "basicSalaryType": {
+        "label": "Lohnart",
+        "placeholder": "Lohnart wählen"
+      },
+      "basicSalaryAmount": {
+        "label": "Grundlohn",
+        "placeholder": "Betrag eingeben"
+      },
+      "childAndFamilyBenefitsAmount": {
+        "label": "Kinder- und Familienzulagen",
+        "placeholder": "Betrag eingeben"
+      },
+      "vacationCompensationTotalAmount": {
+        "label": "Ferienentschädigung Total",
+        "placeholder": "Betrag eingeben"
+      },
+      "otherSupplementsAmount": {
+        "label": "Andere Zulagen Betrag",
+        "placeholder": "Betrag eingeben"
+      },
+      "otherSupplementsDescription": {
+        "label": "Andere Zulagen Beschreibung",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "gratuityAmount": {
+        "label": "Gratifikation",
+        "placeholder": "Betrag eingeben"
+      },
+      "accountHolder": {
+        "label": "Kontoinhaber",
+        "placeholder": "Name des Kontoinhabers"
+      },
+      "paymentMethod": {
+        "label": "Zahlungsmethode",
+        "placeholder": "Zahlungsmethode wählen",
+        "options": {
+          "iban": "IBAN",
+          "postal": "Postkonto"
+        }
+      },
+      "iban": {
+        "label": "IBAN",
+        "placeholder": "IBAN eingeben"
+      },
+      "postalAccountNumber": {
+        "label": "Postkontonummer",
+        "placeholder": "Postkontonummer eingeben"
+      },
+      "ktg": {
+        "incidentType": {
+          "label": "Was möchten Sie melden?",
+          "maternity": "Geburtenmeldung",
+          "illness": "Krankheit"
+        },
+        "illnessDate": {
+          "label": "Krankheitsbeginn",
+          "description": "Wann hat die Krankheit begonnen?"
+        },
+        "illnessDescription": {
+          "label": "Beschreibung der Krankheit",
+          "placeholder": "Beschreibung der Krankheit eingeben"
+        },
+        "predictedDuration": {
+          "label": "Voraussichtliche Dauer der Arbeitsunfähigkeit",
+          "placeholder": "Dauer eingeben"
+        }
+      }
+    },
+    "uvg": {
+      "accidentCategory": {
+        "label": "Unfallkategorie",
+        "placeholder": "Unfallkategorie auswählen"
+      },
+      "accidentDate": {
+        "label": "Unfalldatum",
+        "placeholder": "Unfalldatum auswählen"
+      },
+      "accidentTime": {
+        "label": "Unfallzeit",
+        "placeholder": "Unfallzeit eingeben"
+      },
+      "placeOfAccident": {
+        "label": "Unfallort",
+        "placeholder": "Unfallort eingeben"
+      },
+      "sceneOfAccident": {
+        "label": "Unfallhergang",
+        "placeholder": "Unfallhergang eingeben"
+      },
+      "descriptionOfAccident": {
+        "label": "Beschreibung des Unfalls",
+        "placeholder": "Beschreibung des Unfalls eingeben"
+      },
+      "policeReportExists": {
+        "label": "Polizeirapport vorhanden",
+        "placeholder": "Auswählen"
+      },
+      "involvedPersons": {
+        "label": "Beteiligte Personen",
+        "placeholder": "Beteiligte Personen eingeben"
+      },
+      "relapse": {
+        "label": "Rückfall"
+      },
+      "relapseDate": {
+        "label": "Datum des Rückfalls",
+        "placeholder": "Datum auswählen"
+      },
+      "BUinvolvedObjects": {
+        "label": "Bei BU beteiligte Objekte",
+        "placeholder": "Objekte eingeben"
+      },
+      "lastWorkingDayDate": {
+        "label": "Letzter Arbeitstag (Datum)",
+        "placeholder": "Datum auswählen"
+      },
+      "lastWorkingDayTime": {
+        "label": "Letzter Arbeitstag (Zeit)",
+        "placeholder": "Zeit eingeben"
+      },
+      "reasonForAbsence": {
+        "label": "Grund der Abwesenheit",
+        "placeholder": "Grund eingeben"
+      },
+      "activityAtTimeOfAccident": {
+        "label": "Tätigkeit zum Unfallzeitpunkt",
+        "placeholder": "Tätigkeit auswählen"
+      },
+      "injury1BodyPart": {
+        "label": "Verletzung 1: Körperteil"
+      },
+      "injury2BodyPart": {
+        "label": "Verletzung 2: Körperteil"
+      },
+      "injury3BodyPart": {
+        "label": "Verletzung 3: Körperteil"
+      },
+      "injury1Type": {
+        "label": "Verletzung 1: Art"
+      },
+      "injury2Type": {
+        "label": "Verletzung 2: Art"
+      },
+      "injury3Type": {
+        "label": "Verletzung 3: Art"
+      },
+      "injuredBodyPart": {
+        "placeholder": "Körperteil auswählen"
+      },
+      "typeOfInjury": {
+        "placeholder": "Verletzungsart auswählen"
+      },
+      "injuryTypeDescription": {
+        "label": "Beschreibung der Verletzungsart",
+        "placeholder": "Beschreibung eingeben"
+      },
+      "initialTreatmentName": {
+        "label": "Erstbehandlung: Name",
+        "placeholder": "Name eingeben"
+      },
+      "initialTreatmentAddress": {
+        "label": "Erstbehandlung: Adresse",
+        "placeholder": "Adresse eingeben"
+      },
+      "initialTreatmentPlz": {
+        "label": "Erstbehandlung: PLZ",
+        "placeholder": "PLZ eingeben"
+      },
+      "initialTreatmentCity": {
+        "label": "Erstbehandlung: Ort",
+        "placeholder": "Ort eingeben"
+      }
+    }
+  },
+  "fileUploader": {
+    "save": "Speichern",
+    "upload": "Hochladen",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "uploading": "Hochladen...",
+    "uploadFailed": "Hochladen fehlgeschlagen",
+    "uploadSuccess": "Hochladen erfolgreich"
+  },
+  "customerForm": {
+    "labels": {
+      "noResults": "Keine Kunden gefunden"
+    }
+  },
+  "addressForm": {
+    "labels": {
+      "noResults": "Keine Adressen gefunden"
+    }
+  },
+  "forgotPassword": {
+    "title": "Passwort vergessen?",
+    "requestSubmittedMessage": "Eine E-Mail zum Zurücksetzen des Passworts wurde an Ihre E-Mail-Adresse gesendet.",
+    "requestFailedMessage": "Es konnten keine E-Mail zum Zurücksetzen des Passworts gesendet werden. Bitte überprüfen Sie Ihre E-Mail-Adresse.",
+    "labels": {
+      "email": "Ihre E-Mail"
+    },
+    "actions": {
+      "submit": "absenden",
+      "toLogin": "Zurück zum Login"
+    }
+  },
+  "resetPassword": {
+    "title": "Passwort zurücksetzen",
+    "requestSubmittedMessage": "Ihr Passwort wurde erfolgreich zurückgesetzt.",
+    "requestFailedMessage": "Das Zurücksetzen des Passworts ist fehlgeschlagen. Bitte prüfe die Gültigkeit des Links.",
+    "labels": {
+      "password": "Ihr neues Passwort",
+      "passwordMatch": "Passwort bestätigen"
+    },
+    "actions": {
+      "submit": "absenden",
+      "toLogin": "Zurück zum Login"
+    }
+  },
+  "stepper": {
+    "next": "Weiter",
+    "nextDisabledTooltip": "Füllen Sie alle fehlenden Felder aus, um fortzufahren",
+    "previous": "Zurück",
+    "complete": "Übermitteln",
+    "skip": "Überspringen",
+    "saveDraft": "Entwurf speichern",
+    "invalid": "Einige Schritte müssen noch korrigiert werden!",
+    "information": {
+      "title": "Information"
+    },
+    "summary": {
+      "name": "Kategorie wählen"
+    },
+    "steps": {
+      "documentsFormData": {
+        "title": "Dokumente",
+        "reportInfo": "Dokumente"
+      },
+      "changeData": {
+        "title": "Änderung",
+        "reportInfo": "Änderung"
+      },
+      "remarksData": {
+        "title": "Bemerkungen und Dokumente",
+        "reportInfo": "Bemerkungen"
+      },
+      "remarks": {
+        "title": "Bemerkungen und Dokumente",
+        "reportInfo": "Bemerkungen"
+      },
+      "selectType": {
+        "title": "Für wen oder was möchten sie eine Meldung erfassen?"
+      },
+      "selectForm": {
+        "title": "Was möchten sie melden?"
+      },
+      "categorySelect": {
+        "title": "Für wen oder was möchten sie eine Meldung erfassen?"
+      },
+      "supportData": {
+        "title": "Angaben Sozialleistungen",
+        "reportInfo": "Sozialleistungen"
+      },
+      "damageData": {
+        "title": "Schadensangaben",
+        "reportInfo": "Angaben Schaden"
+      },
+      "deregistrationData": {
+        "title": "Fahrzeug Abmeldung",
+        "reportInfo": "Fahrzeug Abmeldung"
+      },
+      "illnessData": {
+        "title": "Angaben zur Krankheit",
+        "reportInfo": "Angaben zur Krankheit"
+      },
+      "industrySelect": {
+        "title": "Um welchen Bereich geht es?"
+      },
+      "insuredPersonData": {
+        "title": "Versicherte Person",
+        "reportInfo": "Angaben zur versicherten Person"
+      },
+      "personDamageData": {
+        "title": "Personenschaden",
+        "reportInfo": "Angaben zum Personenschaden"
+      },
+      "policeData": {
+        "title": "Polizei-Involvierung",
+        "reportInfo": "Angaben zur Polizei"
+      },
+      "locationData": {
+        "title": "Ort der Schadensfeststellung",
+        "reportInfo": "Ortsdaten"
+      },
+      "typeSelect": {
+        "title": "Was möchten sie melden?"
+      },
+      "ownDamageForm": {
+        "title": "Eigener Schaden",
+        "toggle": "Hat ihr eigenes Fahrzeug Schaden erlitten?",
+        "reportInfo": "Eigener Fahrzeugschaden"
+      },
+      "foreignVehicleDamageForm": {
+        "title": "Fremder Schaden",
+        "toggle": "Hat eine Fremdfahrzeug Schaden erlitten?",
+        "reportInfo": "Fremder Fahrzeugschaden"
+      },
+      "personDamageForm": {
+        "title": "Personenschaden",
+        "toggle": "Hat eine Person Schaden erlitten?",
+        "reportInfo": "Personenschaden"
+      },
+      "timeAndPlaceDamageForm": {
+        "title": "Ort und Zeit",
+        "reportInfo": "Ort und Zeit des Schadens"
+      },
+      "driverDamageForm": {
+        "title": "Fahrer",
+        "reportInfo": "Angaben zum Fahrer"
+      },
+      "damageRepairForm": {
+        "title": "Reparatur",
+        "reportInfo": "Angaben zur Reparatur"
+      },
+      "damageRepair": {
+        "title": "Reparatur",
+        "reportInfo": "Angaben zur Reparatur"
+      },
+      "policeForm": {
+        "title": "Polizei",
+        "toggle": "Wurde die Polizei benachrichtigt?",
+        "reportInfo": "Angaben zur Polizei"
+      },
+      "summary": {
+        "title": "Zusammenfassung"
+      },
+      "link": {
+        "title": "Lieber Kunde, liebe Kundin"
+      },
+      "personAndDateData": {
+        "title": "Person & Datum",
+        "reportInfo": "Person & Datum Details"
+      },
+      "exitDetailsData": {
+        "title": "Austrittsdetails",
+        "reportInfo": "Austrittsdetails"
+      },
+      "employmentChangesData": {
+        "title": "Lohnänderungen",
+        "reportInfo": "Lohnänderungen"
+      },
+      "replacementData": {
+        "title": "Nachfolgedetails",
+        "reportInfo": "Nachfolge Daten"
+      },
+      "mutationBaseData": {
+        "title": "Aktuelle Daten",
+        "reportInfo": "Aktuelle Daten"
+      },
+      "mutationChangesData": {
+        "title": "Anpassungen",
+        "reportInfo": "Anpassungen"
+      },
+      "deklarationBaseData": {
+        "title": "Deklaration",
+        "reportInfo": "BVG Deklaration"
+      },
+      "healthConfirmationData": {
+        "title": "Gesundheitsbestätigung",
+        "reportInfo": "Gesundheitsbestätigung"
+      },
+      "financialLossData": {
+        "title": "Vermögensschaden",
+        "reportInfo": "Vermögensschaden"
+      },
+      "personData": {
+        "title": "Person",
+        "reportInfo": "Personendaten"
+      },
+      "entryBaseData": {
+        "title": "Basisdaten",
+        "reportInfo": "Basisdaten"
+      },
+      "contactData": {
+        "title": " Adresse",
+        "reportInfo": "Adressdaten"
+      },
+      "contactDetailData": {
+        "title": "Kontaktinformationen",
+        "reportInfo": "Kontaktdaten"
+      },
+      "involvementData": {
+        "title": "Involvierte Parteien",
+        "reportInfo": "Involvierte Parteien"
+      },
+      "employmentData": {
+        "title": "Anstellung",
+        "reportInfo": "Anstellungsdaten"
+      },
+      "pickUpData": {
+        "title": "Fahrzeug",
+        "reportInfo": "Fahrzeugdaten"
+      },
+      "coverageData": {
+        "title": "Versicherung",
+        "reportInfo": "Versicherungsdaten"
+      },
+      "registrationData": {
+        "title": "EintrittsDaten",
+        "reportInfo": "EintrittsDaten"
+      },
+      "salaryData": {
+        "title": "Lohn der versicherten Person",
+        "reportInfo": "Lohn der versicherten Person"
+      },
+      "paymentData": {
+        "title": "Bankverbindung",
+        "reportInfo": "Bankverbindung"
+      },
+      "injuryData": {
+        "title": "Verletzungsdaten",
+        "reportInfo": "Verletzungsdetails"
+      }
+    }
+  },
+  "global": {
+    "uploadDocument": "Dokument hochladen",
+    "year": "Jahr",
+    "years": "Jahre",
+    "yes": "Ja",
+    "no": "Nein",
+    "incident": "Meldung",
+    "step": "Schritt {{count}}",
+    "skipped": "Übersprungen",
+    "active": "Aktiv",
+    "all": "Alle",
+    "today": "Heute",
+    "send": "Übermitteln",
+    "user": "Benutzer",
+    "correct": "Korrigieren",
+    "complete": "Abschliessen",
+    "inactive": "Inaktiv",
+    "save": "Speichern",
+    "search": "Suche",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "update": "Aktualisieren",
+    "close": "Schliessen",
+    "loading": "Laden...",
+    "errorOccurred": "Ein Fehler ist aufgetreten.",
+    "success": "Erfolg",
+    "back": "Zurück",
+    "failed": "Fehlgeschlagen",
+    "other": "Anderes",
+    "reject": "Ablehnen",
+    "noData": "Keine Daten verfügbar",
+    "noEntries": "Keine Einträge gefunden",
+    "logoAlt": "Logo",
+    "selectPlaceholder": "Bitte wählen",
+    "remarks": "Bemerkungen",
+    "fileUpload": {
+      "dragDrop": "Dateien mit Drag & Drop hochladen",
+      "select": "oder auswählen",
+      "constraints": ".jpg / .png / .pdf (max. 12 MB)",
+      "uploadButton": "Anhänge hochladen",
+      "public": "Öffentlich",
+      "internal": "Intern"
+    }
+  },
+  "customers": {
+    "searchPlaceholder": "Kunde suchen ...",
+    "address": "Adresse",
+    "mainContact": "Hauptkontakt",
+    "overviewPage": {
+      "title": "Kunden",
+      "filters": {
+        "type": {
+          "label": "Typ",
+          "placeholder": "Typ auswählen"
+        },
+        "search": {
+          "label": "Suche",
+          "placeholder": "Kunden suchen"
+        }
+      },
+      "table": {
+        "headers": {
+          "name": "Name",
+          "customerNumber": "Kundennummer",
+          "type": "Typ",
+          "street": "Strasse",
+          "zip": "PLZ",
+          "city": "Ort",
+          "activePolicies": "Aktive Policen",
+          "numIncidents": "Meldungen",
+          "numPendencies": "Aufgaben",
+          "consultantName": "Zuständig"
+        }
+      }
+    },
+    "detailPage": {
+      "title": "Kunden - Details",
+      "noData": "Keine Daten verfügbar",
+      "form": {
+        "titles": {
+          "customer": "Kundendaten",
+          "address": "Adressdaten",
+          "contact": "Kontaktdaten",
+          "new-user": "Neuen Benutzer zuordnen",
+          "select-user": "Benutzer zuordnen"
+        },
+        "item": {
+          "street": {
+            "label": "Strasse",
+            "placeholder": "Strasse eingeben"
+          },
+          "zipCode": {
+            "label": "Postleitzahl",
+            "placeholder": "Postleitzahl eingeben"
+          },
+          "city": {
+            "label": "Stadt",
+            "placeholder": "Stadt eingeben"
+          },
+          "canton": {
+            "label": "Kanton",
+            "placeholder": "Kanton eingeben"
+          },
+          "country": {
+            "label": "Land",
+            "placeholder": "Land eingeben"
+          },
+          "name": {
+            "label": "Name",
+            "placeholder": "Kundennamen eingeben"
+          },
+          "firstName": {
+            "label": "Vorname",
+            "placeholder": "Vorname eingeben"
+          },
+          "lastName": {
+            "label": "Nachname",
+            "placeholder": "Nachname eingeben"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "Email eingeben"
+          },
+          "phone": {
+            "label": "Telefon",
+            "placeholder": "Telefon eingeben"
+          },
+          "contactType": {
+            "label": "Kontaktart",
+            "placeholder": "Kontaktart wählen"
+          },
+          "customerType": {
+            "label": "Kundenart",
+            "placeholder": "Kundenart wählen"
+          },
+          "customerNumber": {
+            "label": "Kundennummer",
+            "placeholder": "Kundennummer eingeben"
+          },
+          "mainContact": {
+            "label": "Hauptkontakt",
+            "placeholder": "Hauptkontakt auswählen"
+          },
+          "mainAddress": {
+            "label": "HauptAdresse",
+            "placeholder": "HauptAdresse auswählen"
+          },
+          "addressType": {
+            "label": "Adresstyp",
+            "placeholder": "Adresstyp auswählen"
+          }
+        }
+      },
+      "contactForm": {
+        "title": "Kontakt hinzufügen",
+        "sections": {
+          "details": "Details",
+          "settings": "Einstellungen"
+        },
+        "fields": {
+          "member": {
+            "label": "Mitglied",
+            "placeholder": "Auswählen"
+          },
+          "position": {
+            "label": "Funktion",
+            "placeholder": ""
+          }
+        }
+      },
+      "customerCard": {
+        "title": "Kunde"
+      },
+      "overviewBar": {
+        "activePolicies": "Aktive Policen",
+        "openIncidents": "Offene Meldungen",
+        "openPendencies": "Offene Aufgaben",
+        "members": "Versicherte"
+      },
+      "tabs": {
+        "contacts": "Kontakte",
+        "addresses": "Adressen & Standorte",
+        "documents": "Dokumente & Medien",
+        "users": "Benutzer"
+      },
+      "documents": {
+        "noDocuments": "Keine Dokumente vorhanden"
+      },
+      "tables": {
+        "users": {
+          "title": "Benutzer",
+          "headers": {
+            "firstName": "Vorname",
+            "lastName": "Nachname",
+            "email": "Email",
+            "role": "Rolle"
+          }
+        },
+        "addresses": {
+          "title": "Adressen",
+          "headers": {
+            "street": "Strasse",
+            "zipCode": "PLZ",
+            "city": "Ort",
+            "canton": "Kt.",
+            "country": "Land"
+          }
+        },
+        "contacts": {
+          "title": "Kontakte",
+          "headers": {
+            "name": "Name",
+            "email": "E-Mail",
+            "phone": "Telefon",
+            "type": "Typ"
+          }
+        }
+      }
+    },
+    "editSidebar": {
+      "title": "Kunde bearbeiten",
+      "tabs": {
+        "kunde": "Kunde",
+        "mandat": "Mandat",
+        "kommunikation": "Kommunikation",
+        "rechnungen": "Rechnungen & Buchhaltung",
+        "customer": "Kunde",
+        "mandate": "Mandat",
+        "communication": "Kommunikation",
+        "invoicing": "Rechnungen & Buchhaltung"
+      },
+      "kunde": {
+        "sections": {
+          "details": "Details",
+          "status": "Status"
+        },
+        "activationToggle": {
+          "statusActive": "Aktiv",
+          "statusInactive": "Inaktiv",
+          "activate": "Kunde aktivieren",
+          "deactivate": "Kunde deaktivieren"
+        },
+        "fields": {
+          "status": {
+            "label": "Status",
+            "placeholder": "Status auswählen"
+          },
+          "customerNumber": {
+            "label": "Kundennummer",
+            "placeholder": "Kundennummer"
+          },
+          "name": {
+            "label": "Name",
+            "placeholder": "Name eingeben"
+          },
+          "type": {
+            "label": "Kundentyp",
+            "placeholder": "Kundentyp auswählen"
+          },
+          "industry": {
+            "label": "Branche",
+            "placeholder": "Branche auswählen"
+          },
+          "activityType": {
+            "label": "Tätigkeitsbereich",
+            "placeholder": "Tätigkeitsbereich eingeben"
+          },
+          "uid": {
+            "label": "UID",
+            "placeholder": "UID eingeben"
+          },
+          "nogaCode": {
+            "label": "NOGA-Code",
+            "placeholder": "NOGA-Code eingeben"
+          },
+          "foundingDate": {
+            "label": "Gründungsdatum",
+            "placeholder": "Gründungsdatum eingeben"
+          }
+        }
+      },
+      "mandat": {
+        "sections": {
+          "details": "Details",
+          "suva": "SUVA"
+        },
+        "fields": {
+          "mainContact": {
+            "label": "Hauptkontakt",
+            "placeholder": "Hauptkontakt auswählen"
+          },
+          "consultant": {
+            "label": "Zuständiger Berater",
+            "placeholder": "Berater auswählen"
+          },
+          "mandateStart": {
+            "label": "Mandatsbeginn",
+            "placeholder": ""
+          },
+          "mandateEnd": {
+            "label": "Mandatsende",
+            "placeholder": ""
+          },
+          "suvaOrganization": {
+            "label": "SUVA-Betrieb"
+          }
+        }
+      },
+      "kommunikation": {
+        "sections": {
+          "details": "Details"
+        },
+        "fields": {
+          "mainAddress": {
+            "label": "Hauptadresse",
+            "placeholder": "Auswählen"
+          },
+          "website": {
+            "label": "Website",
+            "placeholder": "https://"
+          }
+        }
+      },
+      "rechnungen": {
+        "sections": {
+          "details": "Details",
+          "accounting": "Finanzbuchhaltung"
+        },
+        "fields": {
+          "invoiceAddress": {
+            "label": "Rechnungsadresse",
+            "placeholder": "Auswählen"
+          },
+          "bankName": {
+            "label": "Bank",
+            "placeholder": "Bank eingeben"
+          },
+          "iban": {
+            "label": "IBAN",
+            "placeholder": "IBAN eingeben"
+          },
+          "swiftBicCode": {
+            "label": "SWIFT / BIC-Code",
+            "placeholder": "SWIFT / BIC-Code eingeben"
+          },
+          "validFrom": {
+            "label": "Gültig ab",
+            "placeholder": ""
+          },
+          "notes": {
+            "label": "Bemerkungen",
+            "placeholder": "Bemerkungen erfassen"
+          },
+          "accountingSoftware": {
+            "label": "Software",
+            "placeholder": "Software auswählen"
+          },
+          "vatDeductionEntitled": {
+            "label": "Berechtigung für Vorsteuerabzug"
+          }
+        }
+      }
+    }
+  },
+  "supplier": {
+    "searchPlaceholder": "Versicherer suchen ...",
+    "mainContact": "Hauptkontakt",
+    "overviewPage": {
+      "title": "Versicherer",
+      "filters": {
+        "search": {
+          "label": "Suche",
+          "placeholder": "Name eingeben"
+        }
+      },
+      "table": {
+        "headers": {
+          "name": "Name",
+          "identifier": "Kennung",
+          "dxpCode": "DXP Code",
+          "street": "Strasse",
+          "zip": "PLZ",
+          "city": "Ort",
+          "numActivePolicies": "Aktive Policen",
+          "numActiveIncidents": "Aktive Meldungen"
+        }
+      }
+    },
+    "detailPage": {
+      "title": "Versicherer - Details",
+      "noData": "Keine Daten verfügbar",
+      "card": {
+        "identifier": "Kennung",
+        "dxpCode": "DXP-Code"
+      },
+      "form": {
+        "title": "Versichererdaten",
+        "sections": {
+          "details": "Details",
+          "communication": "Kommunikation",
+          "settings": "Einstellungen"
+        },
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Name eingeben"
+          },
+          "brokerNumber": {
+            "label": "Broker-Nummer",
+            "placeholder": "Broker-Nummer eingeben"
+          },
+          "identifier": {
+            "label": "Kennung",
+            "placeholder": "Kennung eingeben"
+          },
+          "dxpCode": {
+            "label": "DXP-Code",
+            "placeholder": "DXP-Code eingeben"
+          },
+          "email": {
+            "label": "E-Mail",
+            "placeholder": "E-Mail-Adresse eingeben"
+          },
+          "mainContact": {
+            "label": "Hauptkontakt",
+            "placeholder": "Hauptkontakt auswählen"
+          },
+          "mainAddress": {
+            "label": "Hauptadresse",
+            "placeholder": "Hauptadresse auswählen"
+          },
+          "addressType": {
+            "label": "Adresstyp",
+            "placeholder": "Adresstyp auswählen"
+          }
+        }
+      },
+      "overviewBar": {
+        "activeIncidents": "Aktive Meldungen",
+        "activePolicies": "Aktive Policen",
+        "totalPremium": "Total Bruttoprämien"
+      },
+      "tabs": {
+        "contacts": "Kontakte",
+        "addresses": "Adressen & Standorte",
+        "documents": "Dokumente & Medien",
+        "courtages": "Courtagen",
+        "courtagesPlaceholder": "Courtagen werden hier angezeigt"
+      },
+      "contactForm": {
+        "title": "Kontakt hinzufügen",
+        "sections": {
+          "details": "Details"
+        },
+        "fields": {
+          "type": {
+            "label": "Zuständigkeit",
+            "placeholder": "Auswählen"
+          }
+        }
+      },
+      "tables": {
+        "contacts": {
+          "title": "Kontakte",
+          "headers": {
+            "name": "Name",
+            "type": "Typ",
+            "email": "E-Mail",
+            "phone": "Telefon"
+          }
+        },
+        "addresses": {
+          "title": "Adressen",
+          "headers": {
+            "street": "Strasse",
+            "zipCode": "PLZ",
+            "city": "Ort",
+            "canton": "Kt.",
+            "country": "Land"
+          }
+        }
+      }
+    }
+  },
+  "policies": {
+    "searchPlaceholder": "Policen suchen ...",
+    "categories": {
+      "things": "Sach",
+      "person": "Person",
+      "vehicle": "Fahrzeug"
+    },
+    "invoices": {
+      "states": {
+        "open": "offen",
+        "paid": "bezahlt",
+        "canceled": "storniert"
+      },
+      "dueOn": "fällig am {{date}}",
+      "paidOn": "Bezahlt am {{date}}",
+      "daysUntilDue": "noch {{count}} Tage"
+    },
+    "filterTabs": {
+      "all": "Alle",
+      "open": "Offen",
+      "draft": "Entwurf",
+      "active": "Aktiv",
+      "quote": "Offerte",
+      "application": "Antrag",
+      "canceled": "Gekündigt",
+      "suspended": "Sistiert",
+      "revoked": "Aufgehoben",
+      "inactive": "Passiv",
+      "branches": "Branchen",
+      "documents": "Dokumente",
+      "invoices": "Rechnungen",
+      "incidents": "Meldungen",
+      "history": "Verlauf",
+      "persons": "Personen"
+    },
+    "coverageObject": {
+      "vehicle": {
+        "category1": "Kategorie 1",
+        "category2": "Kategorie 2",
+        "undefined": "Unbekannt",
+        "null": "Unbekannt",
+        "allEmployees": "Alle Mitarbeiter"
+      },
+      "people": {
+        "category1": "Kategorie 1",
+        "category2": "Kategorie 2",
+        "undefined": "Unbekannt",
+        "null": "Unbekannt",
+        "allEmployees": "Alle Mitarbeiter"
+      },
+      "things": {
+        "category1": "Kategorie 1",
+        "category2": "Kategorie 2",
+        "undefined": "Unbekannt"
+      }
+    },
+    "internal": "Intern",
+    "external": "Extern",
+    "groups": {
+      "company": {
+        "vehicle": "Fahrzeuge",
+        "people": "Personen",
+        "things": "Betrieb"
+      },
+      "private": {
+        "vehicle": "Fahrzeuge",
+        "people": "Personen",
+        "things": "Haushalt"
+      },
+      "null": {
+        "vehicle": "Fahrzeuge",
+        "people": "Personen",
+        "things": "Unbekannt"
+      }
+    },
+    "overviewPage": {
+      "title": "Policen",
+      "noPolicies": "Keine Policen vorhanden",
+      "noPoliciesSubtitle": "Für diesen Kunden sind noch keine Policen erfasst.",
+      "currentContract": "Aktueller Vertrag",
+      "annually": "pro Jahr",
+      "policyNumber": "Vertragsnummer",
+      "base-data": {
+        "header": "Basisdaten",
+        "category": "Kategorie",
+        "insurance": "Versicherung",
+        "insured": "Versicherungsnehmer",
+        "validTo": "Gültig bis"
+      },
+      "button-actions": {
+        "createIncident": "Meldung erfassen",
+        "createNewVersion": "Neue Version erstellen",
+        "openDetails": "Details",
+        "upload": "Hochladen"
+      },
+      "table.headers": {
+        "title": "Title",
+        "supplier": "Anbieter",
+        "startDate": "Start Datum",
+        "endDate": "End Datum"
+      },
+      "tables": {
+        "uploadDate": "Hochgeladen am {{date}}"
+      }
+    },
+    "editPage": {
+      "createTitle": "Neue Police erfassen",
+      "updateTitle": "Police bearbeiten",
+      "actions": {
+        "saveDraft": "Entwurf speichern",
+        "save": "Speichern"
+      },
+      "formTitles": {
+        "baseData": "Basisdaten",
+        "premiumData": "Prämie",
+        "optionsData": "Optionen"
+      },
+      "customerSelect": {
+        "title": "Kunde",
+        "label": "Kunden auswählen"
+      },
+      "responsibleSelect": {
+        "label": "Verantwortliche Person"
+      },
+      "statusSelect": {
+        "label": "Status"
+      },
+      "categorySelect": {
+        "label": "Kategorie",
+        "placeholder": "Kategorie wählen"
+      },
+      "supplierSelect": {
+        "label": "Versicherer"
+      },
+      "currencySelect": {
+        "label": "Währung",
+        "placeholder": "Währung wählen"
+      },
+      "paymentInterval": {
+        "label": "Zahlweise",
+        "placeholder": "Zahlweise wählen"
+      },
+      "bruttoPremium": {
+        "label": "Prämie Brutto",
+        "placeholder": "Prämie Brutto eingeben"
+      },
+      "declarable": {
+        "label": "Deklarationspflichtig"
+      },
+      "nettoPremium": {
+        "label": "Prämie Netto",
+        "placeholder": "Prämie Netto eingeben"
+      },
+      "paymentDueOn": {
+        "label": "Fällig an",
+        "placeholder": "Tag angeben"
+      },
+      "policyNumber": {
+        "label": "Policennummer",
+        "placeholder": "Nummer eingeben"
+      },
+      "validFrom": {
+        "label": "Gültig ab"
+      },
+      "validTo": {
+        "label": "Gültig bis"
+      },
+      "automaticRenewal": {
+        "label": "Automatische Verlängerung"
+      },
+      "annualTerminationRight": {
+        "label": "Jährliches Kündigungsrecht"
+      },
+      "noProlongation": {
+        "label": "Ohne Prolongation"
+      },
+      "requiresBilling": {
+        "label": "Abrechnungspflichtig"
+      },
+      "premiumIndexed": {
+        "label": "Prämie indexiert"
+      },
+      "premiumRateGuarantee": {
+        "label": "Prämiensatzgarantie"
+      },
+      "profitParticipation": {
+        "label": "Überschussbeteiligung"
+      },
+      "agentSelect": {
+        "label": "Verantwortliche Person"
+      },
+      "elm": {
+        "label": "ELM"
+      },
+      "eBill": {
+        "label": "eBill"
+      }
+    },
+    "detailPage": {
+      "contractnumber": "Vertragsnummer",
+      "activeFrom": "Aktiv ab {{date}}",
+      "annually": "pro Jahr",
+      "internal": "Intern",
+      "external": "Extern",
+      "actions": {
+        "newVersion": "Neue Version erfassen",
+        "edit": "Bearbeiten",
+        "cancel": "Police kündigen",
+        "createIncident": "Meldung erfassen",
+        "upload": "Hochladen",
+        "createInvoice": "Rechnung erstellen",
+        "moreInformation": "Mehr Informationen"
+      },
+      "deleteDialog": {
+        "title": "Police löschen",
+        "message": "Wollen Sie diese Police wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+      },
+      "history": {
+        "policy_created": {
+          "title": "Police erstellt",
+          "label": "Police wurde erstellt"
+        },
+        "policy_number_set": {
+          "title": "Policennummer vergeben",
+          "label": "Policennummer"
+        },
+        "status_changed": {
+          "title": "Status geändert",
+          "label": "Neuer Status"
+        },
+        "coverage_added": {
+          "title": "Branche hinzugefügt",
+          "label": "Branche"
+        },
+        "coverage_updated": {
+          "title": "Branche aktualisiert",
+          "label": "Branche"
+        },
+        "version_created": {
+          "title": "Neue Version erstellt",
+          "label": "Neue Version der Police wurde erstellt"
+        }
+      },
+      "responsibleSelect": {
+        "label": "Verantwortliche Person"
+      },
+      "addBranch": {
+        "label": "Branche hinzufügen"
+      },
+      "coverages": "Deckungen",
+      "overview": {
+        "policyNumber": "Policen Nummer",
+        "policyName": "Policen Name",
+        "supplierName": "Versicherer",
+        "duration": "Laufzeit",
+        "annualCancellation": "Jährliches Kündigungsrecht",
+        "noProlongation": "Ohne Prolongation",
+        "billable": "Abrechnungspflichtig",
+        "indexedPremium": "Prämie indexiert",
+        "guaranteedPremium": "Prämiensatzgarantie",
+        "profitParticipation": "Überschussbeteiligung",
+        "automaticRenewal": "Automatische Verlängerung",
+        "annualPremium": "Jahresprämie",
+        "policyType": "Policen-Typ",
+        "state": "Status",
+        "customer": "Kunde"
+      },
+      "coverageKeys": {
+        "percentage": "Deckungshöhe",
+        "waitingPeriod": "Wartefrist",
+        "maximumInsuredSalary": "Maximal versicherter Lohn",
+        "benefitDurationDays": "Anzahl Tage der Leistung",
+        "benefitType": "Leistungsart",
+        "medicalTreatmentCoverage": "Heilungskosten",
+        "differenceCoverage": "Differenzdeckung",
+        "continuedSalary": "Lohnnachgenuss Art. 338",
+        "assetsLabel": "Versicherte Personen / Objekte",
+        "tabDeckung": "Deckung",
+        "tabAssets": "Personen / Objekte",
+        "assetColName": "Name",
+        "assetColAhv": "AHV-Nummer",
+        "coverageLimitPersonalProperty": "Deckung Personen- und Sachschäden",
+        "professionalLiability": "Berufshaftpflicht",
+        "waiverGrossNegligence": "Verzicht bei Grobfahrlässigkeit",
+        "plans": "Pläne",
+        "coverageScope": "Deckungsumfang",
+        "ownershipStatus": "Eigentumsverhältnis am Wohnsitz",
+        "versicherterWert": "Versicherter Wert",
+        "objektbeschrieb": "Objektbeschrieb",
+        "kontrollschild": "Kontrollschild",
+        "markeTyp": "Marke / Typ",
+        "haftpflicht": "Haftpflicht",
+        "trafficCoverage": "Deckung Verkehr",
+        "insuranceSum": "Versicherungssumme",
+        "primaryActivity": "Hauptätigkeit",
+        "geltungsbereich": "Geltungsbereich",
+        "versicherungssumme": "Versicherungssumme",
+        "selbstbehalt": "Selbstbehalt",
+        "gebaeudeArt": "Gebäudeart",
+        "kanton": "Kanton",
+        "versicherungssummeVollwert": "Versicherungssumme Vollwert"
+      },
+      "additionalInformation": {
+        "allEmployees": "Alle Mitarbeitenden",
+        "allemployees": "Alle Mitarbeitenden",
+        "none": "Keine",
+        "privateWorldwide": "Privat weltweit",
+        "privateworldwide": "Privat weltweit",
+        "halfPrivateWorldwide": "Halb privat weltweit",
+        "halfprivateworldwide": "Halb privat weltweit",
+        "standorte": "{{count}} Standorte"
+      },
+      "title": "Versicherer - Details",
+      "noData": "Keine Daten verfügbar",
+      "uploadDate": "Hochgeladen am {{date}}",
+      "coverageForm": {
+        "sectionTitle": "Deckungen",
+        "fields": {
+          "coveragePercentage": {
+            "label": "Höhe der Deckung",
+            "placeholder": "Deckung wählen"
+          },
+          "maximumInsuredSalary": {
+            "label": "Maximal versicherter Lohn",
+            "placeholder": "Lohn angeben"
+          },
+          "coveredObject": {
+            "label": "Personenkreis",
+            "placeholder": "Personenkreis wählen"
+          },
+          "waitingPeriodDays": {
+            "label": "Wartefrist",
+            "placeholder": "Frist wählen"
+          },
+          "waitingPeriodApplication": {
+            "label": "Anwendung der Wartefrist",
+            "placeholder": "Anwendung wählen"
+          },
+          "benefitDurationDays": {
+            "label": "Dauer der Leistung",
+            "placeholder": "Dauer wählen"
+          },
+          "benefitType": {
+            "label": "Art der Leistung",
+            "placeholder": "Leistung wählen"
+          },
+          "maxInsuredSalary": {
+            "label": "Maximal versicherter Lohn",
+            "placeholder": "Lohn angeben"
+          },
+          "premiumSurchargeFemale": {
+            "label": "Prämienzusatz Frauen",
+            "placeholder": "Zusatz angeben"
+          },
+          "premiumSurchargeMale": {
+            "label": "Prämienzusatz Männer",
+            "placeholder": "Zusatz angeben"
+          }
+        }
+      },
+      "einzeltaggeldCoverageForm": {
+        "fields": {
+          "accidentIncluded": {
+            "label": "Unfall eingeschlossen",
+            "placeholder": "Unfall eingeschlossen wählen"
+          }
+        }
+      },
+      "uvgZusatzCoverageForm": {
+        "fields": {
+          "coveredObject": {
+            "label": "Personenkreis",
+            "placeholder": "Personenkreis wählen"
+          },
+          "medicalTreatmentCoverage": {
+            "label": "Heilungskosten",
+            "placeholder": "Heilungskosten wählen"
+          },
+          "differenceCoverage": {
+            "label": "Differenzdeckung",
+            "placeholder": "Differenzdeckung wählen"
+          },
+          "continuedSalary": {
+            "label": "Lohnnachgenuss Art. 338",
+            "placeholder": "Lohnnachgenuss Art. 338"
+          },
+          "remarks": {
+            "label": "Bemerkungen",
+            "placeholder": "Bemerkungen eingeben"
+          },
+          "premiumSurchargeFemale": {
+            "label": "Prämienzusatz Frauen",
+            "placeholder": "Prämienzusatz Frauen eingeben"
+          },
+          "premiumSurchargeMale": {
+            "label": "Prämienzusatz Männer",
+            "placeholder": "Prämienzusatz Männer eingeben"
+          }
+        }
+      },
+      "einzelunfallCoverageForm": {
+        "fields": {
+          "coveredObject": {
+            "label": "Personenkreis",
+            "placeholder": "Personenkreis wählen"
+          },
+          "coveragePercentage": {
+            "label": "Deckungshöhe",
+            "placeholder": "Deckung wählen"
+          },
+          "waitingPeriodDays": {
+            "label": "Wartefrist",
+            "placeholder": "Frist wählen"
+          },
+          "waitingPeriodApplication": {
+            "label": "Anwendung Wartefrist",
+            "placeholder": "Anwendung wählen"
+          },
+          "benefitDuration": {
+            "label": "Leistungsdauer",
+            "placeholder": "Dauer wählen"
+          },
+          "maximumInsuredSalary": {
+            "label": "Max. versicherter Lohn",
+            "placeholder": "Lohn wählen"
+          },
+          "benefitType": {
+            "label": "Leistungsart",
+            "placeholder": "Leistungsart wählen"
+          },
+          "premiumRateBUFemale": {
+            "label": "Prämiensatz BU Frauen (%)",
+            "placeholder": "Prämiensatz eingeben"
+          },
+          "premiumRateNBUFemale": {
+            "label": "Prämiensatz NBU Frauen (%)",
+            "placeholder": "Prämiensatz eingeben"
+          },
+          "premiumRateBUMale": {
+            "label": "Prämiensatz BU Männer (%)",
+            "placeholder": "Prämiensatz eingeben"
+          },
+          "premiumRateNBUMale": {
+            "label": "Prämiensatz NBU Männer (%)",
+            "placeholder": "Prämiensatz eingeben"
+          }
+        }
+      },
+      "unfallCoverageForm": {
+        "fields": {
+          "coveredObject": {
+            "label": "Personenkreis",
+            "placeholder": "Personenkreis wählen"
+          },
+          "coveragePercentage": {
+            "label": "Deckungshöhe",
+            "placeholder": "Deckung wählen"
+          },
+          "waitingPeriodDays": {
+            "label": "Wartefrist",
+            "placeholder": "Frist wählen"
+          },
+          "waitingPeriodApplication": {
+            "label": "Anwendung Wartefrist",
+            "placeholder": "Anwendung wählen"
+          },
+          "benefitDuration": {
+            "label": "Leistungsdauer",
+            "placeholder": "Dauer wählen"
+          },
+          "maximumInsuredSalary": {
+            "label": "Max. versicherter Lohn",
+            "placeholder": "Lohn wählen"
+          },
+          "benefitType": {
+            "label": "Leistungsart",
+            "placeholder": "Leistungsart wählen"
+          },
+          "premiumRateBUFemale": {
+            "label": "Prämiensatz BU Frauen (%)",
+            "placeholder": "Prämiensatz eingeben"
+          },
+          "premiumRateNBUFemale": {
+            "label": "Prämiensatz NBU Frauen (%)",
+            "placeholder": "Prämiensatz eingeben"
+          },
+          "premiumRateBUMale": {
+            "label": "Prämiensatz BU Männer (%)",
+            "placeholder": "Prämiensatz eingeben"
+          },
+          "premiumRateNBUMale": {
+            "label": "Prämiensatz NBU Männer (%)",
+            "placeholder": "Prämiensatz eingeben"
+          }
+        }
+      },
+      "privatrechtsschutzCoverageForm": {
+        "fields": {
+          "coverageScope": {
+            "label": "Deckungsumfang",
+            "placeholder": "Deckungsumfang wählen"
+          },
+          "trafficCoverage": {
+            "label": "Deckung Verkehr"
+          },
+          "insuranceSum": {
+            "label": "Versicherungssumme",
+            "placeholder": "Summe eingeben"
+          },
+          "additionalCoverage": {
+            "label": "Zusätzliche Deckung",
+            "placeholder": "Zusätzliche Deckung eingeben"
+          }
+        }
+      },
+      "betriebsrechtsschutzCoverageForm": {
+        "fields": {
+          "coverageScope": {
+            "label": "Deckungsumfang",
+            "placeholder": "Deckungsumfang eingeben"
+          },
+          "trafficCoverage": {
+            "label": "Deckung Verkehr"
+          },
+          "insuranceSum": {
+            "label": "Versicherungssumme",
+            "placeholder": "Summe eingeben"
+          },
+          "primaryActivity": {
+            "label": "Hauptätigkeit",
+            "placeholder": "Hauptätigkeit eingeben"
+          },
+          "secondaryActivity": {
+            "label": "Nebenätigkeit",
+            "placeholder": "Nebenätigkeit eingeben"
+          }
+        }
+      },
+      "transportCoverageForm": {
+        "fields": {
+          "geltungsbereich": {
+            "label": "Geltungsbereich",
+            "placeholder": "Geltungsbereich eingeben"
+          },
+          "versicherungssumme": {
+            "label": "Versicherungssumme (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "kostenUndMehrkosten": {
+            "label": "Kosten und Mehrkosten (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "selbstbehalt": {
+            "label": "Selbstbehalt (CHF)",
+            "placeholder": "Betrag eingeben"
+          }
+        }
+      },
+      "gebaeudeCoverageForm": {
+        "fields": {
+          "objektstandort": {
+            "label": "Objektstandort",
+            "placeholder": "Adresse eingeben"
+          },
+          "kanton": {
+            "label": "Kanton",
+            "placeholder": "Kanton wählen"
+          },
+          "gebaeudeArt": {
+            "label": "Gebäudeart",
+            "placeholder": "Gebäudeart wählen"
+          },
+          "bauart": {
+            "label": "Bauart",
+            "placeholder": "Bauart wählen"
+          },
+          "flachdach": {
+            "label": "Flachdach"
+          },
+          "selbstDauerndBewohnt": {
+            "label": "Selbst dauernd bewohnt"
+          },
+          "versicherungssummeVollwert": {
+            "label": "Versicherungssumme Vollwert indexiert (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "grundselbstbehalt": {
+            "label": "Grundselbstbehalt (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "gebaeudeWasser": {
+            "label": "Gebäude-Wasser"
+          },
+          "versicherungssummeWasser": {
+            "label": "Versicherungssumme Wasser (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "freilegungskosten": {
+            "label": "Freilegungskosten (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "selbstbehaltWasser": {
+            "label": "Selbstbehalt Wasser (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "erdbebendeckung": {
+            "label": "Erdbebendeckung"
+          },
+          "versicherungssummeErdbeben": {
+            "label": "Versicherungssumme Erdbeben (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "selbstbehaltErdbeben": {
+            "label": "Selbstbehalt Erdbeben (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "gebaeudeGlas": {
+            "label": "Gebäude-Glas"
+          },
+          "versicherungssummeGlas": {
+            "label": "Versicherungssumme Glas (CHF oder pauschal)",
+            "placeholder": "Betrag oder «pauschal» eingeben"
+          },
+          "selbstbehaltGlas": {
+            "label": "Selbstbehalt Glas (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "gebaeudeHaftpflicht": {
+            "label": "Gebäude-Haftpflicht"
+          },
+          "versicherungssummeHaftpflicht": {
+            "label": "Versicherungssumme Haftpflicht (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "selbstbehaltHaftpflicht": {
+            "label": "Selbstbehalt Haftpflicht (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "deckungElementar": {
+            "label": "Deckung Elementar (GUSTAVO-Kantone)"
+          },
+          "versicherungssummeElementar": {
+            "label": "Versicherungssumme Elementar (CHF)",
+            "placeholder": "Betrag eingeben"
+          },
+          "selbstbehaltElementar": {
+            "label": "Selbstbehalt Elementar (CHF)",
+            "placeholder": "Betrag eingeben"
+          }
+        }
+      },
+      "maschinenCoverageForm": {
+        "fields": {
+          "beschreibung": {
+            "label": "Beschreibung",
+            "placeholder": "Maschinenbeschreibung eingeben"
+          },
+          "versicherterBetrag": {
+            "label": "Versicherter Betrag (CHF)",
+            "placeholder": "Betrag eingeben"
+          }
+        },
+        "addMachine": "+ Maschine hinzufügen",
+        "emptyList": "Noch keine Maschinen erfasst.",
+        "unnamedMachine": "(Keine Beschreibung)",
+        "noMachinesError": "Bitte mindestens eine Maschine erfassen."
+      },
+      "valuablesCoverageForm": {
+        "machine": {
+          "fields": {
+            "beschreibung": {
+              "label": "Beschreibung",
+              "placeholder": "Maschinenbeschreibung eingeben"
+            },
+            "versicherterBetrag": {
+              "label": "Versicherter Betrag (CHF)",
+              "placeholder": "Betrag eingeben"
+            },
+            "description": {
+              "label": "Beschreibung",
+              "placeholder": "Maschinenbeschreibung eingeben"
+            },
+            "insuredAmount": {
+              "label": "Versicherter Betrag (CHF)",
+              "placeholder": "Betrag eingeben"
+            }
+          },
+          "addItem": "+ Maschine hinzufügen",
+          "emptyList": "Noch keine Maschinen erfasst.",
+          "unnamedItem": "(Keine Beschreibung)",
+          "noItemsError": "Bitte mindestens eine Maschine erfassen."
+        },
+        "valuables": {
+          "fields": {
+            "beschreibung": {
+              "label": "Beschreibung",
+              "placeholder": "Wertsachenbeschreibung eingeben"
+            },
+            "versicherterBetrag": {
+              "label": "Versicherter Betrag (CHF)",
+              "placeholder": "Betrag eingeben"
+            },
+            "description": {
+              "label": "Beschreibung",
+              "placeholder": "Wertsachenbeschreibung eingeben"
+            },
+            "insuredAmount": {
+              "label": "Versicherter Betrag (CHF)",
+              "placeholder": "Betrag eingeben"
+            }
+          },
+          "addItem": "+ Wertsache hinzufügen",
+          "emptyList": "Noch keine Wertsachen erfasst.",
+          "unnamedItem": "(Keine Beschreibung)",
+          "noItemsError": "Bitte mindestens eine Wertsache erfassen."
+        }
+      },
+      "betriebshaftpflichtCoverageForm": {
+        "fields": {
+          "coverageLimitPersonalProperty": {
+            "label": "Deckung Personen- und Sachschäden",
+            "placeholder": "Deckungssumme wählen"
+          },
+          "deductiblePersonalProperty": {
+            "label": "Selbstbehalt Personen- und Sachschäden",
+            "placeholder": "Selbstbehalt eingeben"
+          },
+          "coverageLimitFinancialLoss": {
+            "label": "Deckung Vermögensschäden",
+            "placeholder": "Deckungssumme eingeben"
+          },
+          "deductibleFinancialLoss": {
+            "label": "Selbstbehalt Vermögensschäden",
+            "placeholder": "Selbstbehalt eingeben"
+          },
+          "professionalLiability": {
+            "label": "Berufshaftpflicht",
+            "placeholder": "Auswahl treffen"
+          },
+          "waiverGrossNegligence": {
+            "label": "Verzicht bei Grobfahrlässigkeit",
+            "placeholder": "Auswahl treffen"
+          },
+          "financialLossConstruction": {
+            "label": "Vermögensschäden bei Bauzwischenfällen",
+            "placeholder": "Betrag eingeben"
+          },
+          "processedGoods": {
+            "label": "Bearbeitete Sachen",
+            "placeholder": "Betrag eingeben"
+          },
+          "installationRemovalCosts": {
+            "label": "Aus- und Einbaukosten",
+            "placeholder": "Betrag eingeben"
+          },
+          "insuredBusiness": {
+            "label": "Mitversicherter Betrieb",
+            "placeholder": "Betrieb suchen"
+          }
+        }
+      },
+      "privathaftpflichtCoverageForm": {
+        "fields": {
+          "coverageScope": {
+            "label": "Deckungsumfang",
+            "placeholder": "Deckungsumfang wählen"
+          },
+          "coverageLimitPersonalProperty": {
+            "label": "Deckung Personen- und Sachschäden",
+            "placeholder": "Deckungssumme wählen"
+          },
+          "deductible": {
+            "label": "Selbstbehalt",
+            "placeholder": "Selbstbehalt eingeben"
+          },
+          "ownershipStatus": {
+            "label": "Eigentumsverhältnis am Wohnsitz",
+            "placeholder": "Verhältnis wählen"
+          },
+          "waiverGrossNegligence": {
+            "label": "Verzicht bei Grobfahrlässigkeit",
+            "placeholder": "Auswahl treffen"
+          },
+          "coverageThirdPartyDriver": {
+            "label": "Deckung Fremdlenker",
+            "placeholder": "Auswahl treffen"
+          },
+          "damageForeignHorses": {
+            "label": "Schäden an fremden Pferden",
+            "placeholder": "Auswahl treffen"
+          },
+          "guaranteeSum": {
+            "label": "Garantiesumme",
+            "placeholder": "Garantiesumme eingeben"
+          },
+          "participationEquestrian": {
+            "label": "Teilnahme an reitsportlichen Veranstaltungen",
+            "placeholder": "Auswahl treffen"
+          },
+          "coverageHunter": {
+            "label": "Deckung als Jäger",
+            "placeholder": "Auswahl treffen"
+          },
+          "buildingLiability": {
+            "label": "Gebäudehaftpflicht (nur bei Eigentum)",
+            "placeholder": "Auswahl treffen"
+          }
+        }
+      },
+      "hausratCoverageForm": {
+        "fields": {
+          "standortId1": {
+            "label": "Standort",
+            "placeholder": "Standort auswählen"
+          },
+          "versicherungssumme1": {
+            "label": "Versicherungssumme am Standort",
+            "placeholder": "Betrag eingeben"
+          },
+          "einfacherDiebstahl1": {
+            "label": "Einfacher Diebstahl auswärts",
+            "placeholder": "Betrag eingeben"
+          },
+          "mobiliarverglasung1": {
+            "label": "Mobiliarverglasung"
+          },
+          "gebaeudeverglasung1": {
+            "label": "Gebäudeverglasung"
+          },
+          "hausratKasko1": {
+            "label": "Hausrat Kasko",
+            "placeholder": "Betrag eingeben"
+          },
+          "standortId2": {
+            "label": "Weiterer Standort",
+            "placeholder": "Standort auswählen"
+          },
+          "versicherungssumme2": {
+            "label": "Versicherungssumme am Standort",
+            "placeholder": "Betrag eingeben"
+          },
+          "einfacherDiebstahl2": {
+            "label": "Einfacher Diebstahl auswärts",
+            "placeholder": "Betrag eingeben"
+          },
+          "mobiliarverglasung2": {
+            "label": "Mobiliarverglasung"
+          },
+          "gebaeudeverglasung2": {
+            "label": "Gebäudeverglasung"
+          },
+          "hausratKasko2": {
+            "label": "Hausrat Kasko",
+            "placeholder": "Betrag eingeben"
+          },
+          "standortId3": {
+            "label": "Weiterer Standort",
+            "placeholder": "Standort auswählen"
+          },
+          "versicherungssumme3": {
+            "label": "Versicherungssumme am Standort",
+            "placeholder": "Betrag eingeben"
+          },
+          "einfacherDiebstahl3": {
+            "label": "Einfacher Diebstahl auswärts",
+            "placeholder": "Betrag eingeben"
+          },
+          "mobiliarverglasung3": {
+            "label": "Mobiliarverglasung"
+          },
+          "gebaeudeverglasung3": {
+            "label": "Gebäudeverglasung"
+          },
+          "hausratKasko3": {
+            "label": "Hausrat Kasko",
+            "placeholder": "Betrag eingeben"
+          }
+        }
+      },
+      "hausratItemsForm": {
+        "fields": {
+          "standortId": {
+            "label": "Standort",
+            "placeholder": "Standort auswählen"
+          },
+          "versicherungssumme": {
+            "label": "Versicherungssumme am Standort",
+            "placeholder": "Betrag eingeben"
+          },
+          "einfacherDiebstahl": {
+            "label": "Einfacher Diebstahl auswärts",
+            "placeholder": "Betrag eingeben"
+          },
+          "mobiliarverglasung": {
+            "label": "Mobiliarverglasung",
+            "short": "Mobiliar"
+          },
+          "gebaeudeverglasung": {
+            "label": "Gebäudeverglasung",
+            "short": "Gebäude"
+          },
+          "hausratKasko": {
+            "label": "Hausrat Kasko",
+            "placeholder": "Betrag eingeben"
+          }
+        },
+        "addItem": "+ Standort hinzufügen",
+        "emptyList": "Noch keine Standorte erfasst.",
+        "unnamedItem": "(Kein Standort)",
+        "noItemsError": "Bitte mindestens einen Standort erfassen."
+      },
+      "pensionskasseItemsForm": {
+        "title": "Pensionskasse",
+        "sections": {
+          "sparen": "Sparen",
+          "risiko": "Risiko"
+        },
+        "fields": {
+          "planname": {
+            "label": "Planname",
+            "placeholder": "z.B. Mitarbeiter"
+          },
+          "lohndefinitionSparen": {
+            "label": "Lohndefinition Sparen",
+            "placeholder": "Lohndefinition auswählen"
+          },
+          "koordinationsabzugSparen": {
+            "label": "Koordinationsabzug"
+          },
+          "anpassungTeilzeitgradSparen": {
+            "label": "Anpassung an Teilzeitgrad"
+          },
+          "sparstaffelung": {
+            "label": "Sparstaffelung",
+            "placeholder": "z.B. 7, 10, 15, 18%"
+          },
+          "lohndefinitionRisiko": {
+            "label": "Lohndefinition Risiko",
+            "placeholder": "Lohndefinition auswählen"
+          },
+          "koordinationsabzugRisiko": {
+            "label": "Koordinationsabzug"
+          },
+          "anpassungTeilzeitgradRisiko": {
+            "label": "Anpassung an Teilzeitgrad"
+          },
+          "hoeheInvalidenrente": {
+            "label": "Höhe Invalidenrente",
+            "placeholder": "z.B. 60%"
+          },
+          "hoeheInvalidenKinderrente": {
+            "label": "Höhe Invaliden-Kinderrente",
+            "placeholder": "z.B. 10%"
+          },
+          "hoeheEhegattinPartnerrente": {
+            "label": "Höhe Ehegatten- / Partnerrente",
+            "placeholder": "z.B. 60%"
+          },
+          "hoeheWaisenrente": {
+            "label": "Höhe Waisenrente",
+            "placeholder": "z.B. 20%"
+          },
+          "zusaetzlichesTodesfallkapital": {
+            "label": "Zusätzliches Todesfallkapital",
+            "placeholder": "Auswählen"
+          }
+        },
+        "addItem": "+ Plan hinzufügen",
+        "emptyList": "Noch keine Pläne erfasst.",
+        "unnamedItem": "(Kein Planname)",
+        "noItemsError": "Bitte mindestens einen Plan erfassen."
+      },
+      "betriebssachItemsForm": {
+        "title": "Betriebsach",
+        "sections": {
+          "standorte": "Standorte"
+        },
+        "fields": {
+          "standortId": {
+            "label": "Standort",
+            "placeholder": "Standort auswählen"
+          },
+          "versicherungssumme": {
+            "label": "Versicherungssumme am Standort",
+            "placeholder": "Betrag eingeben"
+          },
+          "gebaeudeverglasung": {
+            "label": "Gebäudeverglasung",
+            "short": "Verglasung"
+          },
+          "betriebsunterbruch": {
+            "label": "Betriebsunterbruch"
+          },
+          "warenUndEinrichtungenInZirkulation": {
+            "label": "Waren und Einrichtungen in Zirkulation",
+            "placeholder": "Betrag eingeben"
+          },
+          "geldwerte": {
+            "label": "Geldwerte",
+            "placeholder": "Betrag eingeben"
+          }
+        },
+        "addItem": "+ Standort hinzufügen",
+        "emptyList": "Noch keine Standorte erfasst.",
+        "unnamedItem": "(Kein Standort)",
+        "noItemsError": "Bitte mindestens einen Standort erfassen."
+      },
+      "wertsachenCoverageForm": {
+        "fields": {
+          "objektbeschrieb": {
+            "label": "Objektbeschrieb",
+            "placeholder": "Objektbeschrieb eingeben"
+          },
+          "versicherterWert": {
+            "label": "Versicherter Wert (CHF)",
+            "placeholder": "Betrag eingeben"
+          }
+        }
+      },
+      "fahrzeugeCoverageForm": {
+        "fields": {
+          "kontrollschild": {
+            "label": "Kontrollschild",
+            "placeholder": "Kontrollschild eingeben"
+          },
+          "markeTyp": {
+            "label": "Marke / Typ",
+            "placeholder": "Marke und Typ eingeben"
+          },
+          "inverkehrssetzung": {
+            "label": "Inverkehrssetzung"
+          },
+          "stammnummer": {
+            "label": "Stammnummer",
+            "placeholder": "Stammnummer eingeben"
+          },
+          "haeufigsterLenker": {
+            "label": "Häufigster Lenker",
+            "placeholder": "Lenker auswählen"
+          },
+          "verwendung": {
+            "label": "Verwendung",
+            "placeholder": "Verwendung auswählen"
+          },
+          "garage": {
+            "label": "Garage",
+            "placeholder": "Garage auswählen"
+          },
+          "coverageBranche": {
+            "label": "Fahrzeugkategorie",
+            "placeholder": "Kategorie auswählen"
+          },
+          "leasing": {
+            "label": "Leasing"
+          },
+          "haftpflicht": {
+            "label": "Haftpflicht"
+          },
+          "teilkasko": {
+            "label": "Teilkasko"
+          },
+          "vollkasko": {
+            "label": "Vollkasko"
+          },
+          "parkschaden": {
+            "label": "Parkschaden"
+          },
+          "assistance": {
+            "label": "Assistance"
+          },
+          "verzichtBeiGrobfahrlaessigkeit": {
+            "label": "Verzicht bei Grobfahrlässigkeit"
+          },
+          "bonusschutz": {
+            "label": "Bonusschutz"
+          }
+        }
+      },
+      "form": {
+        "title": "Versichererdaten",
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Name eingeben"
+          },
+          "mainContact": {
+            "label": "Hauptkontakt",
+            "placeholder": "Hauptkontakt auswählen"
+          },
+          "policyNumber": {
+            "label": "Policennummer",
+            "placeholder": "Policennummer eingeben"
+          },
+          "policyName": {
+            "label": "PolicenName",
+            "placeholder": "PolicenName eingeben"
+          },
+          "customer": {
+            "label": "Kunde",
+            "placeholder": "Kunde eingeben"
+          },
+          "supplier": {
+            "label": "Versicherung",
+            "placeholder": "Versicherung eingeben"
+          },
+          "startDate": {
+            "label": "Start-Datum",
+            "placeholder": "Start-Datum eingeben"
+          },
+          "endDate": {
+            "label": "End-Datum",
+            "placeholder": "End-Datum eingeben"
+          },
+          "annualPremiumBrutto": {
+            "label": "Jährliche Prämie Brutto",
+            "placeholder": "Brutto-Jahresprämie eingeben"
+          },
+          "annualPremiumNetto": {
+            "label": "Jährliche Prämie Netto",
+            "placeholder": "Netto-Jahresprämie eingeben"
+          },
+          "currencyCode": {
+            "label": "Währungscode",
+            "placeholder": "Währungscode eingeben"
+          },
+          "paymentInterval": {
+            "label": "Zahlungsintervall",
+            "placeholder": "Zahlungsintervall eingeben"
+          },
+          "dueOn": {
+            "label": "Fällig am",
+            "placeholder": "Fälligkeitsdatum eingeben"
+          },
+          "automaticRenewal": {
+            "label": "Automatische Verlängerung",
+            "placeholder": "Automatische Verlängerung eingeben"
+          },
+          "annualCancellation": {
+            "label": "Jährliche Kündigung",
+            "placeholder": "Jährliche Kündigung eingeben"
+          },
+          "noProlongation": {
+            "label": "Ohne Prolingation",
+            "placeholder": "Ohne Prolingation eingeben"
+          },
+          "billable": {
+            "label": "Verrechenbar",
+            "placeholder": "Verrechenbar eingeben"
+          },
+          "indexedPremium": {
+            "label": "Indexierte Prämie",
+            "placeholder": "Indexierte Prämie eingeben"
+          },
+          "guaranteedPremium": {
+            "label": "Garantierte Prämie",
+            "placeholder": "Garantierte Prämie eingeben"
+          },
+          "profitParticipation": {
+            "label": "Überschussbeteiligung",
+            "placeholder": "Überschussbeteiligung eingeben"
+          },
+          "elm": {
+            "label": "ELM",
+            "placeholder": "ELM eingeben"
+          },
+          "eBill": {
+            "label": "E-Rechnung",
+            "placeholder": "E-Rechnung eingeben"
+          },
+          "coverageType": {
+            "label": "Deckungsart",
+            "placeholder": "Deckungsart eingeben"
+          },
+          "coverageValue": {
+            "label": "Deckungswert",
+            "placeholder": "Deckungswert eingeben"
+          },
+          "waitingTime": {
+            "label": "Wartezeit",
+            "placeholder": "Wartezeit eingeben"
+          },
+          "deductible": {
+            "label": "Selbstbehalt",
+            "placeholder": "Selbstbehalt eingeben"
+          },
+          "premiumRate": {
+            "label": "Prämienrate",
+            "placeholder": "Prämienrate eingeben"
+          },
+          "policyType": {
+            "label": "Policen-Typ",
+            "placeholder": "Policen-Typ auswählen"
+          },
+          "policyState": {
+            "label": "Status",
+            "placeholder": "Status auswählen"
+          }
+        }
+      },
+      "tables": {
+        "contacts": {
+          "title": "Kontakte",
+          "headers": {
+            "name": "Name",
+            "type": "Typ",
+            "email": "E-Mail",
+            "phone": "Telefon"
+          }
+        }
+      }
+    },
+    "personen": {
+      "downloadTemplate": "Vorlage herunterladen",
+      "importPersons": "Personen importieren",
+      "empty": "Noch keine versicherten Personen erfasst.",
+      "fields": {
+        "name": "Name",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "ahvNumber": "AHV-Nummer",
+        "category": "Personenkreis",
+        "entryDate": "Eintrittsdatum",
+        "birthDate": "Geburtsdatum",
+        "workload": "Pensum",
+        "annualSalary": "Jahresgehalt"
+      },
+      "importDialog": {
+        "title": "Personen importieren",
+        "step1": "Schritt 1: Vorlage herunterladen und ausfüllen",
+        "step2": "Schritt 2: Ausgefüllte Datei hochladen",
+        "downloadTemplate": "Vorlage herunterladen",
+        "chooseFile": "Datei auswählen (.xlsx)",
+        "parsing": "Datei wird verarbeitet…",
+        "personsFound": "Personen gefunden",
+        "confirm": "Importieren"
+      }
+    }
+  },
+  "users": {
+    "autocomplete": {
+      "details": "Details"
+    },
+    "overviewPage": {
+      "title": "Benutzer",
+      "table": {
+        "headers": {
+          "firstName": "Vorname",
+          "lastName": "Nachname",
+          "email": "E-Mail",
+          "role": "Rolle",
+          "customers": "Kunde",
+          "active": "Aktiv"
+        }
+      }
+    },
+    "detailPage": {
+      "form": {
+        "title": "Benutzerdaten",
+        "fields": {
+          "firstName": {
+            "label": "Vorname",
+            "placeholder": "Vorname eingeben"
+          },
+          "lastName": {
+            "label": "Nachname",
+            "placeholder": "Nachname eingeben"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "Email eingeben"
+          },
+          "role": {
+            "label": "Rolle",
+            "placeholder": "Rolle auswählen"
+          },
+          "active": {
+            "label": "Aktiv?"
+          }
+        }
+      },
+      "activationToggle": {
+        "statusActive": "Der Benutzer ist derzeit aktiv.",
+        "statusInactive": "Der Benutzer ist derzeit inaktiv.",
+        "activate": "Benutzer aktivieren",
+        "deactivate": "Benutzer deaktivieren"
+      }
+    }
+  },
+  "contacts": {
+    "searchPlaceholder": "Kontakt suchen ...",
+    "form": {
+      "title": "Kontaktdaten",
+      "fields": {
+        "firstName": {
+          "label": "Vorname",
+          "placeholder": "Vorname eingeben"
+        },
+        "lastName": {
+          "label": "Nachname",
+          "placeholder": "Nachname eingeben"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "E-Mail eingeben"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "Telefon eingeben"
+        },
+        "type": {
+          "label": "Kontaktart",
+          "placeholder": "Kontaktart auswählen"
+        }
+      }
+    }
+  },
+  "globalAssets": {
+    "overviewPage": {
+      "title": "Globale Objekte",
+      "filters": {
+        "search": {
+          "label": "Suche",
+          "placeholder": "Objekte suchen..."
+        }
+      },
+      "table": {
+        "headers": {
+          "assetType": "Typ",
+          "displayName": "Name",
+          "identifier": "Kennung"
+        }
+      }
+    },
+    "filterTabs": {
+      "all": "Alle",
+      "person": "Personen",
+      "vehicle": "Fahrzeuge",
+      "location": "Standorte"
+    },
+    "assetTypes": {
+      "person": "Person",
+      "vehicle": "Fahrzeug",
+      "location": "Standort"
+    },
+    "detail": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "birthDate": "Geburtsdatum",
+      "ahvNumber": "AHV-Nummer",
+      "category": "Kategorie",
+      "workload": "Pensum",
+      "annualSalary": "Jahreslohn",
+      "entryDate": "Eintrittsdatum",
+      "licensePlate": "Kontrollschild",
+      "make": "Marke",
+      "model": "Modell",
+      "vin": "Stammnummer",
+      "firstRegistration": "Inverkehrsetzung",
+      "street": "Strasse",
+      "zipCode": "PLZ",
+      "city": "Ort",
+      "kanton": "Kanton",
+      "country": "Land"
+    }
+  },
+  "pendencies": {
+    "overviewPage": {
+      "title": "Aufgaben",
+      "noData": "Keine Aufgaben vorhanden",
+      "noDataSubtitle": "Es sind aktuell keine Aufgaben für diese Auswahl erfasst.",
+      "table": {
+        "headers": {
+          "title": "Aufgabe",
+          "description": "Details",
+          "customerName": "Kunde",
+          "connections": "Verknüpfungen",
+          "status": "Status",
+          "dueDate": "Fällig am",
+          "assignee": "Zuständig"
+        },
+        "columns": {
+          "connections": {
+            "incident": {
+              "types": {
+                "fahrzeugSchaden": "Schaden",
+                "fahrzeugRegistration": "Daten ändern"
+              },
+              "text": "Zur Meldung"
+            }
+          }
+        }
+      }
+    },
+    "detailPage": {
+      "title": "Aufgaben - Details",
+      "noData": "Keine Daten verfügbar",
+      "form": {
+        "title": "Aufgaben",
+        "item": {
+          "title": {
+            "label": "Titel",
+            "placeholder": "Titel eingeben"
+          },
+          "description": {
+            "label": "Beschreibung",
+            "placeholder": "Beschreibung eingeben"
+          },
+          "comment": {
+            "label": "Kommentar",
+            "placeholder": "Kommentar eingeben"
+          },
+          "type": {
+            "label": "Aufgabenart",
+            "placeholder": "Aufgabenart eingeben"
+          },
+          "status": {
+            "label": "Status",
+            "placeholder": "Status auswählen"
+          },
+          "dueDate": {
+            "label": "Fälligkeitsdatum",
+            "placeholder": "Fälligkeitsdatum eingeben"
+          },
+          "assignee": {
+            "label": "Zuständiger Nutzer",
+            "placeholder": "Benutzer auswählen"
+          },
+          "customer": {
+            "label": "Kunde",
+            "placeholder": "Kunde zurordnen"
+          }
+        }
+      }
+    },
+    "status": {
+      "open": "Offen",
+      "completed": "Erledigt"
+    }
+  },
+  "incidents": {
+    "forward": {
+      "newStatus": "Neuer Status"
+    },
+    "damageNumber": "Schadensnummer",
+    "overviewPage": {
+      "title": "Meldungen",
+      "noSelection": {
+        "title": "Keine Meldung ausgewählt",
+        "subtitle": "Wählen Sie eine Meldung aus der Liste oder erstellen Sie eine neue Meldung.",
+        "createButton": "Neue Meldung erstellen"
+      }
+    },
+    "new": {
+      "title": "Neue Meldung"
+    },
+    "edit": {
+      "title": "Meldung bearbeiten",
+      "shortSummary": ""
+    },
+    "details": {
+      "status": {
+        "title": "Aktueller Status",
+        "registered": "Meldung prüfen",
+        "broker": "Vervollständigen",
+        "forwarding": "Weiterleiten",
+        "forwarded": "Weitergeleitet",
+        "waiting": "Warten auf Versicherung",
+        "completed": "Erledigt"
+      },
+      "comments": {
+        "title": "Kommentare",
+        "placeholder": "Kommentar erfassen"
+      },
+      "tabs": {
+        "overview": "Übersicht",
+        "summary": "Meldung",
+        "comments": "Kommentare",
+        "documents": "Dokumente & Medien",
+        "history": "Verlauf"
+      },
+      "tasks": {
+        "title": "Aufgaben",
+        "types": {
+          "INCIDENT_CHECK_TASK": "Meldung prüfen",
+          "INCIDENT_BROKER_DATA_TASK": "Meldungsdaten nachtragen",
+          "INCIDENT_INSURANCE_DATA_TASK": "Versicherungsdaten nachtragen",
+          "INCIDENT_FORWARD_TASK": "Formular und Anhänge an Versicherung weiterleiten",
+          "INCIDENT_NOTIFY_CUSTOMER_TASK": "Kunde informieren",
+          "INCIDENT_DATA_REVIEW_TASK": "Daten überprüfen"
+        }
+      },
+      "fields": {
+        "assignedPerson": "Zuständige Person",
+        "damageNumber": "Schadensfallnummer",
+        "reason": "Grund der Meldung",
+        "police": "Police",
+        "notes": "Notizen",
+        "customer": "Kunde",
+        "reportType": "Art der Meldung",
+        "createdAt": "Erfasst am",
+        "createdBy": "Erfasst von"
+      },
+      "actions": {
+        "downloadReport": "Meldung herunterladen",
+        "completeIncident": "Meldung abschliessen",
+        "submitReport": "Meldung abschicken",
+        "changeRequest": "Änderungsanfrage an Kunden"
+      },
+      "forward": {
+        "title": "Meldung weiterleiten",
+        "newStatus": "Neuer Status",
+        "message": "Nachricht",
+        "recipient": "Empfänger",
+        "subject": "Betreff",
+        "message-placeholder": "Guten Tag \n Anbei leiten wir euch eine Meldung weiter, die bei uns eingegangen ist. Besten Dank fürs Weiterbearbeiten. Bei Fragen stehen wir jederzeit gerne zur Verfügung. \n\n Freundliche Grüsse \n SB Partner GmbH \n\n Telefon 071 992 00 00 \n www.sbpartner.ch "
+      },
+      "relay": {
+        "title": "Meldung weitergeben",
+        "text": {
+          "label": "Nachricht",
+          "placeholder": "Nachricht eingeben"
+        },
+        "fileIds": {
+          "label": "Anhänge",
+          "placeholder": "Anhänge auswählen"
+        }
+      },
+      "assignee": {
+        "title": "Zuständigkeit",
+        "advisorId": {
+          "label": "Zuständiger Berater",
+          "placeholder": "Berater auswählen"
+        }
+      },
+      "notes": {
+        "title": "Interne Notizen",
+        "field": {
+          "label": "Notizen",
+          "placeholder": "Interne Notizen erfassen"
+        }
+      },
+      "table": {
+        "fileName": "Dateiname",
+        "user": "Benutzer",
+        "updated": "Aktualisiert",
+        "fileSize": "Dateigrösse"
+      },
+      "sidebar": {
+        "title": "Incident Details",
+        "customer": "Kunde",
+        "assignedUser": "Zuständiger Benutzer",
+        "attachments": "Anhänge",
+        "noAttachments": "Noch keine Anhänge",
+        "history": "Verlauf",
+        "changeRequest": "Änderungsanfrage an Kunden",
+        "comments": "Kommentare"
+      },
+      "completion": {
+        "notAllTasksDone": "Hinweis: Wir zeigen einen Hinweis an, wenn noch nicht alle Aufgaben erledigt sind",
+        "notAllFieldsFilled": "Hinweis: Wir zeigen einen Hinweis an, wenn noch nicht alle Formularfelder ausgefüllt sind",
+        "tasksWillBeGenerated": "Mit dem Abschluss werden folgende Aufgaben generiert:",
+        "task1": "Aufgabe 1",
+        "task2": "Aufgabe 2"
+      },
+      "brokerData": {
+        "policeNumber": "Policennummer",
+        "damageAmount": "Schadenssumme",
+        "deductible": "Selbstbehalt"
+      },
+      "insuranceData": {
+        "insuranceClaimNumber": "Schadensnummer"
+      },
+      "documentFilters": {
+        "public": "Öffentlich",
+        "internal": "Intern"
+      }
+    },
+    "stepper": {
+      "disclaimer": "Die Meldung kann nicht mehr bearbeitet werden, wenn sie übermittelt wurde.",
+      "success": {
+        "title": "Vielen Dank für Ihre Meldung.",
+        "subtitle": "Für diese Meldung ist Ihre Kontaktperson der Versicherung direkt zuständig. Die Kontaktangaben finden Sie unten.",
+        "thanks": "Besten Dank und freundliche Grüsse",
+        "team": "Ihr SB-Partner-Team",
+        "nextSteps": "Nächste Schritte",
+        "collectDocuments": "Unterlagen sammeln",
+        "collectDocumentsText": "Sammeln Sie alle relevanten Dokumente und Fotos.",
+        "contactInsurance": "Kontaktperson der Versicherung kontaktieren",
+        "contactInsuranceText": "Melden Sie sich telefonisch oder per Mail bei ihrem Berater.",
+        "contactInsuranceHeading": "Kontaktperson Ihrer Versicherung"
+      }
+    },
+    "locationData": {
+      "date": {
+        "label": "Datum des Schadens",
+        "placeholder": "Datum eingeben"
+      },
+      "time": {
+        "label": "Uhrzeit des Schadens",
+        "placeholder": "Uhrzeit eingeben"
+      },
+      "street": {
+        "label": "Strasse",
+        "placeholder": "Strasse eingeben"
+      },
+      "zip": {
+        "label": "PLZ",
+        "placeholder": "PLZ eingeben"
+      },
+      "city": {
+        "label": "Stadt",
+        "placeholder": "Stadt eingeben"
+      },
+      "remarks": {
+        "label": "Bemerkungen",
+        "placeholder": "Bemerkungen eingeben"
+      }
+    },
+    "category-select": {
+      "header": "Für <b>wen</b> oder <b>was</b> möchten Sie eine Meldung erfassen?",
+      "summary": "Gewählte Kategorie (z.B. Motorfahrzeug)"
+    },
+    "type-select": {
+      "header": "<b>Was</b> möchten Sie melden?",
+      "summary": " Gewählter Meldungstyp (z.B. Schaden melden)"
+    },
+    "subCategories": {
+      "baugarantie": {
+        "title": "Baugarantie",
+        "subTitle": "Gewährleistung für Baumängel und Bauschäden",
+        "info": "Deckt Mängel und Schäden an Bauwerken wie Risse, Feuchtigkeitsschäden und Konstruktionsfehler ab."
+      },
+      "bauwesen": {
+        "title": "Bauwesen",
+        "subTitle": "Versicherung für Bauprojekte und Bauarbeiten",
+        "info": "Schützt Bauprojekte vor Risiken wie Verzögerungen, Materialschäden und Unfälle auf der Baustelle."
+      },
+      "bauherrenhaftpflicht": {
+        "title": "Bauherrenhaftpflicht",
+        "subTitle": "Haftung des Bauherren gegenüber Dritten",
+        "info": "Haftet für Personen- und Sachschäden, die während des Baus Dritten entstehen."
+      },
+      "elementar": {
+        "title": "Elementar",
+        "subTitle": "Schutz vor Naturkatastrophen und Elementarschäden",
+        "info": "Schützt vor Hochwasser, Stürmen, Hagel und anderen Naturgewalten."
+      },
+      "gebaeudeSchaden": {
+        "title": "Gebäudeschaden",
+        "subTitle": "Versicherung für Gebäudeschäden",
+        "info": "Deckt Schäden an Gebäuden durch Feuer, Wasser, Sturm, Vandalismus und andere Gefahren ab."
+      },
+      "wasser": {
+        "title": "Wasser",
+        "subTitle": "Versicherung für Wasser- und Rohrbuchschäden",
+        "info": "Deckt Wasserschäden durch Rohrbruch, Lecks und Rohrbuch ab."
+      },
+      "erdbeben": {
+        "title": "Erdbeben",
+        "subTitle": "Schutz vor Schäden durch Erdbeben",
+        "info": "Versichert Schäden an Gebäuden und Einrichtungen durch Erdbebenbewegungen."
+      },
+      "privathaftpflicht": {
+        "title": "Privathaftpflicht",
+        "subTitle": "Haftungsschutz im privaten Bereich",
+        "info": "Haftet für Personen- und Sachschäden im Privatbereich, z.B. beim Sport oder Hobby."
+      },
+      "betriebshaftpflicht": {
+        "title": "Betriebshaftpflicht",
+        "subTitle": "Haftungsschutz für gewerbliche Tätigkeiten",
+        "info": "Schützt Betriebe vor Haftungsansprüchen durch Kunden, Lieferanten und Dritte."
+      },
+      "berufshaftpflicht": {
+        "title": "Berufshaftpflicht",
+        "subTitle": "Haftungsschutz für freiberufliche Tätigkeiten",
+        "info": "Haftet für Fehler und Fahrlässigkeit in der beruflichen Tätigkeit wie Ärzte, Anwälte, Architekten."
+      },
+      "hausrat": {
+        "title": "Hausrat",
+        "subTitle": "Versicherung für Möbel und Haushaltseinrichtung",
+        "info": "Schützt Möbel, Elektronik, Kleidung und andere Hausratsgegenstände vor Diebstahl und Beschädigungen."
+      },
+      "betriebssach": {
+        "title": "Betriebssach",
+        "subTitle": "Versicherung für betriebliche Sachgüter",
+        "info": "Deckt Maschinen, Lagerbestände, Werkzeuge und Betriebsausstattung ab."
+      },
+      "wertsachen": {
+        "title": "Wertsachen",
+        "subTitle": "Schutz für wertvolle Gegenstände",
+        "info": "Versichert Schmuck, Kunstgegenstände, Antiquitäten und andere wertvolle Sammlungen."
+      },
+      "maschinen": {
+        "title": "Maschinen",
+        "subTitle": "Versicherung für Maschinenausrüstungen",
+        "info": "Schützt Industriemaschinen, Produktionsanlagen und Spezialausrüstungen vor Schäden."
+      },
+      "technik": {
+        "title": "Technik",
+        "subTitle": "Versicherung für technische Geräte und Anlagen",
+        "info": "Deckt Ausfallrisiken und Schäden an Computern, Servern und technischen Systemen ab."
+      },
+      "transport": {
+        "title": "Transport",
+        "subTitle": "Versicherung für Transportgüter",
+        "info": "Schützt Waren und Güter während des Transports vor Verlust und Beschädigung."
+      },
+      "epidemie": {
+        "title": "Epidemie",
+        "subTitle": "Schutz vor Epidemie- und Pandemiefolgen",
+        "info": "Deckt finanzielle Verluste durch Betriebsschließungen und Ausgangsverbote ab."
+      },
+      "montage": {
+        "title": "Montage",
+        "subTitle": "Versicherung für Montagearbeiten",
+        "info": "Schützt vor Schäden bei Montage und Installation von Maschinen und Anlagen."
+      },
+      "event": {
+        "title": "Event",
+        "subTitle": "Versicherung für Veranstaltungen und Events",
+        "info": "Haftet für Unfälle und Sachschäden bei Konzerten, Festivals, Sportveranstaltungen."
+      },
+      "kunst": {
+        "title": "Kunst",
+        "subTitle": "Versicherung für Kunstgegenstände",
+        "info": "Schützt Kunstwerke, Gemälde und Skulpturen vor Diebstahl, Beschädigung und Totalverlust."
+      },
+      "motorfahrzeug": {
+        "title": "Motorfahrzeug",
+        "subTitle": "Motorfahrzeuge: PKW, Kleintransporte, Motorrad, Boot, Baumaschinen (Fahrend)",
+        "info": "Deckt Schäden an PKW, Transporter, Motorrädern durch Unfälle, Diebstahl und Vandalismus ab."
+      },
+      "lieferwagen": {
+        "title": "Lieferwagen",
+        "subTitle": "Versicherung für Lieferfahrzeuge",
+        "info": "Schützt Lieferwagen und Transportfahrzeuge inklusive beförderter Waren."
+      },
+      "motorrad": {
+        "title": "Motorrad",
+        "subTitle": "Versicherung für Motorräder und Roller",
+        "info": "Versichert Motorräder, Mopeds und Roller gegen Unfallschäden und Diebstahl."
+      },
+      "wohnmobil": {
+        "title": "Wohnmobil",
+        "subTitle": "Versicherung für Wohnmobile",
+        "info": "Schützt Wohnmobile und deren Ausstattung bei Unfällen und Reisen."
+      },
+      "wohnwagen": {
+        "title": "Wohnwagen",
+        "subTitle": "Versicherung für Wohnwagen und Caravans",
+        "info": "Deckt Schäden an Wohnwagen, Anhänger und deren Einrichtung ab."
+      },
+      "anhaenger": {
+        "title": "Anhänger",
+        "subTitle": "Versicherung für Fahrzeuganhänger",
+        "info": "Versichert Anhänger, Auflieger und Trailer gegen Schäden und Diebstahl."
+      },
+      "boot": {
+        "title": "Boot",
+        "subTitle": "Versicherung für Wasserfahrzeuge und Boote",
+        "info": "Schützt Boote, Yachten und Segelschiffe vor Unfällen, Sinkrisiko und Diebstahl."
+      },
+      "flugzeug": {
+        "title": "Flugzeug",
+        "subTitle": "Versicherung für Luftfahrzeuge",
+        "info": "Deckt Privatflugzeuge und Hubschrauber gegen Flugrisiken und Schäden ab."
+      },
+      "flotte": {
+        "title": "Flotte",
+        "subTitle": "Versicherung für Fahrzeugflotten",
+        "info": "Verwaltet Versicherungsschutz für mehrere Fahrzeuge eines Unternehmens."
+      },
+      "kaution": {
+        "title": "Kaution",
+        "subTitle": "Kautionsversicherung und Garantien",
+        "info": "Ersetzt Kautionen bei Mietverträgen, Bankgarantien und Auftragssicherheiten."
+      },
+      "kredit": {
+        "title": "Kredit",
+        "subTitle": "Versicherung für Kreditausfallrisiken",
+        "info": "Schützt Kreditgeber vor Zahlungsausfällen durch Insolvenz oder Zahlungsverzug."
+      },
+      "reise": {
+        "title": "Reise",
+        "subTitle": "Versicherung für Reisen und Auslandsaufenthalte",
+        "info": "Deckt Reisestornierung, Gepäckverlust und medizinische Notfälle im Ausland ab."
+      },
+      "dno": {
+        "title": "D&O",
+        "subTitle": "Versicherung für Geschäftsführer und Organe",
+        "info": "Haftet für Geschäftsführer, Vorständler und Organmitglieder bei Fehlentscheidungen."
+      },
+      "cyber": {
+        "title": "Cyber",
+        "subTitle": "Schutz vor Cyber-Risiken und Datenverlust",
+        "info": "Schützt vor Cyberangriffen, Ransomware, Datendiebstahl und IT-Ausfällen."
+      },
+      "rechtsschutz": {
+        "title": "Rechtsschutz",
+        "subTitle": "Unterstützung in Rechtstreitigkeiten",
+        "info": "Deckt Anwaltsgebühren und Prozesskosten in Zivil-, Straf- und Verwaltungsverfahren ab."
+      },
+      "pensionskasse": {
+        "title": "Pensionskasse",
+        "subTitle": "Altersvorsorge und Rentensicherung",
+        "info": "Sichert Altersrente, Invaliditätsleistungen und Hinterbliebenenversorgung ab."
+      },
+      "krankentaggeld": {
+        "title": "Krankentaggeld",
+        "subTitle": "Einkommensschutz bei Arbeitsunfähigkeit",
+        "info": "Ersetzt Einkommensausfälle bei Krankheit und Arbeitsunfähigkeit für Arbeitnehmende."
+      },
+      "einzeltaggeld": {
+        "title": "Einzeltaggeld",
+        "subTitle": "Taggeld-Versicherung für Einzelpersonen",
+        "info": "Zahlt tägliche Leistungen bei Krankheit oder Hospitalisierung für Selbstständige."
+      },
+      "einzelunfall": {
+        "title": "Einzelunfall",
+        "subTitle": "Unfallversicherung für Privatpersonen",
+        "info": "Deckt Invalidität, Todesfall und Zusatzleistungen bei privaten Unfällen ab."
+      },
+      "uvg": {
+        "title": "UVG",
+        "subTitle": "Unfallversicherung nach Unfallversicherungsgesetz",
+        "info": "Obligatorische Unfallversicherung für Arbeitnehmende bei Berufsunfällen."
+      },
+      "uvgz": {
+        "title": "UVG-Z",
+        "subTitle": "Zusatzunfallversicherung zum UVG",
+        "info": "Ergänzt die obligatorische UVG um erweiterte Deckung und höhere Leistungen."
+      },
+      "einzellebenGemischt": {
+        "title": "Einzelleben Gemischt",
+        "subTitle": "Gemischte Lebensversicherung für Einzelpersonen",
+        "info": "Kombiniert Todesfall- und Erlebensfall-Leistungen mit Kapitalaufbau und Renditebeteiligung."
+      },
+      "einzellebenRisiko": {
+        "title": "Einzelleben Risiko",
+        "subTitle": "Risikolebensversicherung für Einzelpersonen",
+        "info": "Zahlt Todesfallsumme zur Sicherung von Angehörigen und Schuldenabbau."
+      },
+      "tierunfall": {
+        "title": "Tierunfall",
+        "subTitle": "Versicherung für Unfälle mit Tierbestand",
+        "info": "Deckt Personen- und Sachschäden durch Unfälle mit Nutz- und Zugtieren ab."
+      },
+      "haustier": {
+        "title": "Haustier",
+        "subTitle": "Versicherung für Haustiere und Kleintiere",
+        "info": "Haftet für Schäden durch Hunde, Katzen oder andere Haustiere an Dritten."
+      },
+      "bvgAustritt": {
+        "title": "BVG Austritt"
+      }
+    },
+    "categories": {
+      "debug": {
+        "title": "Debug",
+        "subTitle": "Meldungen testen",
+        "info": "Um Meldungen zu testen"
+      },
+      "fahrzeug": {
+        "title": "Motorfahrzeug",
+        "subTitle": "Motorfahrzeuge: PKW, Kleintransporte, Motorrad, Boot, Baumaschinen (Fahrend)",
+        "info": "Deckt Schäden an PKW, Transporter, Motorrädern und Booten durch Unfälle, Diebstahl und Vandalismus ab.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Fahrzeugschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Fahrzeugdaten"
+          },
+          "register": {
+            "title": "Einlösen",
+            "subTitle": "Registrieren Sie ein neues Fahrzeug"
+          },
+          "unregister": {
+            "title": "Abmelden",
+            "subTitle": "Melden Sie ein Fahrzeug ab"
+          }
+        }
+      },
+      "personen": {
+        "title": "Personen",
+        "subTitle": "Versicherung für Personenschäden",
+        "info": "Haftet für Verletzungen und Todesfälle durch Unfälle, einschließlich medizinischer Behandlung und Invaliditätsleistungen.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Personenschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Personendaten"
+          },
+          "register": {
+            "title": "Anmelden",
+            "subTitle": "Registrieren Sie eine neue Person"
+          },
+          "unregister": {
+            "title": "Abmelden",
+            "subTitle": "Melden Sie eine Person ab"
+          },
+          "accident": {
+            "title": "Unfall",
+            "subTitle": "Melden Sie einen Unfall"
+          },
+          "sickness": {
+            "title": "Krankheit",
+            "subTitle": "Melden Sie einen Krankheitsfall"
+          },
+          "declaration": {
+            "title": "BVG Deklaration",
+            "subTitle": "Jährliche BVG-Deklaration einreichen"
+          }
+        }
+      },
+      "gebaeude": {
+        "title": "Gebäude",
+        "subTitle": "Versicherung für Gebäudeschäden",
+        "info": "Schützt Gebäudeteile vor Brandschäden, Naturgewalten wie Sturm und Hagel sowie Wasserschäden.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Gebäudeschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Gebäudedaten"
+          },
+          "register": {
+            "title": "Anmelden",
+            "subTitle": "Registrieren Sie ein neues Gebäude"
+          },
+          "unregister": {
+            "title": "Abmelden",
+            "subTitle": "Melden Sie ein Gebäude ab"
+          }
+        }
+      },
+      "sach": {
+        "title": "Sach",
+        "subTitle": "Versicherung für Sachschäden",
+        "info": "Deckt Möbel, Elektronik, Maschinen und andere Gegenstände vor Beschädigungen, Diebstahl und Totalverlust ab.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Sachschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Sachdaten"
+          },
+          "register": {
+            "title": "Anmelden",
+            "subTitle": "Registrieren Sie ein neues Sachgut"
+          },
+          "unregister": {
+            "title": "Abmelden",
+            "subTitle": "Melden Sie ein Sachgut ab"
+          }
+        }
+      },
+      "haftpflicht": {
+        "title": "Haftpflicht",
+        "subTitle": "Haftungsversicherung",
+        "info": "Haftet für Personen- und Sachschäden, die Dritten entstehen, im privaten, beruflichen oder betrieblichen Bereich.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Haftpflichtschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Haftpflichtdaten"
+          },
+          "register": {
+            "title": "Anmelden",
+            "subTitle": "Registrieren Sie eine Haftpflichtversicherung"
+          },
+          "unregister": {
+            "title": "Abmelden",
+            "subTitle": "Melden Sie eine Haftpflichtversicherung ab"
+          }
+        }
+      },
+      "vermoegen": {
+        "title": "Vermögen",
+        "subTitle": "Vermögensversicherung",
+        "info": "Schützt finanzielle Vermögenswerte durch Kreditausfallversicherung, Kautionsversicherung und Garantien.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Vermögensschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Vermögensdaten"
+          },
+          "register": {
+            "title": "Anmelden",
+            "subTitle": "Registrieren Sie eine Vermögensversicherung"
+          },
+          "unregister": {
+            "title": "Abmelden",
+            "subTitle": "Melden Sie eine Vermögensversicherung ab"
+          },
+          "cyber": {
+            "title": "Cyber",
+            "subTitle": "Melden sie einen Cyber-Vorfall"
+          },
+          "rechtsschutz": {
+            "title": "Rechtschutz",
+            "subTitle": "Melden sie eine Rechtschutz-Vorfall"
+          }
+        }
+      },
+      "tiere": {
+        "title": "Tiere",
+        "subTitle": "Versicherung für Tiere",
+        "info": "Haftet für Schäden durch Haustiere wie Hunde und Katzen sowie Unfälle mit Nutz- und Zugtieren.",
+        "types": {
+          "damage": {
+            "title": "Schaden melden",
+            "subTitle": "Melden Sie einen Tierschaden"
+          },
+          "mutation": {
+            "title": "Daten ändern",
+            "subTitle": "Aktualisieren Sie Ihre Tierdaten"
+          },
+          "petDamage": {
+            "title": "Schaden melden (Haustier)",
+            "subTitle": "Melden Sie einen Haustierschaden"
+          },
+          "petMutation": {
+            "title": "Daten ändern (Haustier)",
+            "subTitle": "Aktualisieren Sie Ihre Haustierdaten"
+          }
+        }
+      }
+    },
+    "states": {
+      "draft": "Entwurf",
+      "open": "Offen",
+      "needs_work": "In Nachbesserung",
+      "inProgress": "In Bearbeitung",
+      "completed": "Abgeschlossen",
+      "closed": "Geschlossen",
+      "rejected": "Abgelehnt",
+      "canceled": "Storniert"
+    },
+    "types": {
+      "undefined": {
+        "name": "Unbekannt",
+        "title": "Unbekannt",
+        "subTitle": ""
+      },
+      "link": {
+        "eyebrow": "Link",
+        "title": "Externer Link",
+        "subTitle": ""
+      },
+      "gebaeudeSchaden": {
+        "eyebrow": "Gebäude",
+        "title": "Gebäudeschaden",
+        "subTitle": ""
+      },
+      "gebaeudeMutation": {
+        "eyebrow": "Gebäude",
+        "title": "Gebäudedaten ändern",
+        "subTitle": ""
+      },
+      "haftSchaden": {
+        "eyebrow": "Haftpflicht",
+        "title": "Haftpflichtschaden",
+        "subTitle": ""
+      },
+      "haftMutation": {
+        "eyebrow": "Haftpflicht",
+        "title": "Haftpflichtdaten ändern",
+        "subTitle": ""
+      },
+      "sachSchaden": {
+        "eyebrow": "Sach",
+        "title": "Sachschaden",
+        "subTitle": ""
+      },
+      "sachMutation": {
+        "eyebrow": "Sach",
+        "title": "Sachdaten ändern",
+        "subTitle": ""
+      },
+      "fahrzeugSchaden": {
+        "eyebrow": "Fahrzeug",
+        "title": "Fahrzeugschaden",
+        "subTitle": ""
+      },
+      "fahrzeugMutation": {
+        "eyebrow": "Fahrzeug",
+        "title": "Fahrzeugdaten ändern",
+        "subTitle": ""
+      },
+      "fahrzeugRegistration": {
+        "eyebrow": "Fahrzeug",
+        "title": "Fahrzeug einlösen",
+        "subTitle": "Versicherungsnachweis"
+      },
+      "fahrzeugAbmelden": {
+        "eyebrow": "Fahrzeug",
+        "title": "Fahrzeug abmelden",
+        "subTitle": ""
+      },
+      "vermoegenSchaden": {
+        "eyebrow": "Vermögen",
+        "title": "Vermögenschaden",
+        "subTitle": ""
+      },
+      "vermoegenMutation": {
+        "eyebrow": "Vermögen",
+        "title": "Vermögensdaten ändern",
+        "subTitle": ""
+      },
+      "bvgEintritt": {
+        "eyebrow": "BVG",
+        "title": "Personen Eintritt",
+        "subTitle": "Versicherungsnachweis"
+      },
+      "bvgAustritt": {
+        "eyebrow": "BVG",
+        "title": "Personen Austritt",
+        "subTitle": "Versicherungsnachweis"
+      },
+      "bvgMutation": {
+        "eyebrow": "BVG",
+        "title": "Personen Mutation",
+        "subTitle": ""
+      },
+      "bvgSchaden": {
+        "eyebrow": "BVG",
+        "title": "Personen Schaden",
+        "subTitle": ""
+      },
+      "ktgSunet": {
+        "eyebrow": "KTG",
+        "title": "Personen Krankheit",
+        "subTitle": ""
+      },
+      "uvgSunet": {
+        "eyebrow": "UVG",
+        "title": "Personen Unfall",
+        "subTitle": ""
+      },
+      "lebenSchaden": {
+        "eyebrow": "Leben",
+        "title": "Leben: Schaden melden",
+        "subTitle": ""
+      },
+      "lebenMutation": {
+        "eyebrow": "Leben",
+        "title": "Leben: Daten ändern",
+        "subTitle": ""
+      },
+      "tierMutation": {
+        "eyebrow": "Tiere",
+        "title": "Tier: Daten ändern",
+        "subTitle": ""
+      },
+      "bvgAenderung": {
+        "eyebrow": "BVG",
+        "title": "BVG: Änderung melden",
+        "subTitle": "Versicherungsnachweis"
+      },
+      "bcgSchaden": {
+        "eyebrow": "BCG",
+        "title": "BCG: Schaden melden",
+        "subTitle": ""
+      },
+      "bvgDeklaration": {
+        "eyebrow": "BVG",
+        "title": "BVG: Deklaration",
+        "subTitle": ""
+      },
+      "ktgMeldung": {
+        "eyebrow": "KTG",
+        "title": "KTG: Meldung",
+        "subTitle": ""
+      },
+      "rechtsschutzMeldung": {
+        "eyebrow": "Rechtsschutz",
+        "title": "Rechtsschutz: Meldung",
+        "subTitle": ""
+      },
+      "rechtsschutzDeklaration": {
+        "eyebrow": "Rechtsschutz",
+        "title": "Rechtsschutz: Deklaration",
+        "subTitle": ""
+      },
+      "cyberSchaden": {
+        "eyebrow": "Cyber",
+        "title": "Cyber: Schaden melden",
+        "subTitle": ""
+      },
+      "vermoegensSchaden": {
+        "eyebrow": "Vermögen",
+        "title": "Vermögen: Schaden melden",
+        "subTitle": ""
+      },
+      "sachDeklaration": {
+        "eyebrow": "Sach",
+        "title": "Sach: Deklaration",
+        "subTitle": ""
+      }
+    },
+    "property-damage": {
+      "steps": {},
+      "form": {
+        "item": {
+          "consequentialDamages": {
+            "label": "Folgeschäden",
+            "placeholder": "Folgeschäden eingeben"
+          },
+          "remarks": {
+            "label": "Bemerkungen",
+            "placeholder": "Bemerkungen eingeben"
+          }
+        }
+      }
+    },
+    "financial-loss": {
+      "steps": {},
+      "form": {
+        "item": {
+          "damageDescription": {
+            "label": "Welchen Vermögens-Schaden haben sie erlitten:",
+            "placeholder": "Beschreibung eingeben"
+          }
+        }
+      }
+    },
+    "vehicle-damage-incident": {
+      "driverSelection": {
+        "employee": "Mitarbeiter",
+        "selectPerson": "Person auswählen",
+        "other": {
+          "title": "Jemand anderes",
+          "subtitle": "Personendaten erfassen"
+        },
+        "nobody": {
+          "title": "Niemand",
+          "subtitle": "z.B. Parkschaden, Erdrutsch"
+        },
+        "unknown": {
+          "title": "Unbekannt",
+          "subtitle": "z.B. Diebstahl"
+        },
+        "follow": "Kommt noch",
+        "driverPlaceholder": "Unfallfahrer"
+      },
+      "steps": {
+        "base": {
+          "title": "<b>Wie</b> ist der Schaden entstanden?",
+          "shortSummary": "Auswahl der Schadensart"
+        },
+        "timeAndPlace": {
+          "title": "<b>Wann</b> und <b>wo</b> ist der Schaden entstanden?",
+          "shortSummary": ""
+        },
+        "driver": {
+          "title": "<b>Wer</b> hat ihr Fahrzeug gelenkt?",
+          "shortSummary": ""
+        },
+        "repair": {
+          "title": "<b>Wer</b> repariert den Schaden?",
+          "shortSummary": ""
+        },
+        "police": {
+          "title": "Wurde ein Polizeirapport erstellt?",
+          "shortSummary": ""
+        },
+        "remarksAndPictures": {
+          "title": "Bemerkungen & Bilder",
+          "shortSummary": ""
+        }
+      },
+      "form": {
+        "item": {
+          "driver": {
+            "label": "Lenker",
+            "placeholder": "Lenker eingeben"
+          },
+          "vehicle": {
+            "label": "Fahrzeug",
+            "placeholder": "Fahrzeug eingeben"
+          },
+          "currentMileage": {
+            "label": "Kilometerstand",
+            "placeholder": "Kilometerstand eingeben"
+          },
+          "liability": {
+            "label": "Schuld",
+            "placeholder": "Wählen..."
+          },
+          "date": {
+            "label": "Datum",
+            "placeholder": "Datum eingeben"
+          },
+          "street": {
+            "label": "Strasse",
+            "placeholder": "Strasse eingeben"
+          },
+          "city": {
+            "label": "Stadt",
+            "placeholder": "Stadt eingeben"
+          },
+          "zipCode": {
+            "label": "Postleitzahl",
+            "placeholder": "Postleitzahl eingeben"
+          },
+          "country": {
+            "label": "Land",
+            "placeholder": "Land eingeben"
+          },
+          "eventDescription": {
+            "label": "Beschreibung",
+            "placeholder": "Beschreibung eingeben"
+          },
+          "object": {
+            "label": "Schadensobjekt",
+            "placeholder": "Schadensobjekt angeben"
+          },
+          "damageSum": {
+            "label": "Schadenshöhe",
+            "placeholder": "Schadenshöhe eingeben"
+          },
+          "repairContractor": {
+            "label": "Werkstatt",
+            "placeholder": "Werkstatt angeben"
+          },
+          "contractorStreet": {
+            "label": "Werkstatt - Strasse",
+            "placeholder": "Strasse eingeben"
+          },
+          "contractorZipCode": {
+            "label": "Werkstatt - Postleitzahl",
+            "placeholder": "Postleitzahl eingeben"
+          },
+          "contractorCity": {
+            "label": "Werkstatt - Ort",
+            "placeholder": "Ort eingeben"
+          },
+          "remarks": {
+            "label": "Notizen",
+            "placeholder": "Notizen eingeben"
+          },
+          "victimName": {
+            "label": "Geschädigter",
+            "placeholder": "Geschädigter eingeben"
+          },
+          "victimStreet": {
+            "label": "Geschädigter - Strasse",
+            "placeholder": "Strasse eingeben"
+          },
+          "victimZipCode": {
+            "label": "Geschädigter - Postleitzahl",
+            "placeholder": "Postleitzahl eingeben"
+          },
+          "victimCity": {
+            "label": "Geschädigter - Ort",
+            "placeholder": "Ort eingeben"
+          },
+          "injuryDescription": {
+            "label": "Art der Verletzung",
+            "placeholder": "Verletzung beschreiben"
+          },
+          "licensePlate": {
+            "label": "Kontrollschild",
+            "placeholder": "Kontrollschild angeben"
+          },
+          "policeInvolvement": {
+            "label": "Polizeirapport",
+            "placeholder": "Polizeirapport angeben"
+          },
+          "policeStation": {
+            "label": "Polizeiposten",
+            "placeholder": "Polizeiposten angeben"
+          },
+          "policePersonal": {
+            "label": "Zuständige Person",
+            "placeholder": "Person angeben"
+          }
+        }
+      }
+    },
+    "summary": {
+      "sections": {
+        "documentsFormData": {
+          "title": "Documente"
+        },
+        "changeData": {
+          "title": "Änderungen"
+        },
+        "deregistrationData": {
+          "title": "Abmeldung"
+        },
+        "timeAndPlace": {
+          "title": "Ort und Zeit"
+        },
+        "registrationData": {
+          "title": "Eintrittsdaten"
+        },
+        "driverInfo": {
+          "title": "Fahrer"
+        },
+        "policeInfo": {
+          "title": "Polizeimeldung"
+        },
+        "repairInfo": {
+          "title": "Reparaturort"
+        },
+        "personDamage": {
+          "title": "Personenschaden"
+        },
+        "ownPropertyDamage": {
+          "title": "Sachschaden"
+        },
+        "foreignPropertyDamage": {
+          "title": "Fremdschaden"
+        },
+        "policeData": {
+          "title": "Polizei-Involvierung"
+        },
+        "locationData": {
+          "title": "Schadensort"
+        },
+        "personDamageData": {
+          "title": "Personenschaden"
+        },
+        "personAndDateData": {
+          "title": "Person & Datum"
+        },
+        "exitDetailsData": {
+          "title": "Details"
+        },
+        "replacementData": {
+          "title": "Nachfolge"
+        },
+        "mutationBaseData": {
+          "title": "Ursprungsdaten"
+        },
+        "mutationChangesData": {
+          "title": "Mutationen"
+        },
+        "supportData": {
+          "title": "Sozialleistungsdaten"
+        },
+        "personData": {
+          "title": "Personendaten"
+        },
+        "contactData": {
+          "title": "Adressdaten"
+        },
+        "employmentData": {
+          "title": "Kontaktinformationen"
+        },
+        "employmentChangesData": {
+          "title": "Anstellungsänderungen"
+        },
+        "contactDetailData": {
+          "title": "Anstellungsdaten"
+        },
+        "damageData": {
+          "title": "Schadensdaten"
+        },
+        "involvementData": {
+          "title": "Involvierte Parteien"
+        },
+        "remarksData": {
+          "title": "Bemerkungen"
+        },
+        "brokerData": {
+          "title": "Brokerdaten"
+        },
+        "insuranceData": {
+          "title": "Versicherungsdaten"
+        },
+        "salaryData": {
+          "title": "Lohn der versicherten Person"
+        },
+        "illnessData": {
+          "title": "Angaben zur Krankheitsdaten"
+        },
+        "paymentData": {
+          "title": "Bankverbindung"
+        },
+        "insuredPersonData": {
+          "title": "Daten der versicherten Person"
+        },
+        "deklarationBaseData": {
+          "title": "Deklaration"
+        },
+        "healthConfirmationData": {
+          "title": "Gesundheitsbestätigung"
+        },
+        "entryBaseData": {
+          "title": "Arbeitsdaten"
+        }
+      }
+    }
+  },
+  "tableActions": {
+    "edit": "Bearbeiten"
+  },
+  "summaryPages": {
+    "vehicleDamageIncident": {
+      "title": "Zusammenfassung - Fahrzeugschaden",
+      "brokerData": {
+        "title": "Broker",
+        "deductible": "Selbstbehalt",
+        "policyType": "Policy",
+        "coverageType": "Abdeckung",
+        "damageAmount": "Schadenshöhe",
+        "policeNumber": "Policennummer",
+        "insuranceClaimNumber": "Versicherungsfallnummer"
+      },
+      "vehicleDamageBase": {
+        "title": "Basis Daten",
+        "driver": "Fahrer",
+        "vehicle": "Fahrzeug",
+        "liability": "Schuld",
+        "currentMileage": "Kilometerstand"
+      },
+      "policeInfo": {
+        "title": "Polizei Beteiligung",
+        "remarks": "Notizen",
+        "policeStation": "Polizeistelle",
+        "policePersonal": "Polizeibeamter",
+        "policeInvolvement": "Polizei-Verwicklung"
+      },
+      "timeAndPlace": {
+        "title": "Ort und Zeit",
+        "date": "Datum",
+        "time": "Zeit",
+        "place": "Ort"
+      },
+      "repairInfo": {
+        "title": "Reparatur",
+        "remarks": "Notizen",
+        "repairContractor": "Reparierer"
+      },
+      "driverInfo": {
+        "title": "Fahrer",
+        "remarks": "Notizen",
+        "driver": "Fahrer",
+        "liability": "Schuld"
+      },
+      "ownPropertyDamage": {
+        "title": "Schaden am eigenem Fahrzeug",
+        "vehicle": "Schadensobjekt",
+        "description": "Beschreibung",
+        "amount": "Schadenssumme",
+        "repairContractor": "Reperateur",
+        "address": "Reperateur - Adresse"
+      },
+      "foreignPropertyDamage": {
+        "title": "Schaden an Fremdfahrzeug",
+        "object": "SchadensObject",
+        "remarks": "Notizen",
+        "vehicle": "Fahrzeug",
+        "licensePlate": "Kontrollschild",
+        "victimName": "Geschädigter",
+        "victimAddress": "Geschädigter - Adresse",
+        "victimAdress": "Geschädigter - Adresse",
+        "victimVehicleNr": "Kennzeichnen",
+        "additionalNotes": "Bemerkungen",
+        "amount": "Schadenssumme",
+        "description": "Beschreibung"
+      },
+      "personDamage": {
+        "title": "Personenschaden",
+        "remarks": "Notizen",
+        "victimName": "Geschädigter",
+        "address": "Geschädigter - Adresse",
+        "injuryDescription": "Beschreibung der Verletzung",
+        "description": "Beschreibung",
+        "amount": "Schadenssumme",
+        "victimAdress": "Geschädigter - Adresse",
+        "additionalNotes": "Bemerkungen"
+      },
+      "damageEvent": {
+        "title": "Unvallvorgang",
+        "date": "Datum",
+        "address": "Unvallort",
+        "eventDescription": "Ereignisbeschreibung"
+      }
+    }
+  },
+  "brokerDataForms": {
+    "title": "Meldung vervollständigen",
+    "form": {
+      "item": {
+        "policeNumber": {
+          "label": "Policennummer",
+          "placeholder": "Nummer eingeben"
+        },
+        "insuranceClaimNumber": {
+          "label": "Versicherer Schadensnr.",
+          "placeholder": "Versicherungsschadensnummer eingeben"
+        },
+        "damageAmount": {
+          "label": "Schadenshöhe",
+          "placeholder": "Schadenshöhe eingeben"
+        },
+        "deductible": {
+          "label": "Selbstbehalt",
+          "placeholder": "Selbstbehalt eingeben"
+        },
+        "policyType": {
+          "label": "Policenart",
+          "placeholder": "Policenart eingeben"
+        },
+        "coverageType": {
+          "label": "Deckungsart",
+          "placeholder": "Deckungsart eingeben"
+        }
+      }
+    }
+  },
+  "driver": {
+    "autocomplete": {
+      "details": "Details"
+    }
+  },
+  "mutationTableProperties": {
+    "title": "Titel",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "street": "Strasse",
+    "zipcode": "Postleitzahl",
+    "city": "Stadt",
+    "country": "Land",
+    "sex": "Geschlecht",
+    "civilStatus": "Zivilstand",
+    "mobile": "Mobil",
+    "email": "Email"
+  },
+
+  "roles": {
+    "admin": {
+      "label": "Administrator",
+      "name": "Administrator"
+    },
+    "member": {
+      "label": "Mitglied"
+    },
+    "user": {
+      "name": "Benutzer"
+    },
+    "broker_admin": {
+      "label": "Broker Administrator"
+    },
+    "broker_member": {
+      "label": "Broker Mitglied"
+    },
+    "customer_admin": {
+      "label": "Kunden Administrator"
+    },
+    "customer_member": {
+      "label": "Kunden Mitglied"
+    },
+    "trustee": {
+      "label": "Treuhänder"
+    }
+  },
+
+  "dueToPensioning": "Austritt auf Grund vob Pensionierung",
+  "dueToRestructuring": "Austritt auf Grund von Umstrukturierung",
+  "dueToWorkIncapable": "Austritt auf Grund von Arbeitsunfähigkeit",
+  "incapabilityReason": "Grund der Arbeitsunfähigkeit",
+  "newInsurer": "Neuer Versicherer",
+  "newEmployer": "Neuer Arbeitgeber",
+  "exitDate": "Autrittsdatum",
+  "employeeId": "Mitarbeiter - ID",
+  "employeeLastName": "Mitarbeiter - Nachname",
+  "employeeFirstName": "Mitarbeiter - Vorname",
+  "employeeSex": "Geschlecht",
+  "employeeCity": "Mitarbeiter - Ort",
+  "employeeEmail": "Mitarbeiter - Email",
+  "employeeTitle": "Mitarbeiter - Titel",
+  "employeeMobile": "Mitarbeiter - Mobil",
+  "employeeStreet": "Mitarbeiter - Strasse",
+  "employeeCountry": "Mitarbeiter - Land",
+  "employeeZipCode": "Mitarbeiter - Postleitzahl",
+  "mutationFromDate": "Änderung gültig ab",
+  "employeeCivilStatus": "Mitarbeiter - Zivilstatus",
+  "newSex": "Neues Geschlecht",
+  "newCity": "Neuer Ort",
+  "newEmail": "Neue Email",
+  "newTitle": "Neue Ansprache",
+  "newMobile": "Neue Mobilnummer",
+  "newStreet": "Neue Strasse",
+  "newCountry": "Neues Land",
+  "newZipCode": "Neue Postleitzahl",
+  "wasChanged": "Änderung nötig",
+  "newLastName": "Neue Nachname",
+  "newFirstName": "Neuer Vorname",
+  "newCivilStatus": "Neuer Zivilstand",
+  "lastName": "Nachname",
+  "ahvNumber": "AHV-Nummer",
+  "birthdate": "Geburtstag",
+  "firstName": "Vorname",
+  "civilStatus": "Zivilstand",
+  "nationality": "Nationalität",
+  "marriageDate": "Hochzeitsdatum",
+  "driversLicenseDate": "Führerschein Datum",
+  "city": "Ort",
+  "street": "Strasse",
+  "country": "Land",
+  "zipCode": "Postleitzahl",
+  "workload": "Arbeitspensum",
+  "entryDate": "Eintritts-Datum",
+  "pensionPlan": "Vorsorge-Plan",
+  "annualSalary": "Jahreseinkommen",
+  "socialSupport": "Leistungen IV",
+  "socialSupportSource": "Quelle der Leistungen",
+  "email": "Email",
+  "phone": "Telefon",
+  "mobile": "Mobil",
+  "coverageTypes": {
+    "personalVehicle": "Personen Fahrzeug",
+    "transportVehicle": "Transport Fahrzeug",
+    "airplane": "Flugzeug"
+  },
+  "currencyOptions": {
+    "CHF": "Schweizer Franken (CHF)",
+    "EUR": "Euro (EUR)",
+    "USD": "US-Dollar (USD)"
+  },
+  "paymentIntervalOptions": {
+    "annually": "Jährlich",
+    "monthly": "Monatlich"
+  },
+  "days": "Tage",
+  "waitingPeriodApplication": {
+    "perCase": "Pro Fall",
+    "perYear": "Pro Jahr"
+  },
+  "benefitDuration": {
+    "descending": "Fallende"
+  },
+  "benefitType": {
+    "lossOfIncome": "Lohnausfall",
+    "healingCostsAndLossOfIncome": "Heilungskosten / Lohnausfall",
+    "reallyNotGoodThing": "etwas Ungutes (DEBUG)"
+  },
+  "coveredObject": {
+    "allEmployees": "Alle Mitarbeiter",
+    "category1": "Kategorie 1",
+    "category2": "Kategorie 2",
+    "owner": "Inhaber",
+    "draft": "Entwurf"
+  },
+  "medicalTreatmentCoverage": {
+    "none": "Keine",
+    "privateWorldwide": "Privat weltweit",
+    "halfPrivateWorldwide": "Halb privat weltweit"
+  },
+  "coverageScope": {
+    "individual": "Einzelpersonen",
+    "multiple": "Mehrpersonen"
+  },
+  "ownershipStatus": {
+    "tenant": "Mieter",
+    "owner": "Eigentümer"
+  },
+  "gebaeudeArt": {
+    "Einfamilienhaus": "Einfamilienhaus",
+    "Mehrfamilienhaus": "Mehrfamilienhaus",
+    "Stockwerkeigentum": "Stockwerkeigentum"
+  },
+  "bauart": {
+    "Massiv": "Massiv",
+    "Holz": "Holz"
+  },
+  "haeufigsterLenker": {
+    "diverse": "Diverse",
+    "allEmployees": "Alle Mitarbeitenden"
+  },
+  "verwendung": {
+    "private": "Privat",
+    "business": "Geschäftlich",
+    "privateAndBusiness": "Privat und Geschäftlich"
+  },
+  "garage": {
+    "home": "Zuhause",
+    "work": "Arbeit",
+    "homeAndWork": "Zuhause und Arbeit",
+    "none": "Keine"
+  },
+  "coverageBranches": {
+    "searchPlaceholder": "Branche suchen ...",
+    "titles": {
+      "Bauwesen": "Bauwesen",
+      "Bauherrenhaftpflicht": "Bauherrenhaftpflicht",
+      "Gebäude": "Gebäude",
+      "Gebäude-Haftpflicht": "Gebäude-Haftpflicht",
+      "Gebäude-Wasser": "Gebäude-Wasser",
+      "Elementar": "Elementar",
+      "Erdbeben": "Erdbeben",
+      "Privathaftpflicht": "Privathaftpflicht",
+      "Betriebshaftpflicht": "Betriebshaftpflicht",
+      "Hausrat": "Hausrat",
+      "Betriebsach": "Betriebsach",
+      "Wertsachen": "Wertsachen",
+      "Maschinen": "Maschinen",
+      "Technik": "Technik",
+      "Transport": "Transport",
+      "Epidemie": "Epidemie",
+      "Montage": "Montage",
+      "Event": "Event",
+      "Kunst": "Kunst",
+      "Personenwagen": "Personenwagen",
+      "Lieferwagen": "Lieferwagen",
+      "Lastwagen": "Lastwagen",
+      "Motorrad": "Motorrad",
+      "Wohnmobil": "Wohnmobil",
+      "Wohnwagen": "Wohnwagen",
+      "Anhänger": "Anhänger",
+      "Boot": "Boot",
+      "Flugzeug": "Flugzeug",
+      "Kaution": "Kaution",
+      "Kredit": "Kredit",
+      "Reise": "Reise",
+      "D&O": "D&O",
+      "Baugarantie": "Baugarantie",
+      "Cyber": "Cyber",
+      "Rechtsschutz": "Rechtsschutz",
+      "Pensionskasse": "Pensionskasse",
+      "Krankentaggeld": "Krankentaggeld",
+      "Einzeltaggeld": "Einzeltaggeld",
+      "UVG": "UVG",
+      "UVG Zusatz": "UVG Zusatz",
+      "Einzelunfall": "Einzelunfall",
+      "Einzelleben Gemischt": "Einzelleben Gemischt",
+      "Einzelleben Risiko": "Einzelleben Risiko",
+      "Tier": "Tier"
+    },
+    "subtitles": {
+      "Bauwesen": "Bauwesen",
+      "Bauherrenhaftpflicht": "Bauherrenhaftpflicht",
+      "Gebäude-Haftpflicht": "Gebäude-Haftpflicht",
+      "Gebäude-Wasser": "Gebäude-Wasser",
+      "Elementar": "Elementar",
+      "Erdbeben": "Erdbeben",
+      "Privathaftpflicht": "Privathaftpflicht",
+      "Betriebshaftpflicht": "Betriebshaftpflicht",
+      "Hausrat": "Hausrat",
+      "Betriebsach": "Betriebsach",
+      "Wertsachen": "Wertsachen",
+      "Maschinen": "Maschinen",
+      "Technik": "Technik",
+      "Transport": "Transport",
+      "Epidemie": "Epidemie",
+      "Montage": "Montage",
+      "Event": "Event",
+      "Kunst": "Kunst",
+      "Personenwagen": "Personenwagen",
+      "Lieferwagen": "Lieferwagen",
+      "Lastwagen": "Lastwagen",
+      "Motorrad": "Motorrad",
+      "Wohnmobil": "Wohnmobil",
+      "Wohnwagen": "Wohnwagen",
+      "Anhänger": "Anhänger",
+      "Boot": "Boot",
+      "Flugzeug": "Flugzeug",
+      "Kaution": "Kaution",
+      "Kredit": "Kredit",
+      "Reise": "Reise",
+      "D&O": "D&O",
+      "Baugarantie": "Baugarantie",
+      "Cyber": "Cyber",
+      "Rechtsschutz": "Rechtsschutz",
+      "Pensionskasse": "Pensionskasse",
+      "Krankentaggeld": "Krankentaggeld",
+      "Einzeltaggeld": "Einzeltaggeld",
+      "UVG": "UVG",
+      "UVG Zusatz": "UVG Zusatz",
+      "Einzelunfall": "Einzelunfall",
+      "Einzelleben Gemischt": "Einzelleben Gemischt",
+      "Einzelleben Risiko": "Einzelleben Risiko",
+      "Tier": "Tier"
+    },
+    "tags": {
+      "obligatory": "obligatorisch"
+    }
+  },
+  "lowAnnualSalaryHint": "Der Lohn erreicht die Eintrittsschwelle nicht. Sie können die Meldung dennoch fortsetzen.",
+  "dashboard": {
+    "customerNumber": "Kundennummer",
+    "overviewBar": {
+      "salutation": {
+        "morning": "Guten Morgen, ",
+        "afternoon": "Guten Tag, ",
+        "evening": "Guten Abend, "
+      },
+      "tiles": {
+        "openPendencies": "Offene Pendenzen",
+        "openIncidents": "Offene Meldungen",
+        "unreadMessages": "Ungelesene Nachrichten",
+        "customers": "Kunden",
+        "policies": "Aktive Policen",
+        "employees": "Mitarbeitende",
+        "vehicles": "Motorfahrzeuge",
+        "buildings": "Gebäude"
+      }
+    },
+    "tableHeaders": {
+      "incidents": "Meldungen",
+      "invoices": "Rechnungen",
+      "pendencies": "Aufgaben"
+    },
+    "tables": {
+      "showAll": "Alle anzeigen"
+    },
+    "incidents": {
+      "title": "Meldungen",
+      "table": {
+        "noAdvisor": "Unbekannt",
+        "noAuthor": "Unbekannt",
+        "noTitle": "Kein Titel",
+        "headers": {
+          "title": "Bezeichnung",
+          "type": "Meldungstyp",
+          "advisorName": "Zusänding",
+          "authorName": "Erstellt von",
+          "state": "Status",
+          "dueDate": "Fällig am"
+        }
+      }
+    },
+    "pendencies": {
+      "title": "Aufgaben",
+      "table": {
+        "noCustomer": "Unbekannt",
+        "noAuthor": "Unbekannt",
+        "noTitle": "Kein Titel",
+        "noDueDate": "Kein Fälligkeitsdatum",
+        "headers": {
+          "title": "Bezeichnung",
+          "customerName": "Kunde",
+          "authorName": "Erstellt von",
+          "state": "Status",
+          "dueDate": "Fällig am"
+        }
+      }
+    },
+    "invoices": {
+      "title": "Rechnungen",
+      "table": {
+        "noAuthor": "Unbekannt",
+        "noTitle": "Kein Titel",
+        "noDueDate": "Kein Fälligkeitsdatum",
+        "headers": {
+          "title": "Bezeichnung",
+          "customerName": "Kunde",
+          "authorName": "Erstellt von",
+          "state": "Status",
+          "daysUntilDue": "Fällig in",
+          "supplier": "Versicherer",
+          "dueDate": "Fällig am",
+          "consultantName": "Berater"
+        }
+      }
+    },
+    "tabs": {
+      "all": "Alle",
+      "open": "Offen",
+      "cancelled": "Storniert",
+      "paid": "Bezahlt",
+      "pendingResponse": "Antwort ausstehend",
+      "completed": "Erledigt"
+    },
+    "navigationTiles": {
+      "incident": {
+        "title": "Meldung",
+        "subTitle": "Daten ändern / Mitglied abmelden"
+      },
+      "contract": {
+        "title": "Vertrag",
+        "subTitle": "Schadensmeldungen, Mutationen etc."
+      },
+      "customer": {
+        "title": "Kunde",
+        "subTitle": "Schadensmeldungen, Mutationen etc."
+      },
+      "incidents": {
+        "title": "Meldung",
+        "subTitle": "Schadensmeldungen, Mutationen etc."
+      },
+      "pendency": {
+        "title": "Aufgabe",
+        "subTitle": "Schadensmeldungen, Mutationen etc."
+      },
+      "message": {
+        "title": "Nachricht",
+        "subTitle": "Schadensmeldungen, Mutationen etc."
+      }
+    },
+    "pendencyShortList": {
+      "header": "Heute fällig",
+      "subHeader": "To Do's",
+      "empty": "Keine Aufgaben fällig",
+      "showMore": "Weitere Aufgaben ({{count}}) anzeigen"
+    },
+    "contactCards": {
+      "roles": {
+        "trustee": "Ihr Treuhänder",
+        "broker": "Ihr Berater",
+        "backoffice": "Backoffice"
+      },
+      "sendMessage": "Nachricht senden",
+      "requestRecall": "Rückruf vereinbaren"
+    },
+    "customerScope": {
+      "disabledTooltip": "Wird auf dieser Ansicht ignoriert"
+    }
+  },
+  "globalSearchResult": {
+    "noResults": "Keine Ergebnisse gefunden",
+    "titles": {
+      "incidents": "Meldungen",
+      "customers": "Kunden",
+      "policies": "Verträge"
+    }
+  },
+  "extendedAutocomplete": {
+    "noResults": "Keine Ergebnisse",
+    "placeholder": "Suchen..."
+  },
+  "invoices": {
+    "filterTabs": {
+      "all": "Alle",
+      "open": "Offen",
+      "canceled": "Storniert",
+      "paid": "Bezahlt"
+    },
+    "overviewPage": {
+      "title": "Rechnungen",
+      "noData": "Keine Rechnungen vorhanden",
+      "noDataSubtitle": "Für diese Auswahl sind keine Rechnungen verfügbar.",
+      "statusTags": {
+        "unknown": "Unbekannt",
+        "dueInDays": "Noch {{days}} Tage",
+        "dueInOneDay": "Noch 1 Tag",
+        "overdue": "Überfällig",
+        "paid": "Bezahlt"
+      },
+      "table": {
+        "headers": {
+          "title": "Bezeichnung",
+          "supplier": "Versicherer",
+          "invoicePeriod": "Rechnungsperiode",
+          "invoiceSum": "Prämie",
+          "invoiceNetSum": "Nettoprämie",
+          "status": "Status",
+          "dueDate": "Fällig am",
+          "customerName": "Kunde",
+          "isPublished": "Freigegeben"
+        }
+      },
+      "filters": {
+        "name": {
+          "label": "Bezeichnung",
+          "placeholder": "Bezeichnung eingeben"
+        },
+        "from": {
+          "label": "Fälligkeit von"
+        },
+        "to": {
+          "label": "Fälligkeit bis"
+        },
+        "supplier": {
+          "label": "Versicherer",
+          "placeholder": "Versicherer eingeben"
+        }
+      }
+    },
+    "creationPageForm": {
+      "title": "Rechnung erstellen",
+      "actions": {
+        "save": "Speichern",
+        "saveDraft": "Entwurf speichern",
+        "release": "Freigeben",
+        "submit": "Übermitteln",
+        "cancel": "Abbrechen",
+        "delete": "Löschen",
+        "resetFile": "Neues Dokument hochladen"
+      },
+      "existingFileWarning": "Es ist bereits ein Dokument vorhanden. Möchten Sie es ersetzen?",
+      "invoiceDetails": "Rechnungsdetails",
+      "fields": {
+        "policyId": {
+          "label": "Police",
+          "placeholder": "Police auswählen"
+        },
+        "customer": {
+          "label": "Kunde",
+          "placeholder": "Kunde auswählen"
+        },
+        "title": {
+          "label": "Bezeichnung",
+          "placeholder": "Bezeichnung eingeben"
+        },
+        "invoiceSum": {
+          "label": "Betrag Brutto",
+          "placeholder": "Bruttobetrag eingeben"
+        },
+        "invoiceNetSum": {
+          "label": "Betrag Netto",
+          "placeholder": "Nettobetrag eingeben"
+        },
+        "invoicePeriodFrom": {
+          "label": "Datum von (Rechnungsperiode)",
+          "placeholder": "Startdatum eingeben"
+        },
+        "invoicePeriodEnd": {
+          "label": "Datum bis (Rechnungsperiode)",
+          "placeholder": "Enddatum eingeben"
+        },
+        "dueDate": {
+          "label": "Fälligkeitsdatum",
+          "placeholder": "Fälligkeitsdatum eingeben"
+        },
+        "paymentStatus": {
+          "label": "Status",
+          "placeholder": "Status auswählen"
+        },
+        "isPublished": {
+          "label": "Kunde hat Zugriff auf Rechnung"
+        },
+        "notes": {
+          "label": "Notizen",
+          "placeholder": "Notizen eingeben"
+        }
+      }
+    }
+  },
+  "paymentStates": {
+    "open": "Offen",
+    "unpaid": "Unbezahlt",
+    "paid": "Bezahlt",
+    "overdue": "Überfällig"
+  },
+  "assets": {
+    "assetData": "Daten",
+    "searchPlaceholder": {
+      "person": "Person suchen ...",
+      "vehicle": "Fahrzeug suchen ..."
+    },
+    "membersOverviewPage": {
+      "title": "Mitarbeiter",
+      "filters": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Name eingeben"
+        }
+      },
+      "table": {
+        "headers": {
+          "name": "Name",
+          "birthDate": "Geburtsdatum",
+          "age": "Alter",
+          "entryDate": "Eintrittsdatum",
+          "workload": "Arbeitsbelastung",
+          "insuredAnnual": "Versicherter Jahresbetrag",
+          "userAccount": "Benutzerkonto"
+        }
+      },
+      "userAccountStatus": {
+        "active": "Benutzerkonto aktiv",
+        "inactive": "Benutzerkonto inaktiv"
+      },
+      "filterTabs": {
+        "all": "Alle",
+        "hasAccount": "Mit Benutzerkonto"
+      },
+      "importDisabledTooltip": "Bitte wählen Sie zuerst einen Kunden aus",
+      "importSuccess": "Personen wurden erfolgreich importiert",
+      "noData": "Keine Mitarbeiter vorhanden",
+      "noDataSubtitle": "Für diesen Kunden sind noch keine Mitarbeiter erfasst."
+    },
+    "memberDetailPage": {
+      "tabs": {
+        "details": "Details",
+        "contracts": "Verträge",
+        "users": "Benutzer"
+      },
+      "overviewBar": {
+        "openReports": "Offene Meldungen",
+        "employer": "Arbeitgeber"
+      },
+      "actions": {
+        "incident": "Meldung",
+        "incidentSubtitle": "Daten ändern / Mitglied abmelden",
+        "contract": "Vertrag",
+        "contractSubtitle": "Schadensmeldungen, Mutationen etc."
+      },
+      "notes": "Notizen",
+      "user": {
+        "title": "Benutzerdetails",
+        "email": "E-Mail",
+        "activate": "Benutzer aktivieren",
+        "deactivate": "Benutzer deaktivieren",
+        "resetPassword": "Passwort zurücksetzen"
+      }
+    },
+    "memberPerson": {
+      "form": {
+        "title": "Mitgliedsperson",
+        "personalInfo": "Persönliche Informationen",
+        "familyInfo": "Familienstand",
+        "additionalInfo": "Zusätzliche Informationen",
+        "fields": {
+          "firstName": {
+            "label": "Vorname",
+            "placeholder": "Vorname eingeben"
+          },
+          "lastName": {
+            "label": "Nachname",
+            "placeholder": "Nachname eingeben"
+          },
+          "sex": {
+            "label": "Geschlecht",
+            "placeholder": "Geschlecht auswählen"
+          },
+          "birthdate": {
+            "label": "Geburtsdatum"
+          },
+          "civilStatus": {
+            "label": "Zivilstand",
+            "placeholder": "Zivilstand auswählen"
+          },
+          "marriageDate": {
+            "label": "Hochzeitsdatum"
+          },
+          "childSupport": {
+            "label": "Unterhaltspflichtige Kinder"
+          },
+          "nationality": {
+            "label": "Nationalität",
+            "placeholder": "Nationalität auswählen"
+          },
+          "driversLicenseDate": {
+            "label": "Führerscheindatum"
+          }
+        }
+      }
+    },
+    "memberContactDataDisplay": {
+      "birthdayLabel": "Geburtstag",
+      "ahvNumberLabel": "AHV-Nummer"
+    },
+    "detailSectionLabels": {
+      "ahvNumber": "AHV-Nummer",
+      "addressType": "Adresstyp",
+      "amountCHF": "Betrag CHF",
+      "annualSalary": "Jahresgehalt",
+      "birthdate": "Geburtsdatum",
+      "canton": "Kanton",
+      "category": "Kategorie",
+      "childSupport": "Unterhaltspflichtige Kinder",
+      "city": "Stadt",
+      "civilStatus": "Zivilstand",
+      "country": "Land",
+      "driversLicenseDate": "Führerscheindatum",
+      "email": "E-Mail",
+      "employmentContractStatus": "Arbeitsvertragsstatus",
+      "entryDate": "Eintrittsdatum",
+      "exitDate": "Austrittsdatum",
+      "firstName": "Vorname",
+      "fullTimeAble": "Vollzeitfähig",
+      "handicap": "Behinderungsgrad",
+      "language": "Sprache",
+      "lastName": "Nachname",
+      "marriageDate": "Hochzeitsdatum",
+      "mobile": "Mobiltelefon",
+      "nationality": "Nationalität",
+      "notFullTimeReason": "Grund für Teilzeit",
+      "pensionPlan": "Pensionsplan",
+      "phone": "Telefon",
+      "position": "Berufliche Stellung",
+      "profession": "Beruf",
+      "receivesSocialSupport": "Sozialleistungen erhalten",
+      "remarks": "Bemerkungen",
+      "sex": "Geschlecht",
+      "socialSupportSource": "Quelle Sozialleistungen",
+      "staffNumber": "Personalnummer",
+      "street": "Straße",
+      "usualWorkplace": "Üblicher Arbeitsort",
+      "workDaysPerWeek": "Arbeitstage pro Woche",
+      "workFrequency": "Arbeitshäufigkeit",
+      "workload": "Arbeitsbelastung %",
+      "zipCode": "Postleitzahl"
+    },
+    "address": "Adressdaten",
+    "assetContactData": "Kontaktdaten",
+    "assetEntryBaseData": "Eintrittsbasisdaten",
+    "assetEmploymentData": "Beschäftigungsdaten",
+    "assetMemberPersonData": "Persönliche Daten",
+    "assetSupportData": "Sozialleistungsdaten",
+    "contact": "Kontaktdaten",
+    "employment": "Beschäftigungsdaten",
+    "person": "Personendaten",
+    "contactData": {
+      "form": {
+        "title": "Kontaktdaten",
+        "personalInfo": "Persönliche Informationen",
+        "addressInfo": "Adressinformationen",
+        "contactInfo": "Kontaktinformationen",
+        "fields": {
+          "city": {
+            "label": "Stadt",
+            "placeholder": "Stadt eingeben"
+          },
+          "email": {
+            "label": "E-Mail",
+            "placeholder": "E-Mail eingeben"
+          },
+          "firstName": {
+            "label": "Vorname",
+            "placeholder": "Vorname eingeben"
+          },
+          "lastName": {
+            "label": "Nachname",
+            "placeholder": "Nachname eingeben"
+          },
+          "phone": {
+            "label": "Telefon",
+            "placeholder": "Telefonnummer eingeben"
+          },
+          "street": {
+            "label": "Straße",
+            "placeholder": "Straße eingeben"
+          },
+          "zipCode": {
+            "label": "Postleitzahl",
+            "placeholder": "Postleitzahl eingeben"
+          }
+        }
+      }
+    },
+    "employmentData": {
+      "form": {
+        "title": "Beschäftigungsdaten",
+        "fields": {
+          "entryDate": {
+            "label": "Eintrittsdatum"
+          },
+          "fullTimeAble": {
+            "label": "Vollzeitfähig"
+          },
+          "notFullTimeReason": {
+            "label": "Grund für Teilzeit",
+            "placeholder": "Grund eingeben"
+          },
+          "pensionPlan": {
+            "label": "Pensionsplan",
+            "placeholder": "Pensionsplan eingeben"
+          },
+          "staffNumber": {
+            "label": "Personalnummer",
+            "placeholder": "Personalnummer eingeben"
+          }
+        }
+      }
+    },
+    "entryBaseData": {
+      "form": {
+        "title": "Eintrittsbasisdaten",
+        "fields": {
+          "ahvNumber": {
+            "label": "AHV-Nummer",
+            "placeholder": "AHV-Nummer eingeben"
+          },
+          "annualSalary": {
+            "label": "Jahresgehalt",
+            "placeholder": "Jahresgehalt eingeben"
+          },
+          "workload": {
+            "label": "Arbeitsbelastung %",
+            "placeholder": "Arbeitsbelastung eingeben"
+          },
+          "category": {
+            "label": "Kategorie",
+            "placeholder": "Kategorie wählen",
+            "options": {
+              "none": "Keine Kategorie",
+              "category1": "Kategorie 1",
+              "category2": "Kategorie 2"
+            }
+          }
+        }
+      }
+    },
+    "supportData": {
+      "form": {
+        "title": "Sozialleistungsdaten",
+        "fields": {
+          "amountCHF": {
+            "label": "Betrag CHF",
+            "placeholder": "Betrag eingeben"
+          },
+          "handicap": {
+            "label": "Behinderungsgrad (0-100)",
+            "placeholder": "Behinderungsgrad eingeben"
+          },
+          "receivesSocialSupport": {
+            "label": "Sozialleistungen erhalten"
+          },
+          "remarks": {
+            "label": "Bemerkungen",
+            "placeholder": "Bemerkungen eingeben"
+          },
+          "socialSupportSource": {
+            "label": "Quelle Sozialleistungen",
+            "placeholder": "Quelle eingeben"
+          }
+        }
+      }
+    },
+    "userControl": {
+      "hint": "Änderungen müssen über eine Meldung beantragt werden."
+    }
+  },
+  "sunet": {
+    "options": {
+      "accountHolder": {
+        "1": "Versicherte Person",
+        "2": "Arbeitgeber"
+      },
+      "accidentCategory": {
+        "1": "BU (Berufsunfall)",
+        "2": "NBU (Nichtberufsunfall)",
+        "3": "Berufskrankheit"
+      },
+      "activityAtTimeOfAccident": {
+        "30": "Skifahren",
+        "32": "Snowboardfahren",
+        "34": "Fussball / Football",
+        "36": "Übrige Ballspiele",
+        "38": "Joggen",
+        "40": "Fitnesstraining",
+        "42": "Baden, Schwimmen",
+        "44": "Bergwandern",
+        "46": "Zu Fuss unterwegs",
+        "48": "E-Bike, E-Mountainbike",
+        "50": "Velo, Mountainbike fahren",
+        "52": "Autofahren",
+        "54": "Motorrad-, Roller fahren",
+        "56": "Haushaltsarbeiten",
+        "58": "Heimwerken",
+        "60": "Gartenarbeiten, Forst- und Landwirtschaft",
+        "62": "Rauferei, Streit, Gewalt",
+        "64": "Übriger Sport",
+        "66": "Übrige Tätigkeiten zuhause",
+        "68": "Übrige Tätigkeiten"
+      },
+      "employmentContractStatus": {
+        "0": "bestehend",
+        "1": "gekündigt",
+        "2": "beendet",
+        "9": "unbekannt"
+      },
+      "language": {
+        "de": "Deutsch",
+        "fr": "Französisch",
+        "it": "Italienisch",
+        "en": "Englisch"
+      },
+      "maritalStatus": {
+        "1": "ledig",
+        "2": "verheiratet",
+        "3": "verwitwet",
+        "4": "geschieden",
+        "5": "getrennt",
+        "6": "eingetragene Partnerschaft",
+        "7": "aufgelöste Partnerschaft",
+        "9": "unbekannt"
+      },
+      "policeReportExists": {
+        "1": "ja",
+        "2": "nein",
+        "9": "unbekannt"
+      },
+      "predictedDuration": {
+        "0": "unbekannt",
+        "7": "bis 1 Woche",
+        "14": "bis 2 Wochen",
+        "30": "bis 1 Monat",
+        "99": "über 1 Monat"
+      },
+      "professionalPosition": {
+        "1": "Kader/Direktion",
+        "2": "Angestellte/r",
+        "3": "Arbeiter/in",
+        "6": "Lehrling",
+        "7": "Praktikant/in",
+        "9": "Andere"
+      },
+      "salaryType": {
+        "1": "Stundenlohn",
+        "3": "Monatslohn",
+        "4": "Jahreslohn"
+      },
+      "salaryTypeWithPercentage": {
+        "1": "Stundenlohn",
+        "3": "Monatslohn",
+        "4": "Jahreslohn",
+        "5": "Prozent vom Grundlohn"
+      },
+      "sex": {
+        "1": "männlich",
+        "2": "weiblich"
+      },
+      "specialCases": {
+        "0": "keine",
+        "1": "Temporärangestellte",
+        "3": "Sonstiges"
+      },
+      "typeOfInjury": {
+        "1": "Kontusion",
+        "2": "Distorsion",
+        "3": "Luxation",
+        "4": "Fraktur",
+        "5": "Wunde/Verletzung",
+        "6": "Muskelriss",
+        "7": "Sehnenriss",
+        "8": "Bandverletzung",
+        "9": "Meniskusläsion",
+        "10": "Verbrennung/Verätzung",
+        "11": "Amputation",
+        "12": "Nervenverletzung",
+        "13": "Erfrierung",
+        "14": "Zahnschaden",
+        "15": "Gehirnerschütterung",
+        "16": "innere Verletzung",
+        "17": "Vergiftung",
+        "18": "Ertrinken",
+        "19": "andere Schädigung",
+        "20": "Augenverletzung",
+        "21": "Hörverlust"
+      },
+      "workingFrequency": {
+        "0": "regelmässig",
+        "1": "unregelmässig",
+        "2": "saisonal",
+        "9": "unbekannt"
+      }
+    },
+    "bodyPart": {
+      "options": {
+        "109": "Kopf, allgemein",
+        "111": "Stirn",
+        "112": "Augen",
+        "113": "Mund, Kiefer",
+        "119": "Gesicht, allgemein",
+        "121": "Ohr links",
+        "122": "Ohr rechts",
+        "123": "Nase",
+        "129": "Schädel / Gehirn",
+        "139": "Hals / Nacken",
+        "141": "Schulter links",
+        "142": "Schulter rechts",
+        "143": "Schlüsselbein",
+        "149": "Schulter, allgemein",
+        "151": "Brustkorb links",
+        "152": "Brustkorb rechts",
+        "153": "Brustbein",
+        "159": "Brustkorb, allgemein",
+        "161": "Oberer Rücken",
+        "162": "Lendenwirbelsäule",
+        "163": "Becken",
+        "169": "Rücken, allgemein",
+        "209": "Arm, allgemein",
+        "211": "Schultergelenk links",
+        "212": "Schultergelenk rechts",
+        "213": "Schultergelenk, allgemein",
+        "219": "Schultergelenk",
+        "231": "Unterarm links",
+        "232": "Unterarm rechts",
+        "233": "Handgelenk",
+        "239": "Unterarm, allgemein",
+        "249": "Ellbogen",
+        "259": "Oberarm, allgemein",
+        "269": "Arm gesamt",
+        "301": "Daumen links",
+        "302": "Daumen rechts",
+        "303": "Daumen, allgemein",
+        "309": "Hand links",
+        "311": "Zeigefinger links",
+        "312": "Zeigefinger rechts",
+        "313": "Zeigefinger, allgemein",
+        "319": "Hand rechts",
+        "321": "Mittelfinger links",
+        "322": "Mittelfinger rechts",
+        "323": "Mittelfinger, allgemein",
+        "329": "Hand, allgemein",
+        "331": "Ringfinger links",
+        "332": "Ringfinger rechts",
+        "333": "Ringfinger, allgemein",
+        "339": "Handwurzel",
+        "341": "Kleiner Finger links",
+        "342": "Kleiner Finger rechts",
+        "343": "Kleiner Finger, allgemein",
+        "349": "Finger, allgemein",
+        "351": "Mittelhand links",
+        "352": "Mittelhand rechts",
+        "353": "Mittelhand, allgemein",
+        "359": "Finger gesamt",
+        "361": "Hand links (alt.)",
+        "362": "Hand rechts (alt.)",
+        "363": "Hand, allgemein (alt.)",
+        "369": "Hand gesamt",
+        "371": "Fingergelenk links",
+        "372": "Fingergelenk rechts",
+        "373": "Fingergelenk, allgemein",
+        "379": "Fingergelenke, allgemein",
+        "401": "Hüfte links",
+        "402": "Hüfte rechts",
+        "403": "Hüfte, allgemein",
+        "409": "Bein, allgemein",
+        "411": "Oberschenkel links",
+        "412": "Oberschenkel rechts",
+        "413": "Oberschenkel, allgemein",
+        "419": "Knie, allgemein",
+        "429": "Kniegelenk",
+        "431": "Unterschenkel links",
+        "432": "Unterschenkel rechts",
+        "433": "Unterschenkel, allgemein",
+        "439": "Unterschenkel gesamt",
+        "449": "Sprunggelenk",
+        "459": "Bein gesamt",
+        "501": "Grosszehe links",
+        "502": "Grosszehe rechts",
+        "503": "Grosszehe, allgemein",
+        "509": "Fuss links",
+        "511": "2. Zehe links",
+        "512": "2. Zehe rechts",
+        "513": "2. Zehe, allgemein",
+        "519": "Fuss rechts",
+        "521": "3. Zehe links",
+        "522": "3. Zehe rechts",
+        "523": "3. Zehe, allgemein",
+        "529": "Fuss, allgemein",
+        "531": "4. Zehe links",
+        "532": "4. Zehe rechts",
+        "533": "4. Zehe, allgemein",
+        "539": "Knöchel",
+        "541": "Kleiner Zeh links",
+        "542": "Kleiner Zeh rechts",
+        "543": "Kleiner Zeh, allgemein",
+        "549": "Zehen, allgemein",
+        "551": "Fusssohle links",
+        "552": "Fusssohle rechts",
+        "553": "Fusssohle, allgemein",
+        "559": "Zehengelenk",
+        "561": "Fussrücken links",
+        "562": "Fussrücken rechts",
+        "563": "Fussrücken, allgemein",
+        "569": "Fuss gesamt",
+        "609": "Bauch, allgemein",
+        "619": "Lunge",
+        "621": "Herz links",
+        "622": "Herz rechts",
+        "623": "Herz, allgemein",
+        "629": "Herz / Kreislauf",
+        "639": "Leber",
+        "649": "Niere",
+        "651": "Magen / Darm links",
+        "652": "Magen / Darm rechts",
+        "653": "Magen / Darm, allgemein",
+        "659": "Bauchorgane, allgemein",
+        "669": "Organe, allgemein",
+        "709": "Sonstige Körperstelle",
+        "809": "Mehrere Körperstellen",
+        "819": "Ganzer Körper",
+        "999": "Nicht bekannt"
+      }
+    },
+    "bodyPartGroup": {
+      "head": "Kopf",
+      "neck": "Hals",
+      "torso": "Rumpf",
+      "upperExtremities": "Obere Extremitäten",
+      "hands": "Hände",
+      "lowerExtremities": "Untere Extremitäten",
+      "feet": "Füsse",
+      "organs": "Organe",
+      "general": "Allgemein"
+    }
+  },
+  "bvgDeklaration": {
+    "expandAll": "Alle ausklappen",
+    "collapseAll": "Alle einklappen",
+    "annualSalaryLabel": "Jahreslohn bisher",
+    "workloadLabel": "Pensum bisher",
+    "annualSalaryPlaceholder": "Jahreslohn eingeben asdf",
+    "workloadPlaceholder": "Pensum eingeben",
+    "whoPlaceholder": "Namen eingeben",
+    "remarksPlaceholder": "Optionale Bemerkungen zur BVG-Deklaration für dieses Mitglied",
+    "remarksHealthPlaceholder": "Bemerkungen eingeben",
+    "healthConfirmation": {
+      "allFullyCapableLabel": "Der Arbeitgeber bestätigt, dass alle aufgeführten Personen voll arbeitsfähig sind*",
+      "notFullyCapableLabel": "Falls nein, wer?",
+      "receivesSocialBenefitsLabel": "Bezieht eine der aufgeführten Personen Leistungen gemäss Eidg. IV, MVG, UVG, BVG, einer ausländischen Sozialversicherung oder einer anderen Versicherung, oder haben Sie Leistungen beantragt?*",
+      "socialBenefitsWhoLabel": "Falls ja, wer?"
+    }
+  },
+  "directMessages": {
+    "overviewPage": {
+      "title": "Inbox",
+      "fields": {
+        "search": {
+          "placeholder": "Suche"
+        }
+      },
+      "customerChannelTitle": "Ihr Broker"
+    },
+    "inputPlaceholder": "Nachricht eingeben...",
+    "send": "Senden",
+    "uploadButton": "Anhänge hinzufügen",
+    "noSelection": "Wählen Sie einen Chat aus"
+  },
+  "formFields": {
+    "handicap": "Behinderungsgrad",
+    "amountCHF": "Betrag CHF",
+    "socialSupportSource": "Quelle Sozialleistungen",
+    "fullTimeAble": "Voll arbeitsfähig",
+    "notFullTimeReason": "Grund für Teilzeit",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "birthDate": "Geburtstag",
+    "birthdate": "Geburtstag",
+    "civilStatus": "Zivilstand",
+    "nationality": "Nationalität",
+    "childSupport": "Unterhaltspflicht",
+    "marriageDate": "Hochzeitsdatum",
+    "driversLicenseDate": "Führerschein-Datum",
+    "gender": "Geschlecht",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "street": "Strasse",
+    "zipCode": "Postleitzahl",
+    "city": "Stadt",
+    "country": "Land",
+    "salutation": "Anrede",
+    "employeeId": "Mitarbeiter-ID",
+    "entryDate": "Eintrittsdatum",
+    "exitDate": "Austrittsdatum",
+    "pensionPlan": "Vorsorgeplan",
+    "basis": "Basis",
+    "salary": "Jahresgehalt",
+    "annualSalary": "Jahresgehalt",
+    "workload": "Arbeitspensum",
+    "pensum": "Arbeitspensum",
+    "staffNumber": "Personalnummer",
+    "contractType": "Vertragstyp",
+    "language": "Sprache",
+    "receivesSocialSupport": "Erhält Sozialleistungen",
+    "receivedSocialSupport": "Erhält Sozialleistungen",
+    "healthConfirmation": "Gesundheitsbestätigung",
+    "fullyCapable": "Voll arbeitsfähig",
+    "dueToPensioning": "Austritt wegen Pensionierung",
+    "dueToRestructuring": "Austritt wegen Umstrukturierung",
+    "ahvNumber": "AHV-Nummer",
+    "sex": "Geschlecht",
+    "remarks": "Bemerkungen",
+    "placeOfAccident": "Unfallort",
+    "dateOfAccident": "Unfalldatum",
+    "timeOfAccident": "Unfallzeit",
+    "typeOfDamage": "Schadenstyp",
+    "descriptionOfDamage": "Schadenbeschreibung",
+    "estimatedDamageAmount": "Geschätzter Schadenbetrag",
+    "policyNumber": "Policennummer",
+    "customerId": "Kundennummer",
+    "damageNumber": "Schadennummer",
+    "insuredPerson": "Versicherte Person",
+    "thirdParty": "Dritte Person",
+    "witnesses": "Zeugen",
+    "policeReport": "Polizeibericht",
+    "vehicleRegistration": "Fahrzeugregistrierung",
+    "vehicleType": "Fahrzeugtyp",
+    "licensePlate": "Kontrollschild",
+    "vehicleVIN": "Fahrzeug-VIN",
+    "mileage": "Kilometerstand",
+    "damageLocation": "Schadensort",
+    "repairEstimate": "Reparaturkostenvoranschlag",
+    "photos": "Fotos"
+  },
+
+  "enums": {
+    "_comment": "---- GLOBAL ENUMERATION TRANSLATION VALUES ----",
+    "actions": {
+      "incident": "Meldung",
+      "policy": "Police",
+      "employee": "Mitarbeitende:r",
+      "asset": "Asset",
+      "profile": "Profil bearbeiten",
+      "settings": "Einstellungen",
+      "switchAccount": "Konto wechseln",
+      "logout": "Ausloggen"
+    },
+    "boolean": {
+      "yes": "Ja",
+      "no": "Nein",
+      "true": "Ja",
+      "false": "Nein"
+    },
+    "policyTypes": {
+      "vehicle": "Fahrzeug",
+      "people": "Personen"
+    },
+    "policyCategories": {
+      "things": "Betrieb / Haushalt",
+      "people": "Personen",
+      "vehicle": "Fahrzeug"
+    },
+    "policyStates": {
+      "draft": "Entwurf",
+      "quote": "Offerte",
+      "application": "Antrag",
+      "active": "Aktiv",
+      "inactive": "Passiv",
+      "suspended": "Sistiert",
+      "expired": "Ausgelaufen"
+    },
+    "addressTypes": {
+      "main_address": "Hauptadresse",
+      "office": "Büro",
+      "warehouse": "Lager"
+    },
+    "messageStates": {
+      "all": "Alle",
+      "open": "Offen",
+      "pending": "Pendenz",
+      "closed": "Geschlossen",
+      "unread": "Ungelesen"
+    },
+    "contactTypes": {
+      "main_contact": "Hauptkontakt",
+      "ceo": "CEO",
+      "coo": "COO",
+      "hr": "HR",
+      "trustee": "Treuhand",
+      "employee": "Mitarbeiter",
+      "schaden": "Schaden",
+      "brokerbetreuer": "Brokerbetreuer",
+      "generalagent": "Generalagent",
+      "brokersupport_allg": "Brokersupport Allg.",
+      "brokersupport_p": "Brokersupport P",
+      "brokersupport_u": "Brokersupport U",
+      "fachsupport_einzelleben": "Fachsupport Einzelleben",
+      "fachsupport_bvg": "Fachsupport BVG",
+      "fachsupport_haft_sach": "Fachsupport Haft-Sach",
+      "fachsupport_mf": "Fachsupport MF",
+      "fachsupport_transport": "Fachsupport Transport",
+      "fachsupport_flotte": "Fachsupport Flotte",
+      "fachsupport_pv": "Fachsupport PV",
+      "pannenhilfe": "Pannenhilfe",
+      "mandate": "Mandate",
+      "cyber": "Cyber",
+      "baugarantie": "Baugarantie",
+      "provisionen": "Provisionen",
+      "akd": "AKD",
+      "invoicing_contact": "Rechnungskontakt"
+    },
+    "customerTypes": {
+      "household": "Haushalt",
+      "company": "Firma"
+    },
+    "industries": {
+      "transport": "Verkehr",
+      "retail": "Detailhandel",
+      "construction": "Bau",
+      "it": "Informatik",
+      "services": "Dienstleistungen",
+      "gastronomy": "Gastronomie",
+      "agriculture": "Landwirtschaft",
+      "medicine": "Medizin",
+      "administration": "Verwaltung"
+    },
+    "liabilityOptions": {
+      "liable": "schuldig",
+      "notLiable": "nicht schuldig",
+      "partlyLiable": "teilweise schuldig"
+    },
+    "pendencyTypes": {
+      "GENERAL": "Standard"
+    },
+    "pendencyStatus": {
+      "open": "offen",
+      "completed": "abgeschlossen"
+    },
+    "countries": {
+      "ch": "Schweiz",
+      "de": "Deutschland",
+      "at": "Österreich",
+      "fr": "Frankreich",
+      "it": "Italien",
+      "li": "Liechtenstein",
+      "lu": "Luxemburg",
+      "be": "Belgien",
+      "nl": "Niederlande",
+      "gb": "Vereinigtes Königreich",
+      "ie": "Irland",
+      "es": "Spanien",
+      "pt": "Portugal",
+      "dk": "Dänemark",
+      "se": "Schweden",
+      "no": "Norwegen",
+      "fi": "Finnland",
+      "pl": "Polen",
+      "cz": "Tschechien",
+      "sk": "Slowakei",
+      "hu": "Ungarn",
+      "si": "Slowenien",
+      "hr": "Kroatien",
+      "ro": "Rumänien",
+      "bg": "Bulgarien",
+      "gr": "Griechenland",
+      "rs": "Serbien",
+      "me": "Montenegro",
+      "ba": "Bosnien und Herzegowina",
+      "mk": "Nordmazedonien",
+      "al": "Albanien",
+      "tr": "Türkei",
+      "ua": "Ukraine",
+      "ru": "Russland",
+      "us": "Vereinigte Staaten",
+      "br": "Brasilien",
+      "in": "Indien",
+      "cn": "China",
+      "jp": "Japan",
+      "au": "Australien"
+    },
+    "cantons": {
+      "Zurich": "Zürich",
+      "Bern": "Bern",
+      "Lucerne": "Luzern",
+      "Uri": "Uri",
+      "Schwyz": "Schwyz",
+      "Obwalden": "Obwalden",
+      "Nidwalden": "Nidwalden",
+      "Glarus": "Glarus",
+      "Zug": "Zug",
+      "Fribourg": "Freiburg",
+      "Solothurn": "Solothurn",
+      "Basel-Stadt": "Basel-Stadt",
+      "Basel-Landschaft": "Basel-Landschaft",
+      "Schaffhausen": "Schaffhausen",
+      "AppenzellAusserrhoden": "Appenzell Ausserrhoden",
+      "AppenzellInnerrhoden": "Appenzell Innerrhoden",
+      "St.Gallen": "St. Gallen",
+      "Grisons": "Graubünden",
+      "Aargau": "Aargau",
+      "Thurgau": "Thurgau",
+      "Ticino": "Tessin",
+      "Vaud": "Waadt",
+      "Valais": "Wallis",
+      "Neuchatel": "Neuenburg",
+      "Geneva": "Genf",
+      "Jura": "Jura"
+    },
+    "maritalStatus": {
+      "single": "Ledig",
+      "married": "Verheiratet",
+      "divorced": "Geschieden",
+      "widowed": "Verwitwet",
+      "separated": "Getrennt",
+      "registeredPartnership": "Eingetragene Partnerschaft",
+      "unknown": "Unbekannt"
+    },
+    "nationality": {
+      "CH": "Schweiz",
+      "DE": "Deutschland",
+      "FR": "Frankreich",
+      "IT": "Italien",
+      "AT": "Österreich",
+      "BE": "Belgien",
+      "NL": "Niederlande",
+      "SE": "Schweden",
+      "NO": "Norwegen",
+      "DK": "Dänemark"
+    },
+    "gender": {
+      "male": "Männlich",
+      "female": "Weiblich",
+      "other": "Sonstiges",
+      "unknown": "Unbekannt"
+    },
+    "salutation": {
+      "mr": "Herr",
+      "mrs": "Frau",
+      "ms": "Fräulein"
+    },
+    "basis": {
+      "mandatory": "Obligatorisch",
+      "voluntary": "Freiwillig"
+    },
+    "civilStatus": {
+      "single": "Ledig",
+      "married": "Verheiratet",
+      "divorced": "Geschieden",
+      "widowed": "Verwitwet",
+      "separated": "Getrennt",
+      "registeredPartnership": "Eingetragene Partnerschaft",
+      "unknown": "Unbekannt"
+    },
+    "language": {
+      "DE": "Deutsch",
+      "FR": "Französisch",
+      "IT": "Italienisch"
+    },
+    "pensionPlan": {
+      "base": "Standard",
+      "management": "Kader"
+    },
+    "payoutUsage": {
+      "unknown": "Unbekannt",
+      "jobChange": "Stellenwechsel",
+      "createVestedBenefitsAccount": "Freizügigkeitskonto eröffnen",
+      "cashPayout": "Barauszahlung"
+    }
+  },
+  "documents": {
+    "actions": {
+      "publish": "Veröffentlichen",
+      "unpublish": "Unveröffentlichen"
+    },
+    "publishDialog": {
+      "publish": {
+        "title": "Dokument veröffentlichen",
+        "message": "Möchten Sie dieses Dokument veröffentlichen? Es wird danach für den Kunden sichtbar."
+      },
+      "unpublish": {
+        "title": "Veröffentlichung zurückziehen",
+        "message": "Möchten Sie die Veröffentlichung dieses Dokuments zurückziehen? Es wird danach nur noch intern sichtbar."
+      }
+    }
+  }
+}
