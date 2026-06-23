@@ -302,9 +302,9 @@
   "devDependencies": {
     "@cyclonedx/cyclonedx-npm": "^5.0.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.0",
     "@types/vscode": "^1.125.0",
-    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.0.0",
     "@vscode/vsce": "^3.2.1",
     "esbuild": "^0.28.1",
@@ -313,7 +313,7 @@
     "ovsx": "^1.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.19.0"
+    "typescript-eslint": "^8.62.0"
   },
   "dependencies": {
     "jsonc-parser": "^3.3.1"
