@@ -4,6 +4,7 @@ import { registerFindReferencesCommands } from './features/referenceFinder/refer
 import { registerJsonOutlineView } from './features/treeView/jsonOutlineProvider';
 import { registerOutlineSearchCommands } from './features/treeView/treeViewSearchController';
 import { registerDuplicateKeyView } from './features/duplicateKeys/duplicateKeyProvider';
+import { registerDuplicateKeyDecorator } from './features/duplicateKeys/duplicateKeyDecorator';
 import { Logger } from './util/logger';
 
 let logger: Logger | undefined;
@@ -19,6 +20,7 @@ export function activate(context: vscode.ExtensionContext): void {
 
   registerFindReferencesCommands(context, logger);
   registerDuplicateKeyView(context, logger);
+  registerDuplicateKeyDecorator(context, logger);
 
   logger.info('JSON Tools extension activated.');
 }
