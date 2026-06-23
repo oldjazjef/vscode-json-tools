@@ -29,7 +29,7 @@ export function registerDuplicateKeyDecorator(context: vscode.ExtensionContext, 
     gutterIconSize: 'contain',
   });
 
-  let ignoreSet: Set<string> = new Set();
+  const ignoreSet: Set<string> = new Set();
 
   const updateDecorations = (editor: vscode.TextEditor | undefined) => {
     if (!editor || !getJsonLanguageIds().includes(editor.document.languageId)) {
