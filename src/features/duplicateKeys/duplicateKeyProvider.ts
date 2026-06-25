@@ -4,6 +4,7 @@ import { getJsonLanguageIds, getOutlineDebounceMs } from '../../config/settings'
 import { revealRange } from '../../navigation/revealService';
 import { debounce } from '../../util/debounce';
 import { Logger } from '../../util/logger';
+import type { JsonFileManager } from '../treeView/jsonFileManager';
 import {
   DuplicateGroup,
   DuplicateOccurrence,
@@ -258,7 +259,7 @@ class DuplicateKeyProvider implements vscode.TreeDataProvider<DuplicateKeyNode> 
   }
 }
 
-export function registerDuplicateKeyView(context: vscode.ExtensionContext, _logger: Logger): void {
+export function registerDuplicateKeyView(context: vscode.ExtensionContext, _logger: Logger, fileManager: JsonFileManager): void {
   const provider = new DuplicateKeyProvider(context.workspaceState);
 
   vscode.window.createTreeView(DUPLICATE_KEYS_VIEW_ID, {
@@ -266,7 +267,17 @@ export function registerDuplicateKeyView(context: vscode.ExtensionContext, _logg
     showCollapseAll: true,
   });
 
-  const refreshFromActiveEditor = () => provider.setDocument(vscode.window.activeTextEditor?.document);
+  const refreshFromActiveEditor = () => {
+    // If a file is pinned and active, use that; otherwise use the active editor
+    const activeUri = fileManager.getActiveUri();
+    if (activeUri) {
+      vscode.workspace.openTextDocument(activeUri).then((doc) => {
+        provider.setDocument(doc);
+      });
+    } else {
+      provider.setDocument(vscode.window.activeTextEditor?.document);
+    }
+  };
   refreshFromActiveEditor();
 
   const debouncedRefresh = debounce(refreshFromActiveEditor, getOutlineDebounceMs());
@@ -346,6 +357,9 @@ export function registerDuplicateKeyView(context: vscode.ExtensionContext, _logg
       if (event.document.uri.toString() === provider.getActiveDocumentUri()?.toString()) {
         debouncedRefresh();
       }
+    }),
+    fileManager.onDidChange(() => {
+      refreshFromActiveEditor();
     })
   );
 }

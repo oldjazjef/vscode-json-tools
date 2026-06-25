@@ -1,8 +1,10 @@
 import * as vscode from 'vscode';
+import * as path from 'path';
 import { parseJsonModel } from '../../core/jsonModel';
 import { getJsonLanguageIds, getOutlineDebounceMs } from '../../config/settings';
 import { revealRange } from '../../navigation/revealService';
 import { debounce } from '../../util/debounce';
+import { JsonFileManager } from './jsonFileManager';
 import {
   buildRootNode,
   describeOutlineNode,
@@ -18,20 +20,36 @@ import {
 
 export const OUTLINE_VIEW_ID = 'jsonTools.outlineView';
 
+// Sentinel node type to represent a pinned file in the tree view
+interface PinnedFileNode {
+  readonly _type: 'pinnedFile';
+  readonly uri: vscode.Uri;
+  readonly label: string;
+  readonly isActive: boolean;
+}
+
+function isPinnedFileNode(node: unknown): node is PinnedFileNode {
+  return typeof node === 'object' && node !== null && '_type' in node && (node as PinnedFileNode)._type === 'pinnedFile';
+}
+
 /**
  * TreeDataProvider for the active JSON/JSONC document. Mirrors VSCode's
  * built-in Outline view, but for JSON structure: it tracks whichever
  * document is active (not a whole-workspace explorer), and supports an
  * optional text filter that prunes non-matching subtrees.
+ *
+ * When a JsonFileManager is provided, shows pinned files as selectable tabs
+ * and displays the active pinned file's structure.
  */
-export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineNode> {
-  private readonly changeEmitter = new vscode.EventEmitter<JsonOutlineNode | undefined | void>();
+export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineNode | PinnedFileNode> {
+  readonly changeEmitter = new vscode.EventEmitter<JsonOutlineNode | PinnedFileNode | undefined | void>();
   readonly onDidChangeTreeData = this.changeEmitter.event;
 
   private rootOutlineNode: JsonOutlineNode | undefined;
   private documentUri: vscode.Uri | undefined;
   private filterText = '';
-  private treeView: vscode.TreeView<JsonOutlineNode> | undefined;
+  private treeView: vscode.TreeView<JsonOutlineNode | PinnedFileNode> | undefined;
+  private fileManager: JsonFileManager | undefined;
 
   /** Re-parses `document` and rebuilds the tree from scratch. Pass `undefined` to clear the view (e.g. non-JSON active editor). */
   setDocument(document: vscode.TextDocument | undefined): void {
@@ -57,12 +75,26 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
     return this.filterText;
   }
 
-  setTreeView(view: vscode.TreeView<JsonOutlineNode>): void {
+  setTreeView(view: vscode.TreeView<JsonOutlineNode | PinnedFileNode>): void {
     this.treeView = view;
+  }
+
+  setFileManager(fileManager: JsonFileManager): void {
+    this.fileManager = fileManager;
   }
 
   getActiveDocumentUri(): vscode.Uri | undefined {
     return this.documentUri;
+  }
+
+  switchPinnedFile(uri: vscode.Uri): void {
+    if (this.fileManager) {
+      this.fileManager.setActiveUri(uri);
+      // Update the document to show the new file's structure
+      vscode.workspace.openTextDocument(uri).then((doc) => {
+        this.setDocument(doc);
+      });
+    }
   }
 
   /**
@@ -104,7 +136,22 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
     return undefined;
   }
 
-  getTreeItem(element: JsonOutlineNode): vscode.TreeItem {
+  getTreeItem(element: JsonOutlineNode | PinnedFileNode): vscode.TreeItem {
+    // Handle pinned file nodes
+    if (isPinnedFileNode(element)) {
+      const item = new vscode.TreeItem(element.label, vscode.TreeItemCollapsibleState.None);
+      item.iconPath = new vscode.ThemeIcon('json');
+      item.contextValue = element.isActive ? 'jsonTools.pinnedFileActive' : 'jsonTools.pinnedFile';
+      item.description = element.isActive ? '(active)' : '';
+      item.command = {
+        command: 'jsonTools.outline.switchPinnedFile',
+        title: 'Switch to file',
+        arguments: [element.uri],
+      };
+      return item;
+    }
+
+    // Handle JSON outline nodes
     const { label, description } = describeOutlineNode(element);
     const item = new vscode.TreeItem(label, this.collapsibleStateFor(element));
     item.description = description;
@@ -122,12 +169,46 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
     return item;
   }
 
-  getChildren(element?: JsonOutlineNode): JsonOutlineNode[] {
-    const base = element ?? this.rootOutlineNode;
-    if (!base) {
+  getChildren(element?: JsonOutlineNode | PinnedFileNode): Array<JsonOutlineNode | PinnedFileNode> {
+    // If no element is selected, show pinned files AND the active file's structure
+    if (!element) {
+      const result: Array<JsonOutlineNode | PinnedFileNode> = [];
+
+      // Add pinned files if file manager exists
+      if (this.fileManager) {
+        const pinnedFiles = this.fileManager.getPinnedUris();
+        if (pinnedFiles.length > 0) {
+          result.push(
+            ...pinnedFiles.map((uri) => ({
+              _type: 'pinnedFile' as const,
+              uri,
+              label: path.basename(uri.fsPath),
+              isActive: this.fileManager!.getActiveUri()?.toString() === uri.toString(),
+            }))
+          );
+        }
+      }
+
+      // Add the active file's root structure (if it exists)
+      if (this.rootOutlineNode) {
+        const children = getChildOutlineNodes(this.rootOutlineNode);
+        if (this.filterText) {
+          result.push(...children.filter((child) => subtreeMatchesFilter(child, this.filterText)));
+        } else {
+          result.push(...children);
+        }
+      }
+
+      return result;
+    }
+
+    // If element is a pinned file, don't show children (it's just a selector)
+    if (isPinnedFileNode(element)) {
       return [];
     }
-    const children = getChildOutlineNodes(base);
+
+    // Otherwise, show the structure of the current outline node
+    const children = getChildOutlineNodes(element);
     if (!this.filterText) {
       return children;
     }
@@ -156,15 +237,27 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<JsonOutlineN
  * provider so other features (search controller, future "find references"
  * context-menu action) can attach to it.
  */
-export function registerJsonOutlineView(context: vscode.ExtensionContext): JsonOutlineProvider {
+export function registerJsonOutlineView(context: vscode.ExtensionContext, fileManager: JsonFileManager): JsonOutlineProvider {
   const provider = new JsonOutlineProvider();
+  provider.setFileManager(fileManager);
+
   const treeView = vscode.window.createTreeView(OUTLINE_VIEW_ID, {
     treeDataProvider: provider,
     showCollapseAll: true,
   });
   provider.setTreeView(treeView);
 
-  const refreshFromActiveEditor = () => provider.setDocument(vscode.window.activeTextEditor?.document);
+  const refreshFromActiveEditor = () => {
+    // If a file is pinned and active, use that; otherwise use the active editor
+    const activeUri = fileManager.getActiveUri();
+    if (activeUri) {
+      vscode.workspace.openTextDocument(activeUri).then((doc) => {
+        provider.setDocument(doc);
+      });
+    } else {
+      provider.setDocument(vscode.window.activeTextEditor?.document);
+    }
+  };
   refreshFromActiveEditor();
 
   const debouncedRefresh = debounce(refreshFromActiveEditor, getOutlineDebounceMs());
@@ -180,17 +273,27 @@ export function registerJsonOutlineView(context: vscode.ExtensionContext): JsonO
     revealRange(editor, outlineNodeKeyRange(node) ?? outlineNodeValueRange(node));
   });
 
+  const switchPinnedFileCommand = vscode.commands.registerCommand('jsonTools.outline.switchPinnedFile', async (uri: vscode.Uri) => {
+    provider.switchPinnedFile(uri);
+    provider.changeEmitter.fire();
+  });
+
   const refreshCommand = vscode.commands.registerCommand('jsonTools.refreshOutline', refreshFromActiveEditor);
 
   context.subscriptions.push(
     treeView,
     revealCommand,
+    switchPinnedFileCommand,
     refreshCommand,
     vscode.window.onDidChangeActiveTextEditor(refreshFromActiveEditor),
     vscode.workspace.onDidChangeTextDocument((event) => {
       if (event.document.uri.toString() === provider.getActiveDocumentUri()?.toString()) {
         debouncedRefresh();
       }
+    }),
+    fileManager.onDidChange(() => {
+      refreshFromActiveEditor();
+      provider.changeEmitter.fire();
     })
   );
 

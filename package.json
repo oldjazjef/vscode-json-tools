@@ -2,7 +2,7 @@
   "name": "json-assistant",
   "displayName": "JSON Assistant",
   "description": "Jump to any nested JSON path instantly, browse a live JSON outline in the sidebar, and find every code reference to a path across your workspace.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "publisher": "oldjazjef",
   "private": true,
   "license": "MIT",
@@ -94,6 +94,29 @@
         "command": "jsonTools.duplicateKeys.createMergeInstruction",
         "title": "JSON Tools: Create Merge Instruction for AI",
         "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.registerForAutoComplete",
+        "title": "JSON Tools: Register for jt: AutoComplete",
+        "category": "JSON Tools"
+      },
+      {
+        "command": "jsonTools.outline.pinFile",
+        "title": "JSON Tools: Pin File in Outline",
+        "category": "JSON Tools",
+        "icon": "$(pin)"
+      },
+      {
+        "command": "jsonTools.outline.unpinFile",
+        "title": "JSON Tools: Unpin File from Outline",
+        "category": "JSON Tools",
+        "icon": "$(pinned)"
+      },
+      {
+        "command": "jsonTools.outline.openJsonFile",
+        "title": "JSON Tools: Open JSON File",
+        "category": "JSON Tools",
+        "icon": "$(folder-open)"
       }
     ],
     "keybindings": [
@@ -140,6 +163,21 @@
           "command": "jsonTools.findReferences",
           "when": "editorLangId == json || editorLangId == jsonc",
           "group": "jsonTools"
+        },
+        {
+          "command": "jsonTools.registerForAutoComplete",
+          "when": "editorLangId == json || editorLangId == jsonc",
+          "group": "jsonTools"
+        },
+        {
+          "command": "jsonTools.outline.pinFile",
+          "when": "editorLangId == json || editorLangId == jsonc",
+          "group": "jsonTools"
+        },
+        {
+          "command": "jsonTools.outline.unpinFile",
+          "when": "editorLangId == json || editorLangId == jsonc",
+          "group": "jsonTools"
         }
       ],
       "view/title": [
@@ -157,6 +195,16 @@
           "command": "jsonTools.refreshOutline",
           "when": "view == jsonTools.outlineView",
           "group": "navigation@3"
+        },
+        {
+          "command": "jsonTools.outline.pinFile",
+          "when": "view == jsonTools.outlineView",
+          "group": "navigation@4"
+        },
+        {
+          "command": "jsonTools.outline.openJsonFile",
+          "when": "view == jsonTools.outlineView",
+          "group": "navigation@5"
         },
         {
           "command": "jsonTools.duplicateKeys.manageIgnoreList",
@@ -208,7 +256,7 @@
     "viewsWelcome": [
       {
         "view": "jsonTools.outlineView",
-        "contents": "Open a JSON or JSONC file to see its structure here, like the built-in Outline view but JSON-aware.\n\nClick any entry to jump to it in the editor.\n\nUse the $(search) filter icon above to narrow the tree down to matching keys, indices, or values — matches and their ancestors stay visible, everything else is hidden.\n\nRight-click an entry and choose **Find References** to search your workspace for code that accesses that path.\n\n[Search Path in Active File](command:jsonTools.searchPath)"
+        "contents": "Open a JSON or JSONC file to see its structure here, like the built-in Outline view but JSON-aware.\n\nClick any entry to jump to it in the editor.\n\nUse the $(search) filter icon above to narrow the tree down to matching keys, indices, or values — matches and their ancestors stay visible, everything else is hidden.\n\nRight-click an entry and choose **Find References** to search your workspace for code that accesses that path.\n\n**Pin multiple files:** Use the $(pin) button above to keep files visible even when switching between editors. Use $(folder-open) to browse and open JSON files.\n\n[Search Path in Active File](command:jsonTools.searchPath)"
       },
       {
         "view": "jsonTools.duplicateKeysView",
@@ -236,8 +284,8 @@
         },
         "jsonTools.referenceFinder.exclude": {
           "type": "string",
-          "default": "",
-          "description": "Additional glob to exclude from reference scanning, on top of files.exclude/search.exclude."
+          "default": "**/{node_modules,dist,build,out}/**",
+          "description": "Additional glob to exclude from reference scanning, on top of files.exclude/search.exclude. Defaults to excluding common build-output folders."
         },
         "jsonTools.referenceFinder.maxResults": {
           "type": "number",
@@ -256,6 +304,24 @@
             "_.get"
           ],
           "description": "Function names treated as path-accessor calls, e.g. get('a.b.c')."
+        },
+        "jsonTools.completion.include": {
+          "type": "string",
+          "default": "**/*.{json,jsonc}",
+          "description": "Glob of JSON/JSONC files indexed for jt: path completion."
+        },
+        "jsonTools.completion.exclude": {
+          "type": "string",
+          "default": "**/{node_modules,dist,build,out}/**",
+          "description": "Glob excluded from the jt: path completion index, on top of files.exclude/search.exclude."
+        },
+        "jsonTools.completion.registeredFiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Manually registered JSON/JSONC files for jt: path completion. Right-click a JSON file and choose 'Register for jt: AutoComplete'."
         },
         "jsonTools.outline.debounceMs": {
           "type": "number",
