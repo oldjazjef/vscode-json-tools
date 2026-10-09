@@ -14,3 +14,6 @@ tsconfig.json
 **/*.map
 **/.gitignore
 **/*.vsix
+README.md
+CONTRIBUTING.md
+MARKETPLACE.md

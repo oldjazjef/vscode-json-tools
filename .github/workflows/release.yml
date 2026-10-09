@@ -1,7 +1,7 @@
 name: Release
 
 # Triggered by pushing a tag like v0.1.0 (see the "Releasing" section in
-# README.md). Runs the full test suite, packages a .vsix, attaches it to a
+# CONTRIBUTING.md). Runs the full test suite, packages a .vsix, attaches it to a
 # new GitHub Release, and optionally publishes to the Visual Studio
 # Marketplace / Open VSX if the corresponding secrets are configured.
 on:
@@ -50,7 +50,7 @@ jobs:
           node -e "const pkg = require('./package.json'); pkg.version = '$VERSION'; require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2) + '\n');"
 
       - name: Package extension
-        run: npx vsce package --no-git-tag-version
+        run: npx vsce package --no-git-tag-version --readme-path MARKETPLACE.md
 
       - name: Generate a CycloneDX SBOM for the release
         run: npx cyclonedx-npm --output-file sbom.cdx.json
