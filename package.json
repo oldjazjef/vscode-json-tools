@@ -300,7 +300,7 @@
     "vsce:package": "vsce package"
   },
   "devDependencies": {
-    "@cyclonedx/cyclonedx-npm": "^5.0.0",
+    "@cyclonedx/cyclonedx-npm": "^6.0.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "^26.0.0",
     "@types/vscode": "^1.125.0",
