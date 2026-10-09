@@ -1,5 +1,5 @@
 import * as assert from 'assert';
-import { parsePathQuery, stringifyPathQuery, PathQuerySyntaxError } from '../../src/core/pathQuery';
+import { parsePathQuery, stringifyPathQuery, PathQuerySyntaxError, PathSegment } from '../../src/core/pathQuery';
 
 describe('pathQuery', () => {
   describe('parsePathQuery', () => {
@@ -136,6 +136,24 @@ describe('pathQuery', () => {
 
     it('throws PathQuerySyntaxError when given an empty segment list', () => {
       assert.throws(() => stringifyPathQuery([]), PathQuerySyntaxError);
+    });
+  });
+
+  describe('stringifyPathQuery round trips (found by the fuzz tests)', () => {
+    const roundTrip = (segments: PathSegment[]): void =>
+      assert.deepStrictEqual(parsePathQuery(stringifyPathQuery(segments)), segments);
+
+    it('keeps a backslash in a key', () => {
+      roundTrip([{ type: 'key', value: '\\ ' }, { type: 'index', value: 0 }]);
+    });
+
+    it('keeps a newline or a quote in a key', () => {
+      roundTrip([{ type: 'key', value: 'a.b\nc' }]);
+      roundTrip([{ type: 'key', value: 'say "hi"' }]);
+    });
+
+    it('keeps a whitespace-only key', () => {
+      roundTrip([{ type: 'key', value: ' ' }]);
     });
   });
 });
