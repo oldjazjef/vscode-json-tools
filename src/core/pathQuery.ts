@@ -183,9 +183,13 @@ export function stringifyPathQuery(segments: PathSegment[]): string {
       continue;
     }
 
-    const needsBracket = /[.[\]]/.test(segment.value) || /^\d+$/.test(segment.value);
+    // Bracket form for anything the dotted form cannot carry: separators, backslashes (the dotted
+    // form treats them as escapes), numeric look-alikes and whitespace-only keys (a blank query is empty).
+    const needsBracket =
+      /[.[\]\\]/.test(segment.value) || /^\d+$/.test(segment.value) || segment.value.trim().length === 0;
     if (needsBracket) {
-      result += `[${JSON.stringify(segment.value)}]`;
+      // The parser reads a backslash plus any character as that character, so only `\` and `"` need one.
+      result += `["${segment.value.replace(/[\\"]/g, '\\$&')}"]`;
     } else if (idx === 0) {
       result += segment.value;
     } else {
